@@ -24,6 +24,7 @@ export class AppProfile {
             Hello! My name is {this.normalize(this.match.params.name)}. My name was passed in
             through a route param!
           </p>
+          <test-larissa></test-larissa>
         </div>
       );
     }
