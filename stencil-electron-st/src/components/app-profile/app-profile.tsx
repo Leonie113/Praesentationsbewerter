@@ -25,6 +25,11 @@ export class AppProfile {
             through a route param!
           </p>
           <test-larissa></test-larissa>
+          <stencil-route-link url='/'>
+          <button>
+            back
+          </button>
+        </stencil-route-link>
         </div>
       );
     }
