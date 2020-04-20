@@ -1,0 +1,13 @@
+.ueberschrift{
+background-color: red;
+display: block;
+font-family: fantasy;
+visibility: visible;
+}
+
+div{
+    background-color: red;
+    display: block;
+    font-family: fantasy;
+    visibility: visible;   
+}
