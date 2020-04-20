@@ -1,20 +1,20 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'app-home',
-  styleUrl: 'app-home.css',
+  tag: 'app-start',
+  styleUrl: 'app-start.css',
   shadow: true
 })
-export class AppHome {
+export class AppStart {
 
   render() {
     return (
-      <div class='app-home'>
+      <div class='app-start'>
         <p>
           Willkommen zum Präsentationsbewerter
         </p>
 
-        <stencil-route-link url='/profile/stencil'>
+        <stencil-route-link url='/daten/stencil'>
           <button>
             starten
           </button>

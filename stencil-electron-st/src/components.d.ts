@@ -9,40 +9,49 @@ import '@stencil/core';
 
 import '@stencil/router';
 import '@stencil/state-tunnel';
-import {
-  MatchResults,
-} from '@stencil/router';
 
 
 export namespace Components {
 
+  interface AppDaten {}
+  interface AppDatenAttributes extends StencilHTMLAttributes {}
+
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
-  interface AppProfile {
-    'match': MatchResults;
-  }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
-    'match'?: MatchResults;
-  }
+  interface AppProfile {}
+  interface AppProfileAttributes extends StencilHTMLAttributes {}
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface AppStart {}
+  interface AppStartAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'AppDaten': Components.AppDaten;
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'AppStart': Components.AppStart;
   }
 
   interface StencilIntrinsicElements {
+    'app-daten': Components.AppDatenAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'app-start': Components.AppStartAttributes;
   }
 
+
+  interface HTMLAppDatenElement extends Components.AppDaten, HTMLStencilElement {}
+  var HTMLAppDatenElement: {
+    prototype: HTMLAppDatenElement;
+    new (): HTMLAppDatenElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -62,16 +71,26 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLAppStartElement extends Components.AppStart, HTMLStencilElement {}
+  var HTMLAppStartElement: {
+    prototype: HTMLAppStartElement;
+    new (): HTMLAppStartElement;
+  };
+
   interface HTMLElementTagNameMap {
+    'app-daten': HTMLAppDatenElement
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'app-start': HTMLAppStartElement
   }
 
   interface ElementTagNameMap {
+    'app-daten': HTMLAppDatenElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'app-start': HTMLAppStartElement;
   }
 
 
