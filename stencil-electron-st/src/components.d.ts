@@ -28,13 +28,6 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
-
-  interface TestLarissa {
-    'test': string;
-  }
-  interface TestLarissaAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
 }
 
 declare global {
@@ -42,14 +35,12 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
-    'TestLarissa': Components.TestLarissa;
   }
 
   interface StencilIntrinsicElements {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
-    'test-larissa': Components.TestLarissaAttributes;
   }
 
 
@@ -71,24 +62,16 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
-  interface HTMLTestLarissaElement extends Components.TestLarissa, HTMLStencilElement {}
-  var HTMLTestLarissaElement: {
-    prototype: HTMLTestLarissaElement;
-    new (): HTMLTestLarissaElement;
-  };
-
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
-    'test-larissa': HTMLTestLarissaElement
   }
 
   interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
-    'test-larissa': HTMLTestLarissaElement;
   }
 
 
