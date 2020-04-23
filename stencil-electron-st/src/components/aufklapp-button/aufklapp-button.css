@@ -1,0 +1,50 @@
+.aufklapp-button{
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 30pt;
+    text-align: center;
+    color: white;
+    background: #7F868D;
+    padding: 5px 30px 10px 30px;
+    width: 60%;
+    border: none;
+    border-radius: 35px; 
+    cursor: pointer;
+
+}
+
+.table {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15pt;
+    text-align: left;
+    width: 60%;
+    padding: 10px 30px 20px 40px;
+    border-color: #8D0011;
+    border-width: 2px;
+    border-style: solid;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background: white;
+
+}
+
+.table td{
+    padding: 7px 20px 7px 20px;
+}
+
+.table td:nth-child(2){
+    width: 45%;
+}
+
+.aufklapp-container {
+    visibility: hidden;
+}
+
+.shown {
+    visibility: visible;
+}
+
+.changeradius {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
