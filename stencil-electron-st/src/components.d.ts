@@ -16,13 +16,6 @@ import {
 
 export namespace Components {
 
-  interface AnmerkungsFeld {
-    'test': string;
-  }
-  interface AnmerkungsFeldAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
-
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
@@ -39,25 +32,17 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
-    'AnmerkungsFeld': Components.AnmerkungsFeld;
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
   }
 
   interface StencilIntrinsicElements {
-    'anmerkungs-feld': Components.AnmerkungsFeldAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
   }
 
-
-  interface HTMLAnmerkungsFeldElement extends Components.AnmerkungsFeld, HTMLStencilElement {}
-  var HTMLAnmerkungsFeldElement: {
-    prototype: HTMLAnmerkungsFeldElement;
-    new (): HTMLAnmerkungsFeldElement;
-  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -78,14 +63,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'anmerkungs-feld': HTMLAnmerkungsFeldElement
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
   }
 
   interface ElementTagNameMap {
-    'anmerkungs-feld': HTMLAnmerkungsFeldElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
