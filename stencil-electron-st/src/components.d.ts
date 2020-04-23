@@ -35,6 +35,12 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface FooterLeonie {}
+  interface FooterLeonieAttributes extends StencilHTMLAttributes {}
+
+  interface HeaderLeonie {}
+  interface HeaderLeonieAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
@@ -43,6 +49,8 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'FooterLeonie': Components.FooterLeonie;
+    'HeaderLeonie': Components.HeaderLeonie;
   }
 
   interface StencilIntrinsicElements {
@@ -50,6 +58,8 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'footer-leonie': Components.FooterLeonieAttributes;
+    'header-leonie': Components.HeaderLeonieAttributes;
   }
 
 
@@ -77,11 +87,25 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLFooterLeonieElement extends Components.FooterLeonie, HTMLStencilElement {}
+  var HTMLFooterLeonieElement: {
+    prototype: HTMLFooterLeonieElement;
+    new (): HTMLFooterLeonieElement;
+  };
+
+  interface HTMLHeaderLeonieElement extends Components.HeaderLeonie, HTMLStencilElement {}
+  var HTMLHeaderLeonieElement: {
+    prototype: HTMLHeaderLeonieElement;
+    new (): HTMLHeaderLeonieElement;
+  };
+
   interface HTMLElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'footer-leonie': HTMLFooterLeonieElement
+    'header-leonie': HTMLHeaderLeonieElement
   }
 
   interface ElementTagNameMap {
@@ -89,6 +113,8 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'footer-leonie': HTMLFooterLeonieElement;
+    'header-leonie': HTMLHeaderLeonieElement;
   }
 
 

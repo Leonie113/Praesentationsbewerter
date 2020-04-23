@@ -1,0 +1,32 @@
+header-leonie{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    text-align: center;
+    border: 1px solid #E1E1E1;
+    box-shadow: 1px 1px 1px #ccc;
+    font-size: 3px;
+    height: 85px;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+#presentation{
+    height: 50px;
+    width: 50px;
+    float: left;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+#dhbw {
+    height: 60px;
+    padding-top: 10px;
+    margin-right: 20px;
+    float: right;
+}
+#onlinemedien {
+    height: 50px;
+    float: right;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
