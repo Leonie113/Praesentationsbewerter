@@ -17,7 +17,7 @@
     "parse": "node parseHTML.js dev"
   },
   "dependencies": {
-    "@stencil/core": "0.18.0",
+    "@stencil/core": "1.12.5",
     "@stencil/router": "~0.3.1",
     "electron-is-dev": "^1.0.1"
   },

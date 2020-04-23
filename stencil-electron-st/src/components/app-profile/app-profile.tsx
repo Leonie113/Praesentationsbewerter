@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop} from '@stencil/core';
 import { MatchResults } from '@stencil/router';
 
 @Component({
@@ -23,6 +23,7 @@ export class AppProfile {
             home
           </button>
         </stencil-route-link>
+          <aufklapp-button></aufklapp-button>
         </div>
       );
     }
