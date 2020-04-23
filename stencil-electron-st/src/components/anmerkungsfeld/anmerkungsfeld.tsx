@@ -11,7 +11,7 @@ export class AnmerkungsFeld {
   handleClick(event: UIEvent) {
     
     // var inhalt = document.getElementById('save-button').value;
-    alert("Du hast auf Speichern gedrückt");
+    alert("Du hast auf Speichern gedrückt" +event);
     
   }
   render() {

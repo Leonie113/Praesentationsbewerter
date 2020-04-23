@@ -18,6 +18,11 @@ export class AppProfile {
           <p>
             Hello! My name is 
           </p>
+          <stencil-route-link url='/'>
+          <button>
+            home
+          </button>
+        </stencil-route-link>
         </div>
       );
     }
