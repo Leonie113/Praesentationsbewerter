@@ -16,13 +16,13 @@ export class AppHome {
         <aufklapp-button></aufklapp-button>
           <regler-wertung></regler-wertung>
           <export-button></export-button>
-          <anmerkungs-feld></anmerkungs-feld>
+          
         <stencil-route-link url='/profile/stencil'>
           <button>
             zurück
           </button>
         </stencil-route-link>
-        <stencil-route-link url='/profile/stencil'>
+        <stencil-route-link url='/auswertung'>
           <button>
             weiter
           </button>

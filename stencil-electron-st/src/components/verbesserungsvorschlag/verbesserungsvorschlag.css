@@ -1,4 +1,4 @@
-.anmerkungs-feld {
+.verbesserungs-vorschlag {
     background: #8D0011;
     padding: 0px;
     margin: 0px 20px 20px 20px;
@@ -6,9 +6,10 @@
     position: relative;
     height: 220px;
     width: 80%;
-  }
 
-.ueberschrift{
+}
+
+.ueberschrift2{
     color: white;
     display: block;
     font-family: sans-serif;
@@ -16,7 +17,7 @@
     margin: 5px 15px;
     font-size: 1.5em;
     padding: 10px 0px 0px;
-}
+    }
     
 div{
     background-color: rgb(255, 255, 255);
@@ -25,14 +26,14 @@ div{
     visibility: visible;   
 }
 textarea {
-    background: #8D0011;
-    color: white;
+    background: #8D0011;color: white;
     border: 1px rgb(255, 255, 255) solid;
     margin: 15px;
     height: 120px;
-    width: 94%;
+    width: 92%;
     border-radius: 10px;
     font-size: 1em;
+    
 }
 #save-button {
     background: #8D0011;
