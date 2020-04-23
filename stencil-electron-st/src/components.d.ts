@@ -28,6 +28,15 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface FormularLarissa {
+    'ueberpruefeEingabe': () => Promise<void>;
+    'value': string;
+  }
+  interface FormularLarissaAttributes extends StencilHTMLAttributes {
+    'onChanged'?: (event: CustomEvent<string>) => void;
+    'value'?: string;
+  }
 }
 
 declare global {
@@ -35,12 +44,14 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'FormularLarissa': Components.FormularLarissa;
   }
 
   interface StencilIntrinsicElements {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'formular-larissa': Components.FormularLarissaAttributes;
   }
 
 
@@ -62,16 +73,24 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLFormularLarissaElement extends Components.FormularLarissa, HTMLStencilElement {}
+  var HTMLFormularLarissaElement: {
+    prototype: HTMLFormularLarissaElement;
+    new (): HTMLFormularLarissaElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'formular-larissa': HTMLFormularLarissaElement
   }
 
   interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'formular-larissa': HTMLFormularLarissaElement;
   }
 
 

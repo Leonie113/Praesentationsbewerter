@@ -67,7 +67,6 @@ export class FormularLarissa{
     return (
 
         <div class="wrapper">
-        <input value={this.value} onInput={(ev)=>this.handleChange(ev)}/>
     
        <label id="dozent" class="meldung">Ihr Name wird zur Auswertung benötigt.
         <input type="text" id="dozentinput" name="dozent" placeholder="Ihr Name (Dozent)" />
