@@ -14,16 +14,22 @@ export class AppProfile {
 
       return (
         <div class="app-profile">
-          <formular-larissa></formular-larissa>
+
           <p>
             Hello! My name is 
           </p>
+          <formular-larissa></formular-larissa>
           <stencil-route-link url='/'>
           <button>
             home
           </button>
         </stencil-route-link>
-          <aufklapp-button></aufklapp-button>
+        <stencil-route-link url='/bewertung'>
+          <button>
+            next
+          </button>
+        </stencil-route-link>
+
         </div>
       );
     }
