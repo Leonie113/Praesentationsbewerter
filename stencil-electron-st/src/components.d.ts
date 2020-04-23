@@ -28,6 +28,13 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface AufklappButton {
+    'test': string;
+  }
+  interface AufklappButtonAttributes extends StencilHTMLAttributes {
+    'test'?: string;
+  }
 }
 
 declare global {
@@ -35,12 +42,14 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'AufklappButton': Components.AufklappButton;
   }
 
   interface StencilIntrinsicElements {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'aufklapp-button': Components.AufklappButtonAttributes;
   }
 
 
@@ -62,16 +71,24 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLAufklappButtonElement extends Components.AufklappButton, HTMLStencilElement {}
+  var HTMLAufklappButtonElement: {
+    prototype: HTMLAufklappButtonElement;
+    new (): HTMLAufklappButtonElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'aufklapp-button': HTMLAufklappButtonElement
   }
 
   interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'aufklapp-button': HTMLAufklappButtonElement;
   }
 
 
