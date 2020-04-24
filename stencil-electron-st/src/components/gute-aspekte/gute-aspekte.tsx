@@ -1,11 +1,11 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, } from '@stencil/core';
 
 @Component({
-  tag: 'anmerkungs-feld',
-  styleUrl: 'anmerkungsfeld.css',
+  tag: 'gute-aspekte',
+  styleUrl: 'gute-aspekte.css',
   shadow: true,
 })
-export class AnmerkungsFeld {
+export class GuteAspekte {
   @Prop() test: string;
   
   handleClick(event: UIEvent) {
@@ -13,12 +13,11 @@ export class AnmerkungsFeld {
     // var inhalt = document.getElementById('save-button').value;
     alert("Du hast auf Speichern gedrückt");
     console.log(event);
-    
   }
   render() {
     return (
-        <div class="anmerkungs-feld">
-          <h1 class="ueberschrift">Anmerkungen</h1>
+        <div class="gute-aspekte">
+          <h1 class="ueberschrift3">Das war gut</h1>
           <textarea></textarea>
           <button id="save-button" onClick={ (event: UIEvent) => this.handleClick(event)}>Speichern</button>
         </div>
