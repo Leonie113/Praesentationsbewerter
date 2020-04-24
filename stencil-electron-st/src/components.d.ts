@@ -37,6 +37,10 @@ export namespace Components {
         "regler": string;
         "value": number;
     }
+    interface WeiterButton {
+    }
+    interface ZurueckButton {
+    }
 }
 declare global {
     interface HTMLAnmerkungsFeldElement extends Components.AnmerkungsFeld, HTMLStencilElement {
@@ -105,6 +109,18 @@ declare global {
         prototype: HTMLReglerWertungElement;
         new (): HTMLReglerWertungElement;
     };
+    interface HTMLWeiterButtonElement extends Components.WeiterButton, HTMLStencilElement {
+    }
+    var HTMLWeiterButtonElement: {
+        prototype: HTMLWeiterButtonElement;
+        new (): HTMLWeiterButtonElement;
+    };
+    interface HTMLZurueckButtonElement extends Components.ZurueckButton, HTMLStencilElement {
+    }
+    var HTMLZurueckButtonElement: {
+        prototype: HTMLZurueckButtonElement;
+        new (): HTMLZurueckButtonElement;
+    };
     interface HTMLElementTagNameMap {
         "anmerkungs-feld": HTMLAnmerkungsFeldElement;
         "app-bewertung": HTMLAppBewertungElement;
@@ -117,6 +133,8 @@ declare global {
         "formular-larissa": HTMLFormularLarissaElement;
         "header-leonie": HTMLHeaderLeonieElement;
         "regler-wertung": HTMLReglerWertungElement;
+        "weiter-button": HTMLWeiterButtonElement;
+        "zurueck-button": HTMLZurueckButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -150,6 +168,10 @@ declare namespace LocalJSX {
         "regler"?: string;
         "value"?: number;
     }
+    interface WeiterButton {
+    }
+    interface ZurueckButton {
+    }
     interface IntrinsicElements {
         "anmerkungs-feld": AnmerkungsFeld;
         "app-bewertung": AppBewertung;
@@ -162,6 +184,8 @@ declare namespace LocalJSX {
         "formular-larissa": FormularLarissa;
         "header-leonie": HeaderLeonie;
         "regler-wertung": ReglerWertung;
+        "weiter-button": WeiterButton;
+        "zurueck-button": ZurueckButton;
     }
 }
 export { LocalJSX as JSX };
@@ -179,6 +203,8 @@ declare module "@stencil/core" {
             "formular-larissa": LocalJSX.FormularLarissa & JSXBase.HTMLAttributes<HTMLFormularLarissaElement>;
             "header-leonie": LocalJSX.HeaderLeonie & JSXBase.HTMLAttributes<HTMLHeaderLeonieElement>;
             "regler-wertung": LocalJSX.ReglerWertung & JSXBase.HTMLAttributes<HTMLReglerWertungElement>;
+            "weiter-button": LocalJSX.WeiterButton & JSXBase.HTMLAttributes<HTMLWeiterButtonElement>;
+            "zurueck-button": LocalJSX.ZurueckButton & JSXBase.HTMLAttributes<HTMLZurueckButtonElement>;
         }
     }
 }

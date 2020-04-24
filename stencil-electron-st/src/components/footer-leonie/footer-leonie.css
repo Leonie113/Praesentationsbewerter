@@ -31,23 +31,11 @@ footer-leonie{
 .textbox h1 {
     float: left;
 }
-#links {
-    float: left;
-    height: 40px;
-    width: 40px;
-    padding-top: 20px;
-    padding-left: 20px;
-}
 #weiter {
     height: 10px;
     margin-top: 30px;
 }
-#rechts {
-    height: 40px;
-    float: right;
-    padding-top: 20px;
-    padding-right: 20px;
-}
+
 @media only screen and (max-width: 1000px) {
     #rechts {
     margin-top: 0px;
