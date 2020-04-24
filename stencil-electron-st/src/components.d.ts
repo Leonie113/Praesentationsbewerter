@@ -23,13 +23,6 @@ export namespace Components {
     'test'?: string;
   }
 
-  interface AppAuswertung {
-    'test': string;
-  }
-  interface AppAuswertungAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
-
   interface AppBewertung {}
   interface AppBewertungAttributes extends StencilHTMLAttributes {}
 
@@ -45,13 +38,6 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
-
-  interface AufklappButtonKurz {
-    'test': string;
-  }
-  interface AufklappButtonKurzAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
 
   interface AufklappButton {
     'test': string;
@@ -79,13 +65,6 @@ export namespace Components {
     'value'?: string;
   }
 
-  interface GuteAspekte {
-    'test': string;
-  }
-  interface GuteAspekteAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
-
   interface HeaderLeonie {}
   interface HeaderLeonieAttributes extends StencilHTMLAttributes {}
 
@@ -97,50 +76,35 @@ export namespace Components {
     'regler'?: string;
     'value'?: number;
   }
-
-  interface VerbesserungsVorschlag {
-    'test': string;
-  }
-  interface VerbesserungsVorschlagAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'AnmerkungsFeld': Components.AnmerkungsFeld;
-    'AppAuswertung': Components.AppAuswertung;
     'AppBewertung': Components.AppBewertung;
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
-    'AufklappButtonKurz': Components.AufklappButtonKurz;
     'AufklappButton': Components.AufklappButton;
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
     'FormularLarissa': Components.FormularLarissa;
-    'GuteAspekte': Components.GuteAspekte;
     'HeaderLeonie': Components.HeaderLeonie;
     'ReglerWertung': Components.ReglerWertung;
-    'VerbesserungsVorschlag': Components.VerbesserungsVorschlag;
   }
 
   interface StencilIntrinsicElements {
     'anmerkungs-feld': Components.AnmerkungsFeldAttributes;
-    'app-auswertung': Components.AppAuswertungAttributes;
     'app-bewertung': Components.AppBewertungAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
-    'aufklapp-button-kurz': Components.AufklappButtonKurzAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
     'formular-larissa': Components.FormularLarissaAttributes;
-    'gute-aspekte': Components.GuteAspekteAttributes;
     'header-leonie': Components.HeaderLeonieAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
-    'verbesserungs-vorschlag': Components.VerbesserungsVorschlagAttributes;
   }
 
 
@@ -148,12 +112,6 @@ declare global {
   var HTMLAnmerkungsFeldElement: {
     prototype: HTMLAnmerkungsFeldElement;
     new (): HTMLAnmerkungsFeldElement;
-  };
-
-  interface HTMLAppAuswertungElement extends Components.AppAuswertung, HTMLStencilElement {}
-  var HTMLAppAuswertungElement: {
-    prototype: HTMLAppAuswertungElement;
-    new (): HTMLAppAuswertungElement;
   };
 
   interface HTMLAppBewertungElement extends Components.AppBewertung, HTMLStencilElement {}
@@ -180,12 +138,6 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
-  interface HTMLAufklappButtonKurzElement extends Components.AufklappButtonKurz, HTMLStencilElement {}
-  var HTMLAufklappButtonKurzElement: {
-    prototype: HTMLAufklappButtonKurzElement;
-    new (): HTMLAufklappButtonKurzElement;
-  };
-
   interface HTMLAufklappButtonElement extends Components.AufklappButton, HTMLStencilElement {}
   var HTMLAufklappButtonElement: {
     prototype: HTMLAufklappButtonElement;
@@ -210,12 +162,6 @@ declare global {
     new (): HTMLFormularLarissaElement;
   };
 
-  interface HTMLGuteAspekteElement extends Components.GuteAspekte, HTMLStencilElement {}
-  var HTMLGuteAspekteElement: {
-    prototype: HTMLGuteAspekteElement;
-    new (): HTMLGuteAspekteElement;
-  };
-
   interface HTMLHeaderLeonieElement extends Components.HeaderLeonie, HTMLStencilElement {}
   var HTMLHeaderLeonieElement: {
     prototype: HTMLHeaderLeonieElement;
@@ -228,46 +174,32 @@ declare global {
     new (): HTMLReglerWertungElement;
   };
 
-  interface HTMLVerbesserungsVorschlagElement extends Components.VerbesserungsVorschlag, HTMLStencilElement {}
-  var HTMLVerbesserungsVorschlagElement: {
-    prototype: HTMLVerbesserungsVorschlagElement;
-    new (): HTMLVerbesserungsVorschlagElement;
-  };
-
   interface HTMLElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement
-    'app-auswertung': HTMLAppAuswertungElement
     'app-bewertung': HTMLAppBewertungElement
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
-    'aufklapp-button-kurz': HTMLAufklappButtonKurzElement
     'aufklapp-button': HTMLAufklappButtonElement
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
     'formular-larissa': HTMLFormularLarissaElement
-    'gute-aspekte': HTMLGuteAspekteElement
     'header-leonie': HTMLHeaderLeonieElement
     'regler-wertung': HTMLReglerWertungElement
-    'verbesserungs-vorschlag': HTMLVerbesserungsVorschlagElement
   }
 
   interface ElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement;
-    'app-auswertung': HTMLAppAuswertungElement;
     'app-bewertung': HTMLAppBewertungElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
-    'aufklapp-button-kurz': HTMLAufklappButtonKurzElement;
     'aufklapp-button': HTMLAufklappButtonElement;
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;
     'formular-larissa': HTMLFormularLarissaElement;
-    'gute-aspekte': HTMLGuteAspekteElement;
     'header-leonie': HTMLHeaderLeonieElement;
     'regler-wertung': HTMLReglerWertungElement;
-    'verbesserungs-vorschlag': HTMLVerbesserungsVorschlagElement;
   }
 
 
