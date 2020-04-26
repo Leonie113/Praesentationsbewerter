@@ -17,9 +17,16 @@ import {
 export namespace Components {
 
   interface AnmerkungsFeld {
-    'test': string;
+    'name': string;
   }
   interface AnmerkungsFeldAttributes extends StencilHTMLAttributes {
+    'name'?: string;
+  }
+
+  interface AppAuswertung {
+    'test': string;
+  }
+  interface AppAuswertungAttributes extends StencilHTMLAttributes {
     'test'?: string;
   }
 
@@ -38,6 +45,13 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface AufklappButtonKurz {
+    'test': string;
+  }
+  interface AufklappButtonKurzAttributes extends StencilHTMLAttributes {
+    'test'?: string;
+  }
 
   interface AufklappButton {
     'test': string;
@@ -81,10 +95,12 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'AnmerkungsFeld': Components.AnmerkungsFeld;
+    'AppAuswertung': Components.AppAuswertung;
     'AppBewertung': Components.AppBewertung;
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'AufklappButtonKurz': Components.AufklappButtonKurz;
     'AufklappButton': Components.AufklappButton;
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
@@ -95,10 +111,12 @@ declare global {
 
   interface StencilIntrinsicElements {
     'anmerkungs-feld': Components.AnmerkungsFeldAttributes;
+    'app-auswertung': Components.AppAuswertungAttributes;
     'app-bewertung': Components.AppBewertungAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'aufklapp-button-kurz': Components.AufklappButtonKurzAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
@@ -112,6 +130,12 @@ declare global {
   var HTMLAnmerkungsFeldElement: {
     prototype: HTMLAnmerkungsFeldElement;
     new (): HTMLAnmerkungsFeldElement;
+  };
+
+  interface HTMLAppAuswertungElement extends Components.AppAuswertung, HTMLStencilElement {}
+  var HTMLAppAuswertungElement: {
+    prototype: HTMLAppAuswertungElement;
+    new (): HTMLAppAuswertungElement;
   };
 
   interface HTMLAppBewertungElement extends Components.AppBewertung, HTMLStencilElement {}
@@ -136,6 +160,12 @@ declare global {
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
+  };
+
+  interface HTMLAufklappButtonKurzElement extends Components.AufklappButtonKurz, HTMLStencilElement {}
+  var HTMLAufklappButtonKurzElement: {
+    prototype: HTMLAufklappButtonKurzElement;
+    new (): HTMLAufklappButtonKurzElement;
   };
 
   interface HTMLAufklappButtonElement extends Components.AufklappButton, HTMLStencilElement {}
@@ -176,10 +206,12 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement
+    'app-auswertung': HTMLAppAuswertungElement
     'app-bewertung': HTMLAppBewertungElement
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'aufklapp-button-kurz': HTMLAufklappButtonKurzElement
     'aufklapp-button': HTMLAufklappButtonElement
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
@@ -190,10 +222,12 @@ declare global {
 
   interface ElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement;
+    'app-auswertung': HTMLAppAuswertungElement;
     'app-bewertung': HTMLAppBewertungElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'aufklapp-button-kurz': HTMLAufklappButtonKurzElement;
     'aufklapp-button': HTMLAufklappButtonElement;
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;

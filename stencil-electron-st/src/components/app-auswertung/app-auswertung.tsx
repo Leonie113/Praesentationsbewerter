@@ -27,9 +27,9 @@ export class AppHome {
             <aufklapp-button-kurz>hallo</aufklapp-button-kurz>
           </div>
           <div id="rechts" class="flex-item">
-            <anmerkungs-feld></anmerkungs-feld>
-            <gute-aspekte></gute-aspekte>
-            <verbesserungs-vorschlag></verbesserungs-vorschlag>
+            <anmerkungs-feld name="Anmerkungen"></anmerkungs-feld>
+            <anmerkungs-feld name="Das war gut"></anmerkungs-feld>
+            <anmerkungs-feld name="Verbesserungsvorschläge"></anmerkungs-feld>
           </div>
         </div>
         <button id="abschließen"  onClick={ (event: UIEvent) => this.handleClick(event)}>Bewertung speichern</button>
