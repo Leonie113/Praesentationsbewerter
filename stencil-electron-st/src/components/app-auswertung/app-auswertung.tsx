@@ -33,6 +33,8 @@ export class AppHome {
           </div>
         </div>
         <button id="abschließen"  onClick={ (event: UIEvent) => this.handleClick(event)}>Bewertung speichern</button>
+        <export-button></export-button>
+        
         <stencil-route-link url='/bewertung'>
           <button>
             zurück
