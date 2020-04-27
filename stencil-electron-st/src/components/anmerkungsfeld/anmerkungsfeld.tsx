@@ -6,7 +6,7 @@ import { Component, Prop } from '@stencil/core';
   shadow: true,
 })
 export class AnmerkungsFeld {
-  @Prop() test: string;
+  @Prop() name: string;
   
   handleClick(event: UIEvent) {
     
@@ -18,7 +18,7 @@ export class AnmerkungsFeld {
   render() {
     return (
         <div class="anmerkungs-feld">
-          <h1 class="ueberschrift">Anmerkungen</h1>
+          <h1 class="ueberschrift">{this.name}</h1>
           <textarea></textarea>
           <button id="save-button" onClick={ (event: UIEvent) => this.handleClick(event)}>Speichern</button>
         </div>
