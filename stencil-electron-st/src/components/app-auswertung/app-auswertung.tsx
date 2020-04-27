@@ -7,14 +7,13 @@ import { Component, Prop, Element, h } from '@stencil/core';
 })
 export class AppHome{
   @Prop() test: string;
-  @Element() host: HTMLElement;
   handleClick(event: UIEvent) {
     
     // var inhalt = document.getElementById('save-button').value;
     alert("Deine Bewertung wird nun gespeichert");
     console.log(event);
   }
-  todoListElement: HTMLEingabeFelderElement = this.host.querySelector('eingabe-felder');
+  todoListElement: HTMLEingabeFelderElement = document.querySelector('eingabe-felder');
   render() {
     return (
       <div class='app-home'>
