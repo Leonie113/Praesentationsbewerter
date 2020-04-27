@@ -105,6 +105,12 @@ export namespace Components {
     'regler'?: string;
     'value'?: number;
   }
+
+  interface WeiterButton {}
+  interface WeiterButtonAttributes extends StencilHTMLAttributes {}
+
+  interface ZurueckButton {}
+  interface ZurueckButtonAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
@@ -124,6 +130,8 @@ declare global {
     'HeaderLeonie': Components.HeaderLeonie;
     'HeadlineMittig': Components.HeadlineMittig;
     'ReglerWertung': Components.ReglerWertung;
+    'WeiterButton': Components.WeiterButton;
+    'ZurueckButton': Components.ZurueckButton;
   }
 
   interface StencilIntrinsicElements {
@@ -142,6 +150,8 @@ declare global {
     'header-leonie': Components.HeaderLeonieAttributes;
     'headline-mittig': Components.HeadlineMittigAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
+    'weiter-button': Components.WeiterButtonAttributes;
+    'zurueck-button': Components.ZurueckButtonAttributes;
   }
 
 
@@ -235,6 +245,18 @@ declare global {
     new (): HTMLReglerWertungElement;
   };
 
+  interface HTMLWeiterButtonElement extends Components.WeiterButton, HTMLStencilElement {}
+  var HTMLWeiterButtonElement: {
+    prototype: HTMLWeiterButtonElement;
+    new (): HTMLWeiterButtonElement;
+  };
+
+  interface HTMLZurueckButtonElement extends Components.ZurueckButton, HTMLStencilElement {}
+  var HTMLZurueckButtonElement: {
+    prototype: HTMLZurueckButtonElement;
+    new (): HTMLZurueckButtonElement;
+  };
+
   interface HTMLElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement
     'app-auswertung': HTMLAppAuswertungElement
@@ -251,6 +273,8 @@ declare global {
     'header-leonie': HTMLHeaderLeonieElement
     'headline-mittig': HTMLHeadlineMittigElement
     'regler-wertung': HTMLReglerWertungElement
+    'weiter-button': HTMLWeiterButtonElement
+    'zurueck-button': HTMLZurueckButtonElement
   }
 
   interface ElementTagNameMap {
@@ -269,6 +293,8 @@ declare global {
     'header-leonie': HTMLHeaderLeonieElement;
     'headline-mittig': HTMLHeadlineMittigElement;
     'regler-wertung': HTMLReglerWertungElement;
+    'weiter-button': HTMLWeiterButtonElement;
+    'zurueck-button': HTMLZurueckButtonElement;
   }
 
 
