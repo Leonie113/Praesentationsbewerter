@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-bewertung',
@@ -16,6 +16,7 @@ export class AppHome {
         <aufklapp-button></aufklapp-button>
           <regler-wertung></regler-wertung>
           <export-button></export-button>
+          <bewertung-end></bewertung-end>
           <anmerkungs-feld></anmerkungs-feld>
         <stencil-route-link url='/profile/stencil'>
           <button>

@@ -1,20 +1,20 @@
-import { Component, Prop, Listen} from '@stencil/core';
+import { Component, Prop, Listen, h} from '@stencil/core';
 
 @Component({
-  tag: 'export-button',
-  styleUrl: 'export-button.css',
+  tag: 'bewertung-end',
+  styleUrl: 'bewertung-end.css',
   shadow: true
 })
 export class ExportierButton {
-  @Prop() button: string= "Exportieren";
+  @Prop() button: string= "Bewertung abschließen";
 
   handleClick() {
-    alert("Die Funktion exportieren ist momentan noch nicht umgesetzt");
+    alert("Die Bewertung wurde abgeschlossen.");
   }
 
   @Listen("click")
   handleClickEvent() {
-    console.log("Exportierbutton wurde geklickt");
+   // console.log("Exportierbutton wurde geklickt");
   }
 
   render() {
