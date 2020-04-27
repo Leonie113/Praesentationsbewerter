@@ -1,55 +1,50 @@
-import { Component, Prop, Event, EventEmitter, Listen,  Element } from '@stencil/core';
+import { Component, Prop, Event, EventEmitter,  Element, h } from '@stencil/core';
 
 @Component({
   tag: 'eingabe-felder',
   styleUrl: 'eingabe-felder.css',
 })
 export class EingabeFelder{
-  @Prop() forgotPasswordUrl: string;
+  @Prop() forgotPasswordUrl: string ="hallo";
   @Event() loginShouldOccur: EventEmitter;
   @Element() host: HTMLElement;
-  public dozent : string;
-  dozentmeldung;
-  public name : string;
-  namemeldung;
-  public matrikelnummer : string;
-  matrikelnummermeldung;
-  public veranstaltung : string;
-  veranstaltungmeldung;
-  public pruefung : string;
-  pruefungmeldung;
+  @Prop() public dozent : string;
+  @Prop() dozentmeldung;
+  @Prop() public name : string;
+  @Prop() namemeldung;
+  @Prop() matrikelnummereins;
+  @Prop() matrikelnummerzwei;
+  @Prop() matrikelnummerdrei;
+  @Prop() matrikelnummervier;
+  @Prop() matrikelnummermeldung;
+  @Prop() public veranstaltung : string;
+  @Prop() veranstaltungmeldung;
+  @Prop() public pruefung : string;
+  @Prop() pruefungmeldung;
 
-  login() {
-      let form = this.host.querySelector('form');
-      if (form.reportValidity()) {
+
+    login() {
           let inputs = this.host.querySelectorAll('input');
-          this.loginShouldOccur.emit({ dozent: inputs[0].value,
-                                       gruppe: inputs[1].value,
-                                       mitglieder: inputs[2].value
-                                      });
           let meldungen = this.host.querySelectorAll('.meldung');
-          this.dozentmeldung = meldungen[0];
           this.dozent = inputs[0].value;
-          this.namemeldung = meldungen[1];
+          console.log(this.dozent);
+          this.dozentmeldung = meldungen[0];
           this.name = inputs[1].value;
+          this.namemeldung = meldungen[1];
           this.matrikelnummermeldung = meldungen[2];
-          this.matrikelnummer = inputs[2].value;
+          this.matrikelnummereins = inputs[3].value;
+          this.matrikelnummerzwei = inputs[4].value;
+          this.matrikelnummerdrei = inputs[5].value;
+          this.matrikelnummervier = inputs[6].value;
           this.veranstaltungmeldung = meldungen[3];
-          this.veranstaltung = inputs[3].value;
-          this.pruefungmeldung = meldungen[4];
-          this.pruefung = inputs[4].value;
+          this.veranstaltung = inputs[7].value;
+          this.pruefungmeldung = inputs[8].value;
+          console.log(this.pruefungmeldung);
           this.ueberpruefeEingabe();
         }
-  }
 
-  @Listen('keydown')
-  handleKeyDown(ev: KeyboardEvent){
-    if (ev.key === 'ArrowDown'){
-      this.login();
-    }
-  }
 
-  ueberpruefeEingabe(){
+ ueberpruefeEingabe(){
   
         if( this.dozent === '') {
             this.dozentmeldung.classList.add('meldungfehlerhaft');
@@ -66,13 +61,13 @@ export class EingabeFelder{
         else{
           this.namemeldung.classList.remove('meldungfehlerhaft');  
         }
-    
-        if( this.matrikelnummer === "" ){
+
+        if( this.matrikelnummereins === "" ){
           this.matrikelnummermeldung.classList.add('meldungfehlerhaft');
-           }
+        }
 
         else{
-          this.matrikelnummermeldung.classList.remove('meldungfehlerhaft');  
+        this.matrikelnummermeldung.classList.remove('meldungfehlerhaft');  
         }
             
         if( this.veranstaltung === "" ){
@@ -83,13 +78,6 @@ export class EingabeFelder{
           this.veranstaltungmeldung.classList.remove('meldungfehlerhaft');
         }
             
-        if( this.pruefung === "" ){
-          this.pruefungmeldung.classList.add('meldungfehlerhaft');
-           }   
-        
-        else{
-          this.pruefungmeldung.classList.remove('meldungfehlerhaft'); 
-        }
     }
 
     remove(){
@@ -118,27 +106,34 @@ export class EingabeFelder{
   render() {
       return (
         <div class="login-container">
+
           <form class="login-form">
                 <label id="dozent">
                 <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
-                <input type="text" id="dozentinput" name="dozent" placeholder="Name des Lehrenden" maxlength="15"/>
+                <input type="text" id="dozentinput" name="dozent" placeholder="Name des Lehrenden" maxlength="15" value=""/>
                 </label>
                 <label id="name">
                 <span class="meldung">Mindestens ein Name eines Studierenden muss angegeben werden.</span>
-                <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe"/>
+                <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe" value=""/>
                 </label>
-                <label id="matrikelnummer">
-                <span class="meldung">Mindestens eine Matrikelnummer muss angegeben werden.</span>
-                <input type="text" id="matrikelnummerinput" name="matrikelnummer" placeholder="Matrikelnummern der Studierenden"/>
-                </label>
+                <span class="meldung">Bitte geben Sie mindestens eine Matrikelnummer im ersten Feld ein.</span>
+                <aufklapp-input class="aufklappbuttons"
+                  Ueberschrift="Matrikelnummern der Studierenden" 
+                  Kriterium1="1. Matrikelnummer"
+                  Kriterium2="2. Matrikelnummer"
+                  Kriterium3="3. Matrikelnummer"
+                  Kriterium4="4. Matrikelnummer"
+                ></aufklapp-input>
+
                 <label id="veranstaltung">
                 <span class="meldung">Die Bezeichnung der Lehrveranstaltung wird für die Auswertung benötigt.</span>
-                <input type="text" id="veranstaltunginput" name="veranstaltung" placeholder="Lehrveranstaltung"/>
+                <input type="text" id="veranstaltunginput" name="veranstaltung" placeholder="Lehrveranstaltung" value=""/>
                 </label>
-                <label id="pruefung">
-                <span class="meldung">Die Bezeichnung der Prüfungsleistung wird für die Auswertung benötigt.</span>
-                <input type="text" id="pruefunginput" name="mitglieder" placeholder="Prüfungsleistung"/>
-                </label>
+                <radio-input                 
+                  Ueberschrift="Prüfungsleistung" 
+                  Kriterium1="1. Matrikelnummer"
+                  Kriterium2="2. Matrikelnummer"
+                ></radio-input>
                 <div class="buttons">
                 <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>
                 <button id="submit" type="button"  onClick={() => { this.login(); }}>Speichern</button>
