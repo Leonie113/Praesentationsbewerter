@@ -30,13 +30,6 @@ export namespace Components {
     'test'?: string;
   }
 
-  interface AppAuswertung {
-    'test': string;
-  }
-  interface AppAuswertungAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
-
   interface AppBewertung {}
   interface AppBewertungAttributes extends StencilHTMLAttributes {}
 
@@ -86,13 +79,6 @@ export namespace Components {
     'value'?: string;
   }
 
-  interface GuteAspekte {
-    'test': string;
-  }
-  interface GuteAspekteAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
-
   interface HeaderLeonie {}
   interface HeaderLeonieAttributes extends StencilHTMLAttributes {}
 
@@ -103,13 +89,6 @@ export namespace Components {
   interface ReglerWertungAttributes extends StencilHTMLAttributes {
     'regler'?: string;
     'value'?: number;
-  }
-
-  interface VerbesserungsVorschlag {
-    'test': string;
-  }
-  interface VerbesserungsVorschlagAttributes extends StencilHTMLAttributes {
-    'test'?: string;
   }
 }
 
@@ -126,10 +105,8 @@ declare global {
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
     'FormularLarissa': Components.FormularLarissa;
-    'GuteAspekte': Components.GuteAspekte;
     'HeaderLeonie': Components.HeaderLeonie;
     'ReglerWertung': Components.ReglerWertung;
-    'VerbesserungsVorschlag': Components.VerbesserungsVorschlag;
   }
 
   interface StencilIntrinsicElements {
@@ -144,10 +121,8 @@ declare global {
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
     'formular-larissa': Components.FormularLarissaAttributes;
-    'gute-aspekte': Components.GuteAspekteAttributes;
     'header-leonie': Components.HeaderLeonieAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
-    'verbesserungs-vorschlag': Components.VerbesserungsVorschlagAttributes;
   }
 
 
@@ -217,12 +192,6 @@ declare global {
     new (): HTMLFormularLarissaElement;
   };
 
-  interface HTMLGuteAspekteElement extends Components.GuteAspekte, HTMLStencilElement {}
-  var HTMLGuteAspekteElement: {
-    prototype: HTMLGuteAspekteElement;
-    new (): HTMLGuteAspekteElement;
-  };
-
   interface HTMLHeaderLeonieElement extends Components.HeaderLeonie, HTMLStencilElement {}
   var HTMLHeaderLeonieElement: {
     prototype: HTMLHeaderLeonieElement;
@@ -233,12 +202,6 @@ declare global {
   var HTMLReglerWertungElement: {
     prototype: HTMLReglerWertungElement;
     new (): HTMLReglerWertungElement;
-  };
-
-  interface HTMLVerbesserungsVorschlagElement extends Components.VerbesserungsVorschlag, HTMLStencilElement {}
-  var HTMLVerbesserungsVorschlagElement: {
-    prototype: HTMLVerbesserungsVorschlagElement;
-    new (): HTMLVerbesserungsVorschlagElement;
   };
 
   interface HTMLElementTagNameMap {
@@ -253,10 +216,8 @@ declare global {
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
     'formular-larissa': HTMLFormularLarissaElement
-    'gute-aspekte': HTMLGuteAspekteElement
     'header-leonie': HTMLHeaderLeonieElement
     'regler-wertung': HTMLReglerWertungElement
-    'verbesserungs-vorschlag': HTMLVerbesserungsVorschlagElement
   }
 
   interface ElementTagNameMap {
@@ -271,10 +232,8 @@ declare global {
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;
     'formular-larissa': HTMLFormularLarissaElement;
-    'gute-aspekte': HTMLGuteAspekteElement;
     'header-leonie': HTMLHeaderLeonieElement;
     'regler-wertung': HTMLReglerWertungElement;
-    'verbesserungs-vorschlag': HTMLVerbesserungsVorschlagElement;
   }
 
 
