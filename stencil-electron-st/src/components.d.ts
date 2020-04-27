@@ -17,9 +17,16 @@ import {
 export namespace Components {
 
   interface AnmerkungsFeld {
-    'test': string;
+    'name': string;
   }
   interface AnmerkungsFeldAttributes extends StencilHTMLAttributes {
+    'name'?: string;
+  }
+
+  interface AppAuswertung {
+    'test': string;
+  }
+  interface AppAuswertungAttributes extends StencilHTMLAttributes {
     'test'?: string;
   }
 
