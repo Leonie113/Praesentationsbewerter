@@ -8,7 +8,6 @@ import { Component, h } from '@stencil/core';
 export class FooterLeonie {
     render() {
         return <div class="footer">
-            <img id="links" src="/assets/links.png"></img>
             <ul id="footer-liste">
                 <li id="bold">Home</li>
                 <li><img src="/assets/weiter.png"></img></li>
@@ -18,7 +17,6 @@ export class FooterLeonie {
                 <li><img src="/assets/weiter.png"></img></li>
                 <li>Auswertung</li>
             </ul>
-            <img id="rechts" src="/assets/rechts.png"></img>
         </div>
     }
 }

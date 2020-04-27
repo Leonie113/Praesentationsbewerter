@@ -1,0 +1,72 @@
+.login-container{
+    width: 40em;
+    margin: auto;
+}
+
+.meldung{
+    display: none;
+}
+
+.meldungfehlerhaft{
+    display: block;
+    color: red;
+    margin-left: 2%;
+}
+
+input{
+    border-radius: 50em;
+    text-align: center;
+}
+
+input[type=text] {
+    background-color: #474747;
+    color: #fff;
+    width: 40em;
+    height: 2.5em;
+    margin-bottom: 1em;
+  }
+
+  input[type=text]:focus, select {
+    background-color: #7F868D;;
+    outline: none;
+    width: 100%;
+  }
+
+  ::placeholder {
+    color: #ffffff80;
+  }
+
+  
+input[type=reset] {
+    background-color: #E10119;
+    color: #fff;
+    border: none;
+    border-radius: 50em;
+    width: 5.5%;
+    padding: 1%;
+}
+
+input[type=reset]:hover {
+    background-color: #8D0011;
+}
+
+input[type=reset]:focus {
+    outline: none;
+}
+
+#submit{
+    border-radius: 50em;
+    font-size: 1em;
+    background-color: #000;
+    font-weight: 900;
+    color: #fff;
+    padding: 1.5%;
+    width: 35%;
+    margin-left: 59%;
+}
+
+#submit:focus{
+    border-radius: 50em;
+    background-color: #76b238;
+    outline: none;
+}

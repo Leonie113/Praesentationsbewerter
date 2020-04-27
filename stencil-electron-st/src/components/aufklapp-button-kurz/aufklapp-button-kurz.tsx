@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State,h } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-button-kurz',
@@ -13,7 +13,6 @@ export class AufklappButton {
   toggleVisibility = () => {
     this.visible = !this.visible;
   }
-
   render() {
     return (
       <div id="container-button">

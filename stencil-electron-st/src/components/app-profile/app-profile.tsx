@@ -18,7 +18,13 @@ export class AppProfile {
           <p>
             Hello! My name is 
           </p>
+          <stencil-route-link url="/profile/stencil">
+          <zurueck-button></zurueck-button>
+          </stencil-route-link>
           <formular-larissa></formular-larissa>
+          <stencil-route-link url='/bewertung'>
+          <weiter-button></weiter-button>
+          </stencil-route-link> 
           <stencil-route-link url='/'>
           <button>
             home
