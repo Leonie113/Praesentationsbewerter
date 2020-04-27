@@ -1,24 +1,27 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, Element, h } from '@stencil/core';
 
 
 @Component({
   tag: 'app-auswertung',
   styleUrl: 'app-auswertung.css',
-  shadow: true
 })
 export class AppHome{
   @Prop() test: string;
-  
+  @Element() host: HTMLElement;
   handleClick(event: UIEvent) {
     
     // var inhalt = document.getElementById('save-button').value;
     alert("Deine Bewertung wird nun gespeichert");
     console.log(event);
   }
-
+  todoListElement: HTMLEingabeFelderElement = this.host.querySelector('eingabe-felder');
   render() {
     return (
       <div class='app-home'>
+                <auswertung-daten
+        dozent={this.todoListElement.dozent}
+        gruppe={this.todoListElement.name}
+        ></auswertung-daten>
         <headline-mittig text="Auswertung &amp; Anmerkungen"></headline-mittig>
         <div class="flex-container">
           <div id="linkeSeite" class="flex-item">
