@@ -1,0 +1,136 @@
+.aufklapp-button-kurz{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background: #7F868D;
+    padding: 5px 30px 5px 30px;
+    width: 100%;
+    border: none;
+    border-radius: 35px; 
+    cursor: pointer;
+    margin: 0;
+    margin-bottom: 20px;
+    outline: none;
+    font-weight: 600;
+}
+
+.table {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13pt;
+    text-align: left;
+    width: 60%;
+    overflow: hidden;
+    border-color: #8D0011;
+    border-width: 2px;
+    border-style: solid;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background: white;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.table td{
+    padding: 7px 20px 7px 20px;
+}
+
+.table tr:nth-child(1){
+    background: rgba(207, 207, 207, 0.623);
+}
+
+.table tr:nth-child(2){
+    background: rgb(247, 245, 245);
+}
+
+.table td:nth-child(2){
+    width: 50%;
+}
+
+.aufklapp-container {
+    visibility: hidden;
+    display: none;
+}
+
+.shown {
+    visibility: visible;
+    display: block;
+    display: initial;
+}
+
+.changeradius {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0;
+}
+
+.slider {
+
+    -webkit-appearance: none;
+    width: 70%;
+    height: 10px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: rgb(201, 8, 8);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(201, 8, 8);
+    cursor: pointer;
+  }
+
+.regler-container {
+    width: 100%;
+    display: flex;
+}
+
+.regler-container h4 {
+    margin: 0;
+    margin-top: -9px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15pt;
+}
+
+.regler-container h4:nth-child(1){
+    margin-left: 0px;
+}
+
+input{
+    width: 20em;
+    border-radius: 2.5em;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 1%;
+    background-color: #474747;
+    color: #fff;
+    font-weight: 700;
+}
+
+input[type=text]:focus, select {
+    background-color: #7F868D;
+    outline: none;
+    width: 100%;
+  }
+
+.label{
+    margin-left: 22%;
+    font-weight: 500;
+}

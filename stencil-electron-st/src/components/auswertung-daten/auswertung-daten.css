@@ -1,0 +1,124 @@
+.auswertung-button{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18pt;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background: #7F868D;
+    padding: 5px 30px 10px 30px;
+    width: 100%;
+    border: none;
+    border-radius: 35px; 
+    cursor: pointer;
+    margin: 10px;
+    margin-bottom: 0px;
+    outline: none;
+}
+.table {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13pt;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    border-color: #8D0011;
+    border-width: 2px;
+    border-style: solid;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background: white;
+    margin: 10px;
+    margin-top: 0px;
+    margin-left: 1.5%;
+}
+.table td{
+    padding: 7px 20px 7px 20px;
+}
+.table tr:nth-child(1){
+    background: rgba(226, 226, 226, 0.623);
+}
+.table tr:nth-child(3){
+    background: rgba(226, 226, 226, 0.623);
+}
+.table tr:nth-child(5){
+    background: rgba(226, 226, 226, 0.623);
+}
+.table tr:nth-child(7){
+    background: rgba(226, 226, 226, 0.623);
+}
+.table tr:nth-child(9){
+    background: rgba(226, 226, 226, 0.623);
+}
+.table td:nth-child(2){
+    width: 45%;
+}
+.aufklapp-container {
+    visibility: hidden;
+    display: none;
+}
+.shown {
+    visibility: visible;
+    display: block;
+}
+.changeradius {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.regler-wertung {
+    color: rgb(8, 8, 8);
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+
+}
+
+.regler-container {
+    padding-bottom: 5px;
+}
+
+.slider {
+
+-webkit-appearance: none;
+width: 70%;
+height: 10px;
+border-radius: 5px;  
+background: #d3d3d3;
+outline: none;
+/**opacity: 0.7;*/
+-webkit-transition: .2s;
+transition: opacity .2s;
+
+  }
+
+.slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%; 
+background: rgb(201, 8, 8);
+cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: rgb(201, 8, 8);
+cursor: pointer;
+}
+
+.regler-container {
+    width: 100%;
+    display: flex;
+}
+
+.regler-container h4 {
+    margin: 0;
+    margin-top: -9px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15pt;
+}
+
+.regler-container h4:nth-child(1){
+    margin-left: 0px;
+}
