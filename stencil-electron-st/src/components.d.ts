@@ -60,6 +60,14 @@ export namespace Components {
     'test'?: string;
   }
 
+  interface EingabeFelder {
+    'forgotPasswordUrl': string;
+  }
+  interface EingabeFelderAttributes extends StencilHTMLAttributes {
+    'forgotPasswordUrl'?: string;
+    'onLoginShouldOccur'?: (event: CustomEvent) => void;
+  }
+
   interface ExportButton {
     'button': string;
   }
@@ -82,6 +90,13 @@ export namespace Components {
   interface HeaderLeonie {}
   interface HeaderLeonieAttributes extends StencilHTMLAttributes {}
 
+  interface HeadlineMittig {
+    'text': string;
+  }
+  interface HeadlineMittigAttributes extends StencilHTMLAttributes {
+    'text'?: string;
+  }
+
   interface ReglerWertung {
     'regler': string;
     'value': number;
@@ -102,10 +117,12 @@ declare global {
     'AppRoot': Components.AppRoot;
     'AufklappButtonKurz': Components.AufklappButtonKurz;
     'AufklappButton': Components.AufklappButton;
+    'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
     'FormularLarissa': Components.FormularLarissa;
     'HeaderLeonie': Components.HeaderLeonie;
+    'HeadlineMittig': Components.HeadlineMittig;
     'ReglerWertung': Components.ReglerWertung;
   }
 
@@ -118,10 +135,12 @@ declare global {
     'app-root': Components.AppRootAttributes;
     'aufklapp-button-kurz': Components.AufklappButtonKurzAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
+    'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
     'formular-larissa': Components.FormularLarissaAttributes;
     'header-leonie': Components.HeaderLeonieAttributes;
+    'headline-mittig': Components.HeadlineMittigAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
   }
 
@@ -174,6 +193,12 @@ declare global {
     new (): HTMLAufklappButtonElement;
   };
 
+  interface HTMLEingabeFelderElement extends Components.EingabeFelder, HTMLStencilElement {}
+  var HTMLEingabeFelderElement: {
+    prototype: HTMLEingabeFelderElement;
+    new (): HTMLEingabeFelderElement;
+  };
+
   interface HTMLExportButtonElement extends Components.ExportButton, HTMLStencilElement {}
   var HTMLExportButtonElement: {
     prototype: HTMLExportButtonElement;
@@ -198,6 +223,12 @@ declare global {
     new (): HTMLHeaderLeonieElement;
   };
 
+  interface HTMLHeadlineMittigElement extends Components.HeadlineMittig, HTMLStencilElement {}
+  var HTMLHeadlineMittigElement: {
+    prototype: HTMLHeadlineMittigElement;
+    new (): HTMLHeadlineMittigElement;
+  };
+
   interface HTMLReglerWertungElement extends Components.ReglerWertung, HTMLStencilElement {}
   var HTMLReglerWertungElement: {
     prototype: HTMLReglerWertungElement;
@@ -213,10 +244,12 @@ declare global {
     'app-root': HTMLAppRootElement
     'aufklapp-button-kurz': HTMLAufklappButtonKurzElement
     'aufklapp-button': HTMLAufklappButtonElement
+    'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
     'formular-larissa': HTMLFormularLarissaElement
     'header-leonie': HTMLHeaderLeonieElement
+    'headline-mittig': HTMLHeadlineMittigElement
     'regler-wertung': HTMLReglerWertungElement
   }
 
@@ -229,10 +262,12 @@ declare global {
     'app-root': HTMLAppRootElement;
     'aufklapp-button-kurz': HTMLAufklappButtonKurzElement;
     'aufklapp-button': HTMLAufklappButtonElement;
+    'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;
     'formular-larissa': HTMLFormularLarissaElement;
     'header-leonie': HTMLHeaderLeonieElement;
+    'headline-mittig': HTMLHeadlineMittigElement;
     'regler-wertung': HTMLReglerWertungElement;
   }
 
