@@ -47,10 +47,18 @@ export namespace Components {
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
   interface AufklappButtonKurz {
-    'test': string;
+    'Kriterium1': string;
+    'Kriterium2': string;
+    'Ueberschrift': string;
+    'regler': string;
+    'value': number;
   }
   interface AufklappButtonKurzAttributes extends StencilHTMLAttributes {
-    'test'?: string;
+    'Kriterium1'?: string;
+    'Kriterium2'?: string;
+    'Ueberschrift'?: string;
+    'regler'?: string;
+    'value'?: number;
   }
 
   interface AufklappButton {
@@ -69,6 +77,42 @@ export namespace Components {
     'Kriterium4'?: string;
     'Ueberschrift'?: string;
     'regler'?: string;
+    'value'?: number;
+  }
+
+  interface AuswertungButtonKurz {
+    'Kriterium1': string;
+    'Kriterium2': string;
+    'Ueberschrift': string;
+    'regler': string;
+    'value': number;
+  }
+  interface AuswertungButtonKurzAttributes extends StencilHTMLAttributes {
+    'Kriterium1'?: string;
+    'Kriterium2'?: string;
+    'Ueberschrift'?: string;
+    'regler'?: string;
+    'value'?: number;
+  }
+
+  interface AuswertungButton {
+    'Kriterium1': string;
+    'Kriterium2': string;
+    'Kriterium3': string;
+    'Kriterium4': string;
+    'Ueberschrift': string;
+    'regler': string;
+    'text': any;
+    'value': number;
+  }
+  interface AuswertungButtonAttributes extends StencilHTMLAttributes {
+    'Kriterium1'?: string;
+    'Kriterium2'?: string;
+    'Kriterium3'?: string;
+    'Kriterium4'?: string;
+    'Ueberschrift'?: string;
+    'regler'?: string;
+    'text'?: any;
     'value'?: number;
   }
 
@@ -142,6 +186,8 @@ declare global {
     'AppRoot': Components.AppRoot;
     'AufklappButtonKurz': Components.AufklappButtonKurz;
     'AufklappButton': Components.AufklappButton;
+    'AuswertungButtonKurz': Components.AuswertungButtonKurz;
+    'AuswertungButton': Components.AuswertungButton;
     'BewertungEnd': Components.BewertungEnd;
     'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
@@ -163,6 +209,8 @@ declare global {
     'app-root': Components.AppRootAttributes;
     'aufklapp-button-kurz': Components.AufklappButtonKurzAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
+    'auswertung-button-kurz': Components.AuswertungButtonKurzAttributes;
+    'auswertung-button': Components.AuswertungButtonAttributes;
     'bewertung-end': Components.BewertungEndAttributes;
     'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
@@ -222,6 +270,18 @@ declare global {
   var HTMLAufklappButtonElement: {
     prototype: HTMLAufklappButtonElement;
     new (): HTMLAufklappButtonElement;
+  };
+
+  interface HTMLAuswertungButtonKurzElement extends Components.AuswertungButtonKurz, HTMLStencilElement {}
+  var HTMLAuswertungButtonKurzElement: {
+    prototype: HTMLAuswertungButtonKurzElement;
+    new (): HTMLAuswertungButtonKurzElement;
+  };
+
+  interface HTMLAuswertungButtonElement extends Components.AuswertungButton, HTMLStencilElement {}
+  var HTMLAuswertungButtonElement: {
+    prototype: HTMLAuswertungButtonElement;
+    new (): HTMLAuswertungButtonElement;
   };
 
   interface HTMLBewertungEndElement extends Components.BewertungEnd, HTMLStencilElement {}
@@ -293,6 +353,8 @@ declare global {
     'app-root': HTMLAppRootElement
     'aufklapp-button-kurz': HTMLAufklappButtonKurzElement
     'aufklapp-button': HTMLAufklappButtonElement
+    'auswertung-button-kurz': HTMLAuswertungButtonKurzElement
+    'auswertung-button': HTMLAuswertungButtonElement
     'bewertung-end': HTMLBewertungEndElement
     'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
@@ -314,6 +376,8 @@ declare global {
     'app-root': HTMLAppRootElement;
     'aufklapp-button-kurz': HTMLAufklappButtonKurzElement;
     'aufklapp-button': HTMLAufklappButtonElement;
+    'auswertung-button-kurz': HTMLAuswertungButtonKurzElement;
+    'auswertung-button': HTMLAuswertungButtonElement;
     'bewertung-end': HTMLBewertungEndElement;
     'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;

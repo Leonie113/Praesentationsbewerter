@@ -1,16 +1,13 @@
 .app-bewertung{
-    background: #E1E1E1;
+    
     align-items: center;
     text-align: center;
-}
-
-.title{
-    color: #8D0011;
-    font-size: 20pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .aufklappbuttons{
     text-align: center;
     align-items: center;
 }
-

@@ -1,11 +1,12 @@
 import { Component, Prop } from '@stencil/core';
 
+
 @Component({
   tag: 'app-auswertung',
   styleUrl: 'app-auswertung.css',
   shadow: true
 })
-export class AppHome {
+export class AppHome{
   @Prop() test: string;
   
   handleClick(event: UIEvent) {
@@ -18,13 +19,39 @@ export class AppHome {
   render() {
     return (
       <div class='app-home'>
-        <h2>Auswertung</h2>
+        <headline-mittig text="Auswertung &amp; Anmerkungen"></headline-mittig>
         <div class="flex-container">
-          <div id="links" class="flex-item">
-            <aufklapp-button-kurz>hallo</aufklapp-button-kurz>
-            <aufklapp-button-kurz>hallo</aufklapp-button-kurz>
-            <aufklapp-button-kurz>hallo</aufklapp-button-kurz>
-            <aufklapp-button-kurz>hallo</aufklapp-button-kurz>
+          <div id="linkeSeite" class="flex-item">
+            <auswertung-button class="aufklappbuttons"
+              Ueberschrift="Thematische Ausarbeitung" 
+              Kriterium1="Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)"
+              Kriterium2="Nutzung von Fachwissen"
+              Kriterium3="Struktur"
+              Kriterium4="Dokumentation"
+          ></auswertung-button >
+
+            <auswertung-button-kurz class="aufklappbuttons"
+              Ueberschrift="Produkt"
+              Kriterium1="Umsetzbarkeit des Ergebnisses"
+              Kriterium2="Kreativität"
+            ></auswertung-button-kurz>
+
+            <auswertung-button class="aufklappbuttons" 
+              Ueberschrift="Herangehensweise"
+              Kriterium1="Methodik"
+              Kriterium2="Selbstständigkeit, Eigeninitiative"
+              Kriterium3="Kommunikation"
+              Kriterium4="Dokumentation"
+            ></auswertung-button>
+
+            <auswertung-button class="aufklappbuttons-last" 
+              Ueberschrift="Präsentation"
+              Kriterium1="Rhetorik"
+              Kriterium2="Ansprache"
+              Kriterium3="Medien"
+              Kriterium4="Diskussion"
+            ></auswertung-button>
+
           </div>
           <div id="rechts" class="flex-item">
             <anmerkungs-feld name="Anmerkungen"></anmerkungs-feld>
@@ -32,20 +59,16 @@ export class AppHome {
             <anmerkungs-feld name="Verbesserungsvorschläge"></anmerkungs-feld>
           </div>
         </div>
-        <button id="abschließen"  onClick={ (event: UIEvent) => this.handleClick(event)}>Bewertung speichern</button>
-        <export-button></export-button>
-        <bewertung-end></bewertung-end>
-        
-        <stencil-route-link url='/bewertung'>
-          <button>
-            zurück
-          </button>
-        </stencil-route-link>
-        <stencil-route-link url='/'>
-          <button>
-            home
-          </button>
-        </stencil-route-link>
+        <div>
+          <export-button></export-button>
+          <bewertung-end></bewertung-end>
+        </div>
+        <div>
+          <stencil-route-link url="/bewertung">
+          <zurueck-button></zurueck-button>
+          </stencil-route-link>
+        </div>
+
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { Component, Prop, State,h } from '@stencil/core';
+import { Component, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-button-kurz',
@@ -6,13 +6,19 @@ import { Component, Prop, State,h } from '@stencil/core';
   shadow: true
 })
 export class AufklappButton {
-  @Prop() test: string;
+  @Prop() Kriterium1: string;
+  @Prop() Kriterium2: string;
 
+  @Prop() Ueberschrift: string;
+  @Prop() regler: string;
+  @Prop() value: number;
+  
   @State() visible = false;
 
   toggleVisibility = () => {
     this.visible = !this.visible;
   }
+  
   render() {
     return (
       <div id="container-button">
@@ -23,7 +29,7 @@ export class AufklappButton {
             changeradius: this.visible // <-- using an object to toggle the class here
           }}
           type="button"
-          value="Platzhalter für Kategorie"
+          value={this.Ueberschrift}
         />
         <div
           class={{
@@ -34,25 +40,36 @@ export class AufklappButton {
           <table class="table">
             <tbody>
               <tr>
-                <td></td>
+              <td></td>
                 <td>Zielerreichung in %</td>
               </tr>
               <tr>
-                <td>Kriterium 1</td>
-                <td>Regler</td>
+              <td>{this.Kriterium1}</td>
+              <td>        
+              <div>
+                    <h4 class="regler-wertung">Erreichte Punkte: {this.regler} <span>0</span></h4>
+                    <div class="regler-container">
+                    <h4>0</h4>
+                    <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+                    <h4>10</h4>
+                    </div>
+                    </div>
+              </td>
               </tr>
               <tr>
-                <td>Kriterium 2</td>
-                <td>Regler</td>
+                <td>{this.Kriterium2}</td>
+                <td>
+                <div>
+                <h4 class="regler-wertung">Erreichte Punkte: {this.regler} <span>0</span></h4>
+                    <div class="regler-container">
+                    <h4>0</h4>
+                    <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+                    <h4>10</h4>
+                    </div>
+                    </div>
+                </td>
               </tr>     
-              <tr>
-                <td>Kriterium 3</td>
-                <td>Regler</td>
-              </tr>
-              <tr>
-                <td>Kriterium 4</td>
-                <td>Regler</td>
-              </tr>                      
+                      
             </tbody>
           </table>
         </div>

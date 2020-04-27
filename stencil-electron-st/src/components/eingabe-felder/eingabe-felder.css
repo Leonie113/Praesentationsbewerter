@@ -1,6 +1,9 @@
-.login-container{
+.login-form {
+   
+   
     width: 40em;
     margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .meldung{
@@ -21,9 +24,10 @@ input{
 input[type=text] {
     background-color: #474747;
     color: #fff;
-    width: 40em;
+    
     height: 2.5em;
     margin-bottom: 1em;
+    width: 100%;
   }
 
   input[type=text]:focus, select {
@@ -42,7 +46,7 @@ input[type=reset] {
     color: #fff;
     border: none;
     border-radius: 50em;
-    width: 5.5%;
+    width: 4.5%;
     padding: 1%;
 }
 
@@ -55,14 +59,14 @@ input[type=reset]:focus {
 }
 
 #submit{
-    border-radius: 50em;
-    font-size: 1em;
+    border-radius: 5em;
+    font-size: 1.0em;
     background-color: #000;
     font-weight: 900;
     color: #fff;
-    padding: 1.5%;
-    width: 35%;
-    margin-left: 59%;
+    padding: 1.0%;
+    width: 30%;
+    margin-left: 60%;
 }
 
 #submit:focus{
@@ -70,3 +74,4 @@ input[type=reset]:focus {
     background-color: #76b238;
     outline: none;
 }
+

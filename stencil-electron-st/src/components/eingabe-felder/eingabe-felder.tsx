@@ -1,4 +1,4 @@
-import { Component, Prop, Event, EventEmitter, Listen,  Element, h } from '@stencil/core';
+import { Component, Prop, Event, EventEmitter, Listen,  Element } from '@stencil/core';
 
 @Component({
   tag: 'eingabe-felder',
@@ -141,7 +141,7 @@ export class EingabeFelder{
                 </label>
                 <div class="buttons">
                 <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>
-                <button id="submit" type="button"  onClick={() => { this.login(); }}>Speichern und Fortfahren</button>
+                <button id="submit" type="button"  onClick={() => { this.login(); }}>Speichern</button>
                 </div>
           </form>
         </div>

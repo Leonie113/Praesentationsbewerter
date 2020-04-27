@@ -1,4 +1,4 @@
-import { Component, Prop, h} from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
 import { MatchResults } from '@stencil/router';
 
 @Component({
@@ -14,27 +14,17 @@ export class AppProfile {
 
       return (
         <div class="app-profile">
-
-          <p>
-            Hello! My name is 
-          </p>
-          <stencil-route-link url="/profile/stencil">
+          <headline-mittig text="Bitte geben Sie die entsprechenden Daten ein:"></headline-mittig>
+          <eingabe-felder></eingabe-felder>
+          
+          <stencil-route-link url="/">
           <zurueck-button></zurueck-button>
           </stencil-route-link>
-          <formular-larissa></formular-larissa>
+          
           <stencil-route-link url='/bewertung'>
           <weiter-button></weiter-button>
           </stencil-route-link> 
-          <stencil-route-link url='/'>
-          <button>
-            home
-          </button>
-        </stencil-route-link>
-        <stencil-route-link url='/bewertung'>
-          <button>
-            next
-          </button>
-        </stencil-route-link>
+          
 
         </div>
       );

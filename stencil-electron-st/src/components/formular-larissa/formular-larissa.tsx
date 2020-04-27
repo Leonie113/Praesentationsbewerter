@@ -1,4 +1,4 @@
-import { Component, Prop, Event, EventEmitter, Listen, Method, h } from '@stencil/core';
+import { Component, Prop, Event, EventEmitter, Listen, Method } from '@stencil/core';
 
 @Component({
   tag: 'formular-larissa',

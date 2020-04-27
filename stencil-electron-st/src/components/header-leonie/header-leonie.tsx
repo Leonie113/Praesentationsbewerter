@@ -1,4 +1,4 @@
-import { Component, h} from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
     tag: 'header-leonie',
@@ -8,7 +8,7 @@ import { Component, h} from '@stencil/core';
 export class HeaderLeonie {
     render() {
         return <div class="header">
-            <stencil-route-link url="/home">
+            <stencil-route-link url="/">
             <img id="presentation" src="/assets/presentation.svg"></img>
             </stencil-route-link>
             <img id="dhbw" src="/assets/dhbw.jpg"></img>

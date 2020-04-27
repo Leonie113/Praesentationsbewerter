@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component } from '@stencil/core';
 
 
 @Component({
@@ -10,7 +10,7 @@ export class AppRoot {
 
   render() {
     return (
-      <div>
+      <div class="body">
         <header>
         </header>
 

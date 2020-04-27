@@ -1,11 +1,13 @@
 import { Component, Prop, State } from '@stencil/core';
 
+
+
 @Component({
-  tag: 'aufklapp-button',
-  styleUrl: 'aufklapp-button.css',
+  tag: 'auswertung-button',
+  styleUrl: 'auswertung-button.css',
   shadow: true
 })
-export class AufklappButton {
+export class AuswertungsButton{
   @Prop() Kriterium1: string;
   @Prop() Kriterium2: string;
   @Prop() Kriterium3: string;
@@ -13,6 +15,7 @@ export class AufklappButton {
   @Prop() Ueberschrift: string;
   @Prop() regler: string;
   @Prop() value: number;
+  @Prop() text; 
   
   @State() visible = false;
 
@@ -26,7 +29,7 @@ export class AufklappButton {
         <input
           onClick={this.toggleVisibility} // <-- attaching the listener here
           class={{
-            'aufklapp-button': true,
+            'auswertung-button': true,
             changeradius: this.visible // <-- using an object to toggle the class here
           }}
           type="button"
@@ -47,14 +50,7 @@ export class AufklappButton {
               <tr>
               <td>{this.Kriterium1}</td>
               <td>        
-              <div>
-                    <h4 class="regler-wertung">Erreichte Punkte: {this.regler} <span>0</span></h4>
-                    <div class="regler-container">
-                    <h4>0</h4>
-                    <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
-                    <h4>10</h4>
-                    </div>
-                    </div>
+                {this.text}
               </td>
               </tr>
               <tr>

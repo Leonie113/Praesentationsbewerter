@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component } from '@stencil/core';
 //import { AufklappButton } from '../aufklapp-button/aufklapp-button';
 
 @Component({
@@ -11,36 +11,9 @@ export class AppHome {
 
   render() {
     return (
-      <div class='app-home'>
-        <p>
-          Bewertung
-        </p>
-        <stencil-route-link url="/auswertung">
-        <weiter-button></weiter-button>
-        </stencil-route-link>
-        <stencil-route-link url="/profile/stencil">
-          <zurueck-button></zurueck-button>
-        </stencil-route-link>
-        <aufklapp-button></aufklapp-button>
-          <regler-wertung></regler-wertung>
-
- 
-
-        <stencil-route-link url='/profile/stencil'>
-          <button>
-            zurück
-          </button>
-        </stencil-route-link>
-        <stencil-route-link url='/auswertung'>
-          <button>
-            weiter
-          </button>
-        </stencil-route-link>
       <div class='app-bewertung'>
-        <header-leonie class="header-leonie"></header-leonie>
-        <h2 class='title'>
-          Bewertung - Projektvortrag
-        </h2>
+        
+        <headline-mittig text="Bewertung"></headline-mittig>
         <aufklapp-button class="aufklappbuttons"
           Ueberschrift="Thematische Ausarbeitung" 
           Kriterium1="Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)"
@@ -53,9 +26,7 @@ export class AppHome {
         Ueberschrift="Produkt"
         Kriterium1="Umsetzbarkeit des Ergebnisses"
         Kriterium2="Kreativität"
-        >
-
-        </aufklapp-button-kurz>
+        ></aufklapp-button-kurz>
 
         <aufklapp-button class="aufklappbuttons" 
           Ueberschrift="Herangehensweise"
@@ -72,7 +43,14 @@ export class AppHome {
           Kriterium3="Medien"
           Kriterium4="Diskussion"
         ></aufklapp-button>
-        <footer-leonie class="footer-leonie"></footer-leonie>
+        
+        <stencil-route-link url="/profile/stencil">
+          <zurueck-button></zurueck-button>
+          </stencil-route-link>
+          
+          <stencil-route-link url='/auswertung'>
+          <weiter-button></weiter-button>
+          </stencil-route-link> 
       </div>
     );
   }

@@ -1,3 +1,7 @@
+.app-home {
+  padding-top: 20px;
+}
+
 .flex-container {
     width: 100%;
     justify-content: center; /* mittig */
@@ -8,13 +12,13 @@
     justify-content: flex-evenly;
     
   }
-  #links {
-    border: 5px white dotted;
+  #linkeSeite {
+    
     margin: 0px 10px;   
     width: 100%;
   }
   #rechts {
-    border: 5px white dotted;
+    
     margin: 0px 10px;
     width: 100%;
   }
@@ -35,6 +39,10 @@
     background: black;
     color: white;
     font-size: 1.5em;
-
-
   }
+img {
+  margin-left: 48%;
+  margin-bottom: 10px;
+}
+
+  

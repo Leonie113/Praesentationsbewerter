@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
@@ -10,17 +10,13 @@ export class AppHome {
   render() {
     return (
       <div class='app-home'>
-        <p>
-          Herzlich Willkommen beim Präsentationsbewerter
-        </p>
-        <stencil-route-link url="/profile/stencil">
-        <weiter-button></weiter-button>
-        </stencil-route-link>
-        <stencil-route-link url='/profile/stencil'>
-          <button>
-            Starten
-          </button>
-        </stencil-route-link>
+        <headline-mittig text="Herzlich Willkommen beim Präsentationsbewerter"></headline-mittig>
+        <img id="presentation" src="/assets/presentation.svg"></img>
+        <div >
+          <stencil-route-link url="/profile/stencil">
+          <weiter-button></weiter-button>
+          </stencil-route-link>
+        </div>
       </div>
     );
   }

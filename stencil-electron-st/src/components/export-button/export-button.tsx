@@ -1,4 +1,4 @@
-import { Component, Prop, Listen, h} from '@stencil/core';
+import { Component, Prop, Listen } from '@stencil/core';
 
 @Component({
   tag: 'export-button',
@@ -20,9 +20,8 @@ export class ExportierButton {
   render() {
     return (
           
-            
             <button class="button-text" onClick={this.handleClick}>{this.button}</button>
-       
+
     );
   }
 }
