@@ -1,17 +1,17 @@
 import { Component } from '@stencil/core';
 
 @Component({
-    tag: 'footer-leonie',
-    styleUrl: 'footer-Leonie.css'
+    tag: 'footer-profile',
+    styleUrl: 'footer-profile.css'
 })
 
-export class FooterLeonie {
+export class FooterProfile {
     render() {
         return <div class="footer">
             <ul id="footer-liste">
-                <li id="bold">Home</li>
+                <li>Home</li>
                 <li><img src="/assets/weiter.png"></img></li>
-                <li>Voreinstellungen</li>
+                <li id="bold">Voreinstellungen</li>
                 <li><img src="/assets/weiter.png"></img></li>
                 <li>Bewertung</li>
                 <li><img src="/assets/weiter.png"></img></li>

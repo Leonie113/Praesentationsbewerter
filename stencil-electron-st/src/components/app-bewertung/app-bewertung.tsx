@@ -51,6 +51,8 @@ export class AppHome {
           <stencil-route-link url='/auswertung'>
           <weiter-button></weiter-button>
           </stencil-route-link> 
+
+          <footer-bewertung></footer-bewertung>
       </div>
     );
   }
