@@ -1,0 +1,16 @@
+.app-bewertung{
+    background: #E1E1E1;
+    align-items: center;
+    text-align: center;
+}
+
+.title{
+    color: #8D0011;
+    font-size: 20pt;
+}
+
+.aufklappbuttons{
+    text-align: center;
+    align-items: center;
+}
+

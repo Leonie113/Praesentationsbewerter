@@ -1,6 +1,6 @@
 
 
-.aufklapp-button{
+.aufklapp-button-kurz{
     font-family: 'Segoe UI', sans-serif;
     font-size: 18pt;
     text-align: center;
@@ -64,6 +64,7 @@
 .shown {
     visibility: visible;
     display: block;
+    display: initial;
 }
 
 .changeradius {
