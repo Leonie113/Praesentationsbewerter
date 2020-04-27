@@ -54,10 +54,22 @@ export namespace Components {
   }
 
   interface AufklappButton {
-    'test': string;
+    'Kriterium1': string;
+    'Kriterium2': string;
+    'Kriterium3': string;
+    'Kriterium4': string;
+    'Ueberschrift': string;
+    'regler': string;
+    'value': number;
   }
   interface AufklappButtonAttributes extends StencilHTMLAttributes {
-    'test'?: string;
+    'Kriterium1'?: string;
+    'Kriterium2'?: string;
+    'Kriterium3'?: string;
+    'Kriterium4'?: string;
+    'Ueberschrift'?: string;
+    'regler'?: string;
+    'value'?: number;
   }
 
   interface EingabeFelder {
