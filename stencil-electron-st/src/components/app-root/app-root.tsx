@@ -24,8 +24,6 @@ export class AppRoot {
             </stencil-route-switch>
           </stencil-router>
         </main>
-        <footer> 
-        </footer>
       </div>
     );
   }

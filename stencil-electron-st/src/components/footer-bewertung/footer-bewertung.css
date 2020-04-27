@@ -1,14 +1,14 @@
-footer-leonie{
+footer-bewertung{
     padding-top: 80%;
     font-family: Segoe UI;
 }
 @media screen and (max-width: 750px) {
-    .footer-leonie{
+    .footer-bewertung{
         width: 100%;
     }
 }
 @media screen and (max-width: 2000px) {
-        .footer-leonie{
+        .footer-bewertung{
             width: 100%;
         }
 }

@@ -25,7 +25,7 @@ export class AppProfile {
           <weiter-button></weiter-button>
           </stencil-route-link> 
           
-
+          <footer-profile></footer-profile>
         </div>
       );
     }
