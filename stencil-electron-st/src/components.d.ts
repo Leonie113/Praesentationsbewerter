@@ -80,6 +80,36 @@ export namespace Components {
     'value'?: number;
   }
 
+  interface AufklappInput {
+    'Kriterium1': string;
+    'Kriterium2': string;
+    'Kriterium3': string;
+    'Kriterium4': string;
+    'Ueberschrift': string;
+    'inputs': any;
+    'matrikelnummerdrei': any;
+    'matrikelnummereins': any;
+    'matrikelnummervier': any;
+    'matrikelnummerzwei': any;
+    'regler': string;
+    'value': number;
+  }
+  interface AufklappInputAttributes extends StencilHTMLAttributes {
+    'Kriterium1'?: string;
+    'Kriterium2'?: string;
+    'Kriterium3'?: string;
+    'Kriterium4'?: string;
+    'Ueberschrift'?: string;
+    'inputs'?: any;
+    'matrikelnummerdrei'?: any;
+    'matrikelnummereins'?: any;
+    'matrikelnummervier'?: any;
+    'matrikelnummerzwei'?: any;
+    'onLoginShouldOccur'?: (event: CustomEvent) => void;
+    'regler'?: string;
+    'value'?: number;
+  }
+
   interface AuswertungButtonKurz {
     'Kriterium1': string;
     'Kriterium2': string;
@@ -116,6 +146,35 @@ export namespace Components {
     'value'?: number;
   }
 
+  interface AuswertungDaten {
+    'Ueberschrift': string;
+    'dozent': string;
+    'gruppe': string;
+    'leistung': string;
+    'matrikelnummer1': string;
+    'matrikelnummer2': string;
+    'matrikelnummer3': string;
+    'matrikelnummer4': string;
+    'projekt': string;
+    'regler': string;
+    'text': any;
+    'value': number;
+  }
+  interface AuswertungDatenAttributes extends StencilHTMLAttributes {
+    'Ueberschrift'?: string;
+    'dozent'?: string;
+    'gruppe'?: string;
+    'leistung'?: string;
+    'matrikelnummer1'?: string;
+    'matrikelnummer2'?: string;
+    'matrikelnummer3'?: string;
+    'matrikelnummer4'?: string;
+    'projekt'?: string;
+    'regler'?: string;
+    'text'?: any;
+    'value'?: number;
+  }
+
   interface BewertungEnd {
     'button': string;
   }
@@ -124,11 +183,37 @@ export namespace Components {
   }
 
   interface EingabeFelder {
+    'dozent': string;
+    'dozentmeldung': any;
     'forgotPasswordUrl': string;
+    'matrikelnummerdrei': string;
+    'matrikelnummereins': string;
+    'matrikelnummermeldung': any;
+    'matrikelnummervier': string;
+    'matrikelnummerzwei': string;
+    'name': string;
+    'namemeldung': any;
+    'pruefung': string;
+    'pruefungmeldung': any;
+    'veranstaltung': string;
+    'veranstaltungmeldung': any;
   }
   interface EingabeFelderAttributes extends StencilHTMLAttributes {
+    'dozent'?: string;
+    'dozentmeldung'?: any;
     'forgotPasswordUrl'?: string;
+    'matrikelnummerdrei'?: string;
+    'matrikelnummereins'?: string;
+    'matrikelnummermeldung'?: any;
+    'matrikelnummervier'?: string;
+    'matrikelnummerzwei'?: string;
+    'name'?: string;
+    'namemeldung'?: any;
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
+    'pruefung'?: string;
+    'pruefungmeldung'?: any;
+    'veranstaltung'?: string;
+    'veranstaltungmeldung'?: any;
   }
 
   interface ExportButton {
@@ -138,8 +223,17 @@ export namespace Components {
     'button'?: string;
   }
 
-  interface FooterLeonie {}
-  interface FooterLeonieAttributes extends StencilHTMLAttributes {}
+  interface FooterAuswertung {}
+  interface FooterAuswertungAttributes extends StencilHTMLAttributes {}
+
+  interface FooterBewertung {}
+  interface FooterBewertungAttributes extends StencilHTMLAttributes {}
+
+  interface FooterHome {}
+  interface FooterHomeAttributes extends StencilHTMLAttributes {}
+
+  interface FooterProfile {}
+  interface FooterProfileAttributes extends StencilHTMLAttributes {}
 
   interface FormularLarissa {
     'ueberpruefeEingabe': () => Promise<void>;
@@ -158,6 +252,25 @@ export namespace Components {
   }
   interface HeadlineMittigAttributes extends StencilHTMLAttributes {
     'text'?: string;
+  }
+
+  interface RadioInput {
+    'Kriterium1': string;
+    'Kriterium2': string;
+    'Kriterium3': string;
+    'Kriterium4': string;
+    'Ueberschrift': string;
+    'regler': string;
+    'value': number;
+  }
+  interface RadioInputAttributes extends StencilHTMLAttributes {
+    'Kriterium1'?: string;
+    'Kriterium2'?: string;
+    'Kriterium3'?: string;
+    'Kriterium4'?: string;
+    'Ueberschrift'?: string;
+    'regler'?: string;
+    'value'?: number;
   }
 
   interface ReglerWertung {
@@ -186,15 +299,21 @@ declare global {
     'AppRoot': Components.AppRoot;
     'AufklappButtonKurz': Components.AufklappButtonKurz;
     'AufklappButton': Components.AufklappButton;
+    'AufklappInput': Components.AufklappInput;
     'AuswertungButtonKurz': Components.AuswertungButtonKurz;
     'AuswertungButton': Components.AuswertungButton;
+    'AuswertungDaten': Components.AuswertungDaten;
     'BewertungEnd': Components.BewertungEnd;
     'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
-    'FooterLeonie': Components.FooterLeonie;
+    'FooterAuswertung': Components.FooterAuswertung;
+    'FooterBewertung': Components.FooterBewertung;
+    'FooterHome': Components.FooterHome;
+    'FooterProfile': Components.FooterProfile;
     'FormularLarissa': Components.FormularLarissa;
     'HeaderLeonie': Components.HeaderLeonie;
     'HeadlineMittig': Components.HeadlineMittig;
+    'RadioInput': Components.RadioInput;
     'ReglerWertung': Components.ReglerWertung;
     'WeiterButton': Components.WeiterButton;
     'ZurueckButton': Components.ZurueckButton;
@@ -209,15 +328,21 @@ declare global {
     'app-root': Components.AppRootAttributes;
     'aufklapp-button-kurz': Components.AufklappButtonKurzAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
+    'aufklapp-input': Components.AufklappInputAttributes;
     'auswertung-button-kurz': Components.AuswertungButtonKurzAttributes;
     'auswertung-button': Components.AuswertungButtonAttributes;
+    'auswertung-daten': Components.AuswertungDatenAttributes;
     'bewertung-end': Components.BewertungEndAttributes;
     'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
-    'footer-leonie': Components.FooterLeonieAttributes;
+    'footer-auswertung': Components.FooterAuswertungAttributes;
+    'footer-bewertung': Components.FooterBewertungAttributes;
+    'footer-home': Components.FooterHomeAttributes;
+    'footer-profile': Components.FooterProfileAttributes;
     'formular-larissa': Components.FormularLarissaAttributes;
     'header-leonie': Components.HeaderLeonieAttributes;
     'headline-mittig': Components.HeadlineMittigAttributes;
+    'radio-input': Components.RadioInputAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
     'weiter-button': Components.WeiterButtonAttributes;
     'zurueck-button': Components.ZurueckButtonAttributes;
@@ -272,6 +397,12 @@ declare global {
     new (): HTMLAufklappButtonElement;
   };
 
+  interface HTMLAufklappInputElement extends Components.AufklappInput, HTMLStencilElement {}
+  var HTMLAufklappInputElement: {
+    prototype: HTMLAufklappInputElement;
+    new (): HTMLAufklappInputElement;
+  };
+
   interface HTMLAuswertungButtonKurzElement extends Components.AuswertungButtonKurz, HTMLStencilElement {}
   var HTMLAuswertungButtonKurzElement: {
     prototype: HTMLAuswertungButtonKurzElement;
@@ -282,6 +413,12 @@ declare global {
   var HTMLAuswertungButtonElement: {
     prototype: HTMLAuswertungButtonElement;
     new (): HTMLAuswertungButtonElement;
+  };
+
+  interface HTMLAuswertungDatenElement extends Components.AuswertungDaten, HTMLStencilElement {}
+  var HTMLAuswertungDatenElement: {
+    prototype: HTMLAuswertungDatenElement;
+    new (): HTMLAuswertungDatenElement;
   };
 
   interface HTMLBewertungEndElement extends Components.BewertungEnd, HTMLStencilElement {}
@@ -302,10 +439,28 @@ declare global {
     new (): HTMLExportButtonElement;
   };
 
-  interface HTMLFooterLeonieElement extends Components.FooterLeonie, HTMLStencilElement {}
-  var HTMLFooterLeonieElement: {
-    prototype: HTMLFooterLeonieElement;
-    new (): HTMLFooterLeonieElement;
+  interface HTMLFooterAuswertungElement extends Components.FooterAuswertung, HTMLStencilElement {}
+  var HTMLFooterAuswertungElement: {
+    prototype: HTMLFooterAuswertungElement;
+    new (): HTMLFooterAuswertungElement;
+  };
+
+  interface HTMLFooterBewertungElement extends Components.FooterBewertung, HTMLStencilElement {}
+  var HTMLFooterBewertungElement: {
+    prototype: HTMLFooterBewertungElement;
+    new (): HTMLFooterBewertungElement;
+  };
+
+  interface HTMLFooterHomeElement extends Components.FooterHome, HTMLStencilElement {}
+  var HTMLFooterHomeElement: {
+    prototype: HTMLFooterHomeElement;
+    new (): HTMLFooterHomeElement;
+  };
+
+  interface HTMLFooterProfileElement extends Components.FooterProfile, HTMLStencilElement {}
+  var HTMLFooterProfileElement: {
+    prototype: HTMLFooterProfileElement;
+    new (): HTMLFooterProfileElement;
   };
 
   interface HTMLFormularLarissaElement extends Components.FormularLarissa, HTMLStencilElement {}
@@ -324,6 +479,12 @@ declare global {
   var HTMLHeadlineMittigElement: {
     prototype: HTMLHeadlineMittigElement;
     new (): HTMLHeadlineMittigElement;
+  };
+
+  interface HTMLRadioInputElement extends Components.RadioInput, HTMLStencilElement {}
+  var HTMLRadioInputElement: {
+    prototype: HTMLRadioInputElement;
+    new (): HTMLRadioInputElement;
   };
 
   interface HTMLReglerWertungElement extends Components.ReglerWertung, HTMLStencilElement {}
@@ -353,15 +514,21 @@ declare global {
     'app-root': HTMLAppRootElement
     'aufklapp-button-kurz': HTMLAufklappButtonKurzElement
     'aufklapp-button': HTMLAufklappButtonElement
+    'aufklapp-input': HTMLAufklappInputElement
     'auswertung-button-kurz': HTMLAuswertungButtonKurzElement
     'auswertung-button': HTMLAuswertungButtonElement
+    'auswertung-daten': HTMLAuswertungDatenElement
     'bewertung-end': HTMLBewertungEndElement
     'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
-    'footer-leonie': HTMLFooterLeonieElement
+    'footer-auswertung': HTMLFooterAuswertungElement
+    'footer-bewertung': HTMLFooterBewertungElement
+    'footer-home': HTMLFooterHomeElement
+    'footer-profile': HTMLFooterProfileElement
     'formular-larissa': HTMLFormularLarissaElement
     'header-leonie': HTMLHeaderLeonieElement
     'headline-mittig': HTMLHeadlineMittigElement
+    'radio-input': HTMLRadioInputElement
     'regler-wertung': HTMLReglerWertungElement
     'weiter-button': HTMLWeiterButtonElement
     'zurueck-button': HTMLZurueckButtonElement
@@ -376,15 +543,21 @@ declare global {
     'app-root': HTMLAppRootElement;
     'aufklapp-button-kurz': HTMLAufklappButtonKurzElement;
     'aufklapp-button': HTMLAufklappButtonElement;
+    'aufklapp-input': HTMLAufklappInputElement;
     'auswertung-button-kurz': HTMLAuswertungButtonKurzElement;
     'auswertung-button': HTMLAuswertungButtonElement;
+    'auswertung-daten': HTMLAuswertungDatenElement;
     'bewertung-end': HTMLBewertungEndElement;
     'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;
-    'footer-leonie': HTMLFooterLeonieElement;
+    'footer-auswertung': HTMLFooterAuswertungElement;
+    'footer-bewertung': HTMLFooterBewertungElement;
+    'footer-home': HTMLFooterHomeElement;
+    'footer-profile': HTMLFooterProfileElement;
     'formular-larissa': HTMLFormularLarissaElement;
     'header-leonie': HTMLHeaderLeonieElement;
     'headline-mittig': HTMLHeadlineMittigElement;
+    'radio-input': HTMLRadioInputElement;
     'regler-wertung': HTMLReglerWertungElement;
     'weiter-button': HTMLWeiterButtonElement;
     'zurueck-button': HTMLZurueckButtonElement;

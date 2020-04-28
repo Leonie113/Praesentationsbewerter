@@ -1,4 +1,4 @@
-import { Component, Prop, Element, h } from '@stencil/core';
+import { Component, Prop, } from '@stencil/core';
 
 
 @Component({
@@ -13,17 +13,18 @@ export class AppHome{
     alert("Deine Bewertung wird nun gespeichert");
     console.log(event);
   }
-  todoListElement: HTMLEingabeFelderElement = document.querySelector('eingabe-felder');
+  //todoListElement: HTMLEingabeFelderElement = document.querySelector('eingabe-felder');
   render() {
     return (
       <div class='app-home'>
-                <auswertung-daten
-        dozent={this.todoListElement.dozent}
-        gruppe={this.todoListElement.name}
-        ></auswertung-daten>
+                
         <headline-mittig text="Auswertung &amp; Anmerkungen"></headline-mittig>
         <div class="flex-container">
           <div id="linkeSeite" class="flex-item">
+            {/* <auswertung-daten
+        dozent={this.todoListElement.dozent}
+        gruppe={this.todoListElement.name}
+        ></auswertung-daten> */}
             <auswertung-button class="aufklappbuttons"
               Ueberschrift="Thematische Ausarbeitung" 
               Kriterium1="Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)"

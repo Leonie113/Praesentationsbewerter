@@ -1,4 +1,4 @@
-import { Component, Prop, Event, EventEmitter,  Element, h } from '@stencil/core';
+import { Component, Prop, Event, EventEmitter,  Element } from '@stencil/core';
 
 @Component({
   tag: 'eingabe-felder',
@@ -9,18 +9,18 @@ export class EingabeFelder{
   @Event() loginShouldOccur: EventEmitter;
   @Element() host: HTMLElement;
   @Prop() public dozent : string;
-  @Prop() dozentmeldung;
+  @Prop() dozentmeldung: any;
   @Prop() public name : string;
-  @Prop() namemeldung;
-  @Prop() matrikelnummereins;
-  @Prop() matrikelnummerzwei;
-  @Prop() matrikelnummerdrei;
-  @Prop() matrikelnummervier;
-  @Prop() matrikelnummermeldung;
+  @Prop() namemeldung: any;
+  @Prop() matrikelnummereins: string;
+  @Prop() matrikelnummerzwei: string;
+  @Prop() matrikelnummerdrei: string;
+  @Prop() matrikelnummervier: string;
+  @Prop() matrikelnummermeldung: any;
   @Prop() public veranstaltung : string;
-  @Prop() veranstaltungmeldung;
+  @Prop() veranstaltungmeldung:any;
   @Prop() public pruefung : string;
-  @Prop() pruefungmeldung;
+  @Prop() pruefungmeldung: any;
 
 
     login() {
