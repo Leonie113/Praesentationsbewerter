@@ -198,10 +198,10 @@ export namespace Components {
   }
 
   interface ReglerWertung {
-    'regler': any;
+    'regler': string;
   }
   interface ReglerWertungAttributes extends StencilHTMLAttributes {
-    'regler'?: any;
+    'regler'?: string;
   }
 
   interface WeiterButton {}

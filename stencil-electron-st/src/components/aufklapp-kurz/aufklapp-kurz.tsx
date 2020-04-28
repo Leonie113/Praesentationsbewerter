@@ -47,7 +47,7 @@ export class AufklappButton {
               <tr>
                 <td>{this.Kriterium1}</td>
                 <td>        
-                <regler-wertung regler="reglereins"></regler-wertung> 
+                <regler-wertung regler="reglereins"></regler-wertung>  
                 </td>
               </tr>
               <tr>

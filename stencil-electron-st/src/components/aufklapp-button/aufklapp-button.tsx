@@ -18,23 +18,6 @@ export class AufklappButton {
   
   @Element() host: HTMLElement;
 
-  @Listen ('change', {capture: true})
-      handleChangeEvent(){
-        let inputs = this.host.querySelector('input');
-        
-        this.value1 = inputs[1].value;
-        this.value2 = inputs[2].value;
-        this.value3 = inputs[3].value;
-        this.value4 = inputs[4].value;
-      }
-
-  // @State() inputs = this.host.querySelectorAll('input');
-  
-  @State() value1: any;
-  @State() value2: any;
-  @State() value3: any;
-  @State() value4: any; 
-
   toggleVisibility = () => {
     this.visible = !this.visible;
   }
