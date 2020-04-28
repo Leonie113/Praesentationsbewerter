@@ -1,30 +1,32 @@
-import { Component, Prop, Event, EventEmitter,  Element } from '@stencil/core';
+import { Component, State, Event, EventEmitter,  Element } from '@stencil/core';
 
 @Component({
   tag: 'eingabe-felder',
   styleUrl: 'eingabe-felder.css',
 })
 export class EingabeFelder{
-  @Prop() forgotPasswordUrl: string ="hallo";
+  @State() forgotPasswordUrl: string ="hallo";
   @Event() loginShouldOccur: EventEmitter;
   @Element() host: HTMLElement;
-  @Prop() public dozent : string;
-  @Prop() dozentmeldung: any;
-  @Prop() public name : string;
-  @Prop() namemeldung: any;
-  @Prop() matrikelnummereins: string;
-  @Prop() matrikelnummerzwei: string;
-  @Prop() matrikelnummerdrei: string;
-  @Prop() matrikelnummervier: string;
-  @Prop() matrikelnummermeldung: any;
-  @Prop() public veranstaltung : string;
-  @Prop() veranstaltungmeldung:any;
-  @Prop() public pruefung : string;
-  @Prop() pruefungmeldung: any;
+  @State() public dozent : string = "Mester";
+  @State() dozentmeldung: any;
+  @State() public name : string;
+  @State() namemeldung: any;
+  @State() matrikelnummereins: string;
+  @State() matrikelnummerzwei: string;
+  @State() matrikelnummerdrei: string;
+  @State() matrikelnummervier: string;
+  @State() matrikelnummermeldung: any;
+  @State() public veranstaltung : string;
+  @State() veranstaltungmeldung:any;
+  @State() public pruefung : string;
+  @State() pruefungmeldung: any;
 
 
     login() {
+          
           let inputs = this.host.querySelectorAll('input');
+          console.log(inputs);
           let meldungen = this.host.querySelectorAll('.meldung');
           this.dozent = inputs[0].value;
           console.log(this.dozent);
@@ -41,6 +43,8 @@ export class EingabeFelder{
           this.pruefungmeldung = inputs[8].value;
           console.log(this.pruefungmeldung);
           this.ueberpruefeEingabe();
+          event.preventDefault();
+          console.log("Hallo");
         }
 
 
@@ -48,10 +52,12 @@ export class EingabeFelder{
   
         if( this.dozent === '') {
             this.dozentmeldung.classList.add('meldungfehlerhaft');
+            
         }
 
         else{
           this.dozentmeldung.classList.remove('meldungfehlerhaft');
+          this.dozent = this.dozent;
         }
     
         if( this.name === "" ){
@@ -136,7 +142,7 @@ export class EingabeFelder{
                 ></radio-input>
                 <div class="buttons">
                 <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>
-                <button id="submit" type="button"  onClick={() => { this.login(); }}>Speichern</button>
+                <button id="submit" type="button"  onSubmit={() => { this.login(); }}>Speichern</button>
                 </div>
           </form>
         </div>

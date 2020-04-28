@@ -9,9 +9,9 @@ export class FooterLeonie {
     render() {
         return <div class="footer">
             <ul id="footer-liste">
-                <li>Home</li>
+                <li id="bold">Home</li>
                 <li><img src="/assets/weiter.png"></img></li>
-                <li id="bold">Voreinstellungen</li>
+                <li>Voreinstellungen</li>
                 <li><img src="/assets/weiter.png"></img></li>
                 <li>Bewertung</li>
                 <li><img src="/assets/weiter.png"></img></li>

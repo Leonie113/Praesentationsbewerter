@@ -8,7 +8,7 @@ import { Component, Prop, State } from '@stencil/core';
   shadow: true
 })
 export class AuswertungsButton{
-  @Prop() dozent: string;
+  @Prop() dozent: string = "Mester";
   @Prop() gruppe: string;
   @Prop() matrikelnummer1: string;
   @Prop() matrikelnummer2: string;
@@ -19,7 +19,7 @@ export class AuswertungsButton{
   @Prop() Ueberschrift: string;
   @Prop() regler: string;
   @Prop() value: number;
-  @Prop() text; 
+  @Prop() text: string; 
   
   @State() visible = false;
 
