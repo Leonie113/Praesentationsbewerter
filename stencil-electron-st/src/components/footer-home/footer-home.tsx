@@ -1,8 +1,8 @@
 import { Component } from '@stencil/core';
 
 @Component({
-    tag: 'footer-home',
-    styleUrl: 'footer-home.css'
+    tag: 'footer-leonie',
+    styleUrl: 'footer-leonie.css'
 })
 
 export class FooterHome {
