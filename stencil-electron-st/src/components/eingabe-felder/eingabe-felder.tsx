@@ -43,8 +43,8 @@ export class EingabeFelder{
           this.pruefungmeldung = inputs[8].value;
           console.log(this.pruefungmeldung);
           this.ueberpruefeEingabe();
-          event.preventDefault();
-          console.log("Hallo");
+          //event.preventDefault();
+          //console.log("Hallo");
         }
 
 
@@ -142,7 +142,7 @@ export class EingabeFelder{
                 ></radio-input>
                 <div class="buttons">
                 <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>
-                <button id="submit" type="button"  onSubmit={() => { this.login(); }}>Speichern</button>
+                <button id="submit" type="button"  onClick={() => { this.login(); }}>Speichern</button>
                 </div>
           </form>
         </div>
