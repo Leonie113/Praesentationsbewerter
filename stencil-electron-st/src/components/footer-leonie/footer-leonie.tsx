@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
     tag: 'footer-leonie',
-    styleUrl: 'footer-Leonie.css'
+    styleUrl: 'footer-leonie.css'
 })
 
 export class FooterLeonie {
