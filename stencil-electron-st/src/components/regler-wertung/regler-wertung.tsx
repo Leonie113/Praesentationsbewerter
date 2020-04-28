@@ -1,4 +1,4 @@
-import { Component, Prop, Listen, State } from '@stencil/core';
+import { Component, Prop,  State } from '@stencil/core';
 
 @Component({
   tag: 'regler-wertung',
