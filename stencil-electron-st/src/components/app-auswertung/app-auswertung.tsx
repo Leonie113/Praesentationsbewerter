@@ -71,7 +71,6 @@ export class AppHome{
           <zurueck-button></zurueck-button>
           </stencil-route-link>
         </div>
-        <footer-auswertung></footer-auswertung>
       </div>
     );
   }

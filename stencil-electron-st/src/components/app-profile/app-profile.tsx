@@ -24,8 +24,7 @@ export class AppProfile {
           <stencil-route-link url='/bewertung'>
           <weiter-button></weiter-button>
           </stencil-route-link> 
-          
-          <footer-profile></footer-profile>
+
         </div>
       );
     }

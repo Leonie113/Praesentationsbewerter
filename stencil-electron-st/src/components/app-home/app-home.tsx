@@ -17,7 +17,6 @@ export class AppHome {
           <weiter-button></weiter-button>
           </stencil-route-link>
         </div>
-        <footer-home></footer-home>
       </div>
     );
   }
