@@ -5,7 +5,7 @@ import { Component, Prop, } from '@stencil/core';
   tag: 'app-auswertung',
   styleUrl: 'app-auswertung.css',
 })
-export class AppHome{
+export class AppAuswertung{
   @Prop() test: string;
   handleClick(event: UIEvent) {
     

@@ -46,17 +46,6 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
-  interface AufklappButtonKurz {
-    'Kriterium1': string;
-    'Kriterium2': string;
-    'Ueberschrift': string;
-  }
-  interface AufklappButtonKurzAttributes extends StencilHTMLAttributes {
-    'Kriterium1'?: string;
-    'Kriterium2'?: string;
-    'Ueberschrift'?: string;
-  }
-
   interface AufklappButton {
     'Kriterium1': string;
     'Kriterium2': string;
@@ -86,6 +75,17 @@ export namespace Components {
     'Kriterium4'?: string;
     'Ueberschrift'?: string;
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
+  }
+
+  interface AufklappKurz {
+    'Kriterium1': string;
+    'Kriterium2': string;
+    'Ueberschrift': string;
+  }
+  interface AufklappKurzAttributes extends StencilHTMLAttributes {
+    'Kriterium1'?: string;
+    'Kriterium2'?: string;
+    'Ueberschrift'?: string;
   }
 
   interface AuswertungButtonKurz {
@@ -198,12 +198,10 @@ export namespace Components {
   }
 
   interface ReglerWertung {
-    'regler': string;
-    'value': number;
+    'regler': any;
   }
   interface ReglerWertungAttributes extends StencilHTMLAttributes {
-    'regler'?: string;
-    'value'?: number;
+    'regler'?: any;
   }
 
   interface WeiterButton {}
@@ -221,9 +219,9 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
-    'AufklappButtonKurz': Components.AufklappButtonKurz;
     'AufklappButton': Components.AufklappButton;
     'AufklappInput': Components.AufklappInput;
+    'AufklappKurz': Components.AufklappKurz;
     'AuswertungButtonKurz': Components.AuswertungButtonKurz;
     'AuswertungButton': Components.AuswertungButton;
     'AuswertungDaten': Components.AuswertungDaten;
@@ -247,9 +245,9 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
-    'aufklapp-button-kurz': Components.AufklappButtonKurzAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
     'aufklapp-input': Components.AufklappInputAttributes;
+    'aufklapp-kurz': Components.AufklappKurzAttributes;
     'auswertung-button-kurz': Components.AuswertungButtonKurzAttributes;
     'auswertung-button': Components.AuswertungButtonAttributes;
     'auswertung-daten': Components.AuswertungDatenAttributes;
@@ -303,12 +301,6 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
-  interface HTMLAufklappButtonKurzElement extends Components.AufklappButtonKurz, HTMLStencilElement {}
-  var HTMLAufklappButtonKurzElement: {
-    prototype: HTMLAufklappButtonKurzElement;
-    new (): HTMLAufklappButtonKurzElement;
-  };
-
   interface HTMLAufklappButtonElement extends Components.AufklappButton, HTMLStencilElement {}
   var HTMLAufklappButtonElement: {
     prototype: HTMLAufklappButtonElement;
@@ -319,6 +311,12 @@ declare global {
   var HTMLAufklappInputElement: {
     prototype: HTMLAufklappInputElement;
     new (): HTMLAufklappInputElement;
+  };
+
+  interface HTMLAufklappKurzElement extends Components.AufklappKurz, HTMLStencilElement {}
+  var HTMLAufklappKurzElement: {
+    prototype: HTMLAufklappKurzElement;
+    new (): HTMLAufklappKurzElement;
   };
 
   interface HTMLAuswertungButtonKurzElement extends Components.AuswertungButtonKurz, HTMLStencilElement {}
@@ -412,9 +410,9 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
-    'aufklapp-button-kurz': HTMLAufklappButtonKurzElement
     'aufklapp-button': HTMLAufklappButtonElement
     'aufklapp-input': HTMLAufklappInputElement
+    'aufklapp-kurz': HTMLAufklappKurzElement
     'auswertung-button-kurz': HTMLAuswertungButtonKurzElement
     'auswertung-button': HTMLAuswertungButtonElement
     'auswertung-daten': HTMLAuswertungDatenElement
@@ -438,9 +436,9 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
-    'aufklapp-button-kurz': HTMLAufklappButtonKurzElement;
     'aufklapp-button': HTMLAufklappButtonElement;
     'aufklapp-input': HTMLAufklappInputElement;
+    'aufklapp-kurz': HTMLAufklappKurzElement;
     'auswertung-button-kurz': HTMLAuswertungButtonKurzElement;
     'auswertung-button': HTMLAuswertungButtonElement;
     'auswertung-daten': HTMLAuswertungDatenElement;

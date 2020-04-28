@@ -7,7 +7,7 @@ import { Component } from '@stencil/core';
   shadow: true
 })
 
-export class AppHome {
+export class AppBewertung {
 
   render() {
     return (
@@ -22,11 +22,11 @@ export class AppHome {
           Kriterium4="Dokumentation"
         ></aufklapp-button>
 
-        <aufklapp-button-kurz class="aufklappbuttons"
+        <aufklapp-kurz class="aufklappbuttons"
         Ueberschrift="Produkt"
         Kriterium1="Umsetzbarkeit des Ergebnisses"
         Kriterium2="Kreativität"
-        ></aufklapp-button-kurz>
+        ></aufklapp-kurz>
 
         <aufklapp-button class="aufklappbuttons" 
           Ueberschrift="Herangehensweise"

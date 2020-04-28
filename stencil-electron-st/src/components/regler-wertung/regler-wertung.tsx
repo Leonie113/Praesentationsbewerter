@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'regler-wertung',
@@ -8,9 +8,9 @@ import { Component, Prop } from '@stencil/core';
 
 
 export class regler {
-  @Prop() regler: string;
-  @Prop() value: number;
-
+  
+  @State() value: number;
+  @Prop() regler: any;
   
   /**meinSlider=document.querySelector('#myRange')
 
@@ -24,8 +24,12 @@ export class regler {
   render() {
     return (
         <div>
-            <h1 class="regler-wertung">gewichtete Punkte von 0-10: {this.regler} <span>0</span></h1>
-            <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+          <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value}</span></h4>
+          <div class="regler-container">
+            <h4>0</h4>
+            <input name={this.regler} id="myRange" class="slider" min="0" max="10" type="range" step="1"  value='' ></input>
+          <h4>10</h4>
+          </div>       
         </div>
     )
 }
