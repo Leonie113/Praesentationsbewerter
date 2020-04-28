@@ -13,7 +13,7 @@ export class AppHome{
     alert("Deine Bewertung wird nun gespeichert");
     console.log(event);
   }
-  //todoListElement: HTMLEingabeFelderElement = document.querySelector('eingabe-felder');
+  todoListElement: any = document.querySelector('eingabe-felder');
   render() {
     return (
       <div class='app-home'>
@@ -21,10 +21,7 @@ export class AppHome{
         <headline-mittig text="Auswertung &amp; Anmerkungen"></headline-mittig>
         <div class="flex-container">
           <div id="linkeSeite" class="flex-item">
-            {/* <auswertung-daten
-        dozent={this.todoListElement.dozent}
-        gruppe={this.todoListElement.name}
-        ></auswertung-daten> */}
+            
             <auswertung-button class="aufklappbuttons"
               Ueberschrift="Thematische Ausarbeitung" 
               Kriterium1="Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)"
@@ -54,6 +51,11 @@ export class AppHome{
               Kriterium3="Medien"
               Kriterium4="Diskussion"
             ></auswertung-button>
+
+            <auswertung-daten
+              Ueberschrift="Daten"
+              dozent={this.todoListElement.dozent = "Mester"}
+            ></auswertung-daten>
 
           </div>
           <div id="rechts" class="flex-item">

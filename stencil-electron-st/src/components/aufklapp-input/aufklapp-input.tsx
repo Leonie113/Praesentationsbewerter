@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Event, EventEmitter } from '@stencil/core';
+import { Component,Prop, State, Element, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-input',
@@ -12,13 +12,13 @@ export class AufklappInput {
   @Prop() Kriterium3: string;
   @Prop() Kriterium4: string;
   @Prop() Ueberschrift: string;
-  @Prop() regler: string;
-  @Prop() value: number;
-  @Prop() inputs;
-  @Prop() matrikelnummereins;
-  @Prop() matrikelnummerzwei;
-  @Prop() matrikelnummerdrei;
-  @Prop() matrikelnummervier;
+  @State() regler: string;
+  @State() value: number;
+  @State() inputs: any;
+  @State() matrikelnummereins: string;
+  @State() matrikelnummerzwei: string;
+  @State() matrikelnummerdrei: string;
+  @State() matrikelnummervier: string; 
 
 matrikelnummern (){
   this.inputs = document.querySelectorAll('input');
@@ -59,24 +59,24 @@ matrikelnummern (){
               <tr>
               <td>
               <label class="label">{this.Kriterium1}
-              <input type="text"  name="matrikelnummereins" placeholder="Pflichtfeld" maxlength="15" onBlur={this.matrikelnummern} value=""/>
+              <input id="matrikel" type="text"  name="matrikelnummereins" placeholder="Pflichtfeld" maxlength="15" onBlur={this.matrikelnummern} value=""/>
               </label>
               </td>
               <td>
               <label class="label">{this.Kriterium2}
-              <input type="text" name="matrikelnummerzwei" placeholder="optional" maxlength="15" value=""/>
+              <input id="matrikel" type="text" name="matrikelnummerzwei" placeholder="optional" maxlength="15" value=""/>
               </label>
               </td>  
               </tr>
               <tr>
               <td>
               <label class="label">{this.Kriterium3}
-              <input type="text"  name="matrikelnummerdrei" placeholder="optional" maxlength="15" value=""/>
+              <input id="matrikel" type="text"  name="matrikelnummerdrei" placeholder="optional" maxlength="15" value=""/>
               </label>
               </td>
               <td>
               <label class="label">{this.Kriterium4}
-              <input type="text"  name="matrikelnummervier" placeholder="optional" maxlength="15" value=""/>
+              <input id="matrikel" type="text"  name="matrikelnummervier" placeholder="optional" maxlength="15" value=""/>
               </label>
               </td>  
               </tr>                   

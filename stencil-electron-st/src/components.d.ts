@@ -86,13 +86,6 @@ export namespace Components {
     'Kriterium3': string;
     'Kriterium4': string;
     'Ueberschrift': string;
-    'inputs': any;
-    'matrikelnummerdrei': any;
-    'matrikelnummereins': any;
-    'matrikelnummervier': any;
-    'matrikelnummerzwei': any;
-    'regler': string;
-    'value': number;
   }
   interface AufklappInputAttributes extends StencilHTMLAttributes {
     'Kriterium1'?: string;
@@ -100,14 +93,7 @@ export namespace Components {
     'Kriterium3'?: string;
     'Kriterium4'?: string;
     'Ueberschrift'?: string;
-    'inputs'?: any;
-    'matrikelnummerdrei'?: any;
-    'matrikelnummereins'?: any;
-    'matrikelnummervier'?: any;
-    'matrikelnummerzwei'?: any;
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
-    'regler'?: string;
-    'value'?: number;
   }
 
   interface AuswertungButtonKurz {
@@ -157,7 +143,7 @@ export namespace Components {
     'matrikelnummer4': string;
     'projekt': string;
     'regler': string;
-    'text': any;
+    'text': string;
     'value': number;
   }
   interface AuswertungDatenAttributes extends StencilHTMLAttributes {
@@ -171,7 +157,7 @@ export namespace Components {
     'matrikelnummer4'?: string;
     'projekt'?: string;
     'regler'?: string;
-    'text'?: any;
+    'text'?: string;
     'value'?: number;
   }
 
@@ -182,38 +168,9 @@ export namespace Components {
     'button'?: string;
   }
 
-  interface EingabeFelder {
-    'dozent': string;
-    'dozentmeldung': any;
-    'forgotPasswordUrl': string;
-    'matrikelnummerdrei': string;
-    'matrikelnummereins': string;
-    'matrikelnummermeldung': any;
-    'matrikelnummervier': string;
-    'matrikelnummerzwei': string;
-    'name': string;
-    'namemeldung': any;
-    'pruefung': string;
-    'pruefungmeldung': any;
-    'veranstaltung': string;
-    'veranstaltungmeldung': any;
-  }
+  interface EingabeFelder {}
   interface EingabeFelderAttributes extends StencilHTMLAttributes {
-    'dozent'?: string;
-    'dozentmeldung'?: any;
-    'forgotPasswordUrl'?: string;
-    'matrikelnummerdrei'?: string;
-    'matrikelnummereins'?: string;
-    'matrikelnummermeldung'?: any;
-    'matrikelnummervier'?: string;
-    'matrikelnummerzwei'?: string;
-    'name'?: string;
-    'namemeldung'?: any;
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
-    'pruefung'?: string;
-    'pruefungmeldung'?: any;
-    'veranstaltung'?: string;
-    'veranstaltungmeldung'?: any;
   }
 
   interface ExportButton {
@@ -223,17 +180,8 @@ export namespace Components {
     'button'?: string;
   }
 
-  interface FooterAuswertung {}
-  interface FooterAuswertungAttributes extends StencilHTMLAttributes {}
-
-  interface FooterBewertung {}
-  interface FooterBewertungAttributes extends StencilHTMLAttributes {}
-
-  interface FooterHome {}
-  interface FooterHomeAttributes extends StencilHTMLAttributes {}
-
-  interface FooterProfile {}
-  interface FooterProfileAttributes extends StencilHTMLAttributes {}
+  interface FooterLeonie {}
+  interface FooterLeonieAttributes extends StencilHTMLAttributes {}
 
   interface FormularLarissa {
     'ueberpruefeEingabe': () => Promise<void>;
@@ -306,10 +254,7 @@ declare global {
     'BewertungEnd': Components.BewertungEnd;
     'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
-    'FooterAuswertung': Components.FooterAuswertung;
-    'FooterBewertung': Components.FooterBewertung;
-    'FooterHome': Components.FooterHome;
-    'FooterProfile': Components.FooterProfile;
+    'FooterLeonie': Components.FooterLeonie;
     'FormularLarissa': Components.FormularLarissa;
     'HeaderLeonie': Components.HeaderLeonie;
     'HeadlineMittig': Components.HeadlineMittig;
@@ -335,10 +280,7 @@ declare global {
     'bewertung-end': Components.BewertungEndAttributes;
     'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
-    'footer-auswertung': Components.FooterAuswertungAttributes;
-    'footer-bewertung': Components.FooterBewertungAttributes;
-    'footer-home': Components.FooterHomeAttributes;
-    'footer-profile': Components.FooterProfileAttributes;
+    'footer-leonie': Components.FooterLeonieAttributes;
     'formular-larissa': Components.FormularLarissaAttributes;
     'header-leonie': Components.HeaderLeonieAttributes;
     'headline-mittig': Components.HeadlineMittigAttributes;
@@ -439,28 +381,10 @@ declare global {
     new (): HTMLExportButtonElement;
   };
 
-  interface HTMLFooterAuswertungElement extends Components.FooterAuswertung, HTMLStencilElement {}
-  var HTMLFooterAuswertungElement: {
-    prototype: HTMLFooterAuswertungElement;
-    new (): HTMLFooterAuswertungElement;
-  };
-
-  interface HTMLFooterBewertungElement extends Components.FooterBewertung, HTMLStencilElement {}
-  var HTMLFooterBewertungElement: {
-    prototype: HTMLFooterBewertungElement;
-    new (): HTMLFooterBewertungElement;
-  };
-
-  interface HTMLFooterHomeElement extends Components.FooterHome, HTMLStencilElement {}
-  var HTMLFooterHomeElement: {
-    prototype: HTMLFooterHomeElement;
-    new (): HTMLFooterHomeElement;
-  };
-
-  interface HTMLFooterProfileElement extends Components.FooterProfile, HTMLStencilElement {}
-  var HTMLFooterProfileElement: {
-    prototype: HTMLFooterProfileElement;
-    new (): HTMLFooterProfileElement;
+  interface HTMLFooterLeonieElement extends Components.FooterLeonie, HTMLStencilElement {}
+  var HTMLFooterLeonieElement: {
+    prototype: HTMLFooterLeonieElement;
+    new (): HTMLFooterLeonieElement;
   };
 
   interface HTMLFormularLarissaElement extends Components.FormularLarissa, HTMLStencilElement {}
@@ -521,10 +445,7 @@ declare global {
     'bewertung-end': HTMLBewertungEndElement
     'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
-    'footer-auswertung': HTMLFooterAuswertungElement
-    'footer-bewertung': HTMLFooterBewertungElement
-    'footer-home': HTMLFooterHomeElement
-    'footer-profile': HTMLFooterProfileElement
+    'footer-leonie': HTMLFooterLeonieElement
     'formular-larissa': HTMLFormularLarissaElement
     'header-leonie': HTMLHeaderLeonieElement
     'headline-mittig': HTMLHeadlineMittigElement
@@ -550,10 +471,7 @@ declare global {
     'bewertung-end': HTMLBewertungEndElement;
     'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;
-    'footer-auswertung': HTMLFooterAuswertungElement;
-    'footer-bewertung': HTMLFooterBewertungElement;
-    'footer-home': HTMLFooterHomeElement;
-    'footer-profile': HTMLFooterProfileElement;
+    'footer-leonie': HTMLFooterLeonieElement;
     'formular-larissa': HTMLFormularLarissaElement;
     'header-leonie': HTMLHeaderLeonieElement;
     'headline-mittig': HTMLHeadlineMittigElement;
