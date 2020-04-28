@@ -1,40 +1,36 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
-  tag: 'auswertung-button-kurz',
-  styleUrl: 'auswertung-button-kurz.css',
+  tag: 'kategorie2-button',
+  styleUrl: 'kategorie2-button.css',
   shadow: true
 })
-export class AuswertungsButtonKurz {
+export class AufklappButton {
   @Prop() Kriterium1: string;
   @Prop() Kriterium2: string;
-
   @Prop() Ueberschrift: string;
-  @Prop() regler: string;
-  @Prop() value: number;
-
-  @Prop() reglerfuenf: string;
-  @Prop() reglersechs: string;
-
-  @Prop() gesamt : string = " XX/20 P";
+  @State() regler: string;
+  @State() value: number;
   
   @State() visible = false;
+  
+  @Element() host: HTMLElement;
+
 
   toggleVisibility = () => {
     this.visible = !this.visible;
   }
-  
   render() {
     return (
       <div id="container-button">
         <input
           onClick={this.toggleVisibility} // <-- attaching the listener here
           class={{
-            'auswertung-button-kurz': true,
+            'aufklapp-kurz': true,
             changeradius: this.visible // <-- using an object to toggle the class here
           }}
           type="button"
-          value={this.Ueberschrift + this.gesamt} 
+          value={this.Ueberschrift}
         />
         <div
           class={{
@@ -45,22 +41,21 @@ export class AuswertungsButtonKurz {
           <table class="table">
             <tbody>
               <tr>
-              <td><strong>Kriterium</strong></td>
+                <td></td>
                 <td><strong>Punktebewertung</strong></td>
               </tr>
               <tr>
-              <td>{this.Kriterium1}</td>
-              <td>        
-              {this.reglerfuenf}
-              </td>
+                <td>{this.Kriterium1}</td>
+                <td>        
+                <regler-wertung regler="reglerfuenf"></regler-wertung>  
+                </td>
               </tr>
               <tr>
                 <td>{this.Kriterium2}</td>
                 <td>
-                {this.reglersechs}
+                <regler-wertung regler="reglersechs"></regler-wertung> 
                 </td>
-              </tr>     
-                      
+              </tr>                        
             </tbody>
           </table>
         </div>

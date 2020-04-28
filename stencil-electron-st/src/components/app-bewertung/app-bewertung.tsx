@@ -14,35 +14,35 @@ export class AppBewertung {
       <div class='app-bewertung'>
         
         <headline-mittig text="Bewertung"></headline-mittig>
-        <aufklapp-button class="aufklappbuttons"
+        <kategorie1-button class="aufklappbuttons"
           Ueberschrift="Thematische Ausarbeitung" 
           Kriterium1="Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)"
           Kriterium2="Nutzung von Fachwissen"
           Kriterium3="Struktur"
           Kriterium4="Dokumentation"
-        ></aufklapp-button>
+        ></kategorie1-button>
 
-        <aufklapp-kurz class="aufklappbuttons"
+        <kategorie2-button class="aufklappbuttons"
         Ueberschrift="Produkt"
         Kriterium1="Umsetzbarkeit des Ergebnisses"
         Kriterium2="Kreativität"
-        ></aufklapp-kurz>
+        ></kategorie2-button>
 
-        <aufklapp-button class="aufklappbuttons" 
+        <kategorie3-button class="aufklappbuttons" 
           Ueberschrift="Herangehensweise"
           Kriterium1="Methodik"
           Kriterium2="Selbstständigkeit, Eigeninitiative"
           Kriterium3="Kommunikation"
           Kriterium4="Dokumentation"
-        ></aufklapp-button>
+        ></kategorie3-button>
 
-        <aufklapp-button class="aufklappbuttons-last" 
+        <kategorie4-button class="aufklappbuttons-last" 
           Ueberschrift="Präsentation"
           Kriterium1="Rhetorik"
           Kriterium2="Ansprache"
           Kriterium3="Medien"
           Kriterium4="Diskussion"
-        ></aufklapp-button>
+        ></kategorie4-button>
         
         <stencil-route-link url="/profile/stencil">
           <zurueck-button></zurueck-button>

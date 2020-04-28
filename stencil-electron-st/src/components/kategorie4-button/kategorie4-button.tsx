@@ -1,33 +1,28 @@
-import { Component, Prop, State } from '@stencil/core';
-
-
+import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
-  tag: 'auswertung-button',
-  styleUrl: 'auswertung-button.css',
+  tag: 'kategorie4-button',
+  styleUrl: 'kategorie4-button.css',
   shadow: true
 })
-export class AuswertungsButton{
+export class AufklappButton {
   @Prop() Kriterium1: string;
   @Prop() Kriterium2: string;
   @Prop() Kriterium3: string;
   @Prop() Kriterium4: string;
   @Prop() Ueberschrift: string;
-  @Prop() regler: string;
-  @Prop() value: number;
-  @Prop() reglereins : string;
-  @Prop() reglerzwei : string;
-  @Prop() reglerdrei : string;
-  @Prop() reglervier : string; 
+  @State() regler: string;
+  @State() value: number;
   
-  @Prop() gesamt : string = " XX/40 P";
   @State() visible = false;
+  
+  @Element() host: HTMLElement;
 
   toggleVisibility = () => {
     this.visible = !this.visible;
   }
 
- 
+  
   
   render() {
     return (
@@ -35,11 +30,11 @@ export class AuswertungsButton{
         <input
           onClick={this.toggleVisibility} // <-- attaching the listener here
           class={{
-            'auswertung-button': true,
+            'kategorieeins-button': true,
             changeradius: this.visible // <-- using an object to toggle the class here
           }}
           type="button"
-          value={this.Ueberschrift + this.gesamt} 
+          value={this.Ueberschrift}
         />
         <div
           class={{
@@ -50,31 +45,31 @@ export class AuswertungsButton{
           <table class="table">
             <tbody>
               <tr>
-              <td><strong>Kriterium</strong></td>
+                <td></td>
                 <td><strong>Punktebewertung</strong></td>
               </tr>
               <tr>
-              <td>{this.Kriterium1}</td>
-              <td>        
-                {this.reglereins}
-              </td>
+                <td>{this.Kriterium1}</td>
+                <td>        
+                <regler-wertung regler="reglerelf"></regler-wertung> 
+                </td>
               </tr>
               <tr>
                 <td>{this.Kriterium2}</td>
                 <td>
-                {this.reglerzwei}
+                <regler-wertung regler="reglerzwoelf"></regler-wertung> 
                 </td>
               </tr>     
               <tr>
                 <td>{this.Kriterium3}</td>
                 <td>
-                {this.reglerdrei}
+                <regler-wertung regler="reglerdreizehn"></regler-wertung> 
                 </td>
               </tr>
               <tr>
                 <td>{this.Kriterium4}</td>
                 <td>
-                {this.reglervier}
+                <regler-wertung regler="reglervierzehn"></regler-wertung> 
                 </td>
               </tr>                      
             </tbody>
