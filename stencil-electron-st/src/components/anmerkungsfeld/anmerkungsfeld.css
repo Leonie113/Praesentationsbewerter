@@ -26,6 +26,7 @@ div{
 }
 textarea {
     background: #8D0011;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     border: 1px rgb(255, 255, 255) solid;
     margin: 15px;
@@ -33,6 +34,7 @@ textarea {
     width: 94%;
     border-radius: 10px;
     font-size: 1em;
+    outline: none;
 }
 #save-button {
     background: #8D0011;
