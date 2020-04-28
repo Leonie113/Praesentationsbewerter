@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, } from '@stencil/core';
 //import { AufklappButton } from '../aufklapp-button/aufklapp-button';
 
 @Component({
