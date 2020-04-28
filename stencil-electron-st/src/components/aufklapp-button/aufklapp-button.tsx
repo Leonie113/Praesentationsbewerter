@@ -1,4 +1,4 @@
-import { Component, Prop, State, h, Listen, Element } from '@stencil/core';
+import { Component, Prop, State, Listen, Element } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-button',
