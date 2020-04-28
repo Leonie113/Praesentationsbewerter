@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State, h, Listen, Element } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-button',
@@ -15,10 +15,31 @@ export class AufklappButton {
   @Prop() value: number;
   
   @State() visible = false;
+  
+  @Element() host: HTMLElement;
+
+  @Listen ('change', {capture: true})
+      handleChangeEvent(){
+        let inputs = this.host.querySelectorAll('input');
+        
+        this.value1 = inputs[0].value;
+        this.value2 = inputs[1].value;
+        this.value3 = inputs[2].value;
+        this.value4 = inputs[3].value;
+      }
+
+  @Prop() inputs = this.host.querySelectorAll('input');
+  
+  @Prop() value1 = this.inputs[0].value;
+  @Prop() value2 = this.inputs[1].value;
+  @Prop() value3 = this.inputs[2].value;
+  @Prop() value4 = this.inputs[3].value;
 
   toggleVisibility = () => {
     this.visible = !this.visible;
   }
+
+  
   
   render() {
     return (
@@ -48,10 +69,10 @@ export class AufklappButton {
               <td>{this.Kriterium1}</td>
               <td>        
               <div>
-                    <h4 class="regler-wertung">Erreichte Punkte: {this.regler} <span>0</span></h4>
+                    <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value1}</span></h4>
                     <div class="regler-container">
                     <h4>0</h4>
-                    <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
                     <h4>10</h4>
                     </div>
                     </div>
@@ -61,10 +82,10 @@ export class AufklappButton {
                 <td>{this.Kriterium2}</td>
                 <td>
                 <div>
-                <h4 class="regler-wertung">Erreichte Punkte: {this.regler} <span>0</span></h4>
+                <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value2}</span></h4>
                     <div class="regler-container">
                     <h4>0</h4>
-                    <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
                     <h4>10</h4>
                     </div>
                     </div>
@@ -74,10 +95,10 @@ export class AufklappButton {
                 <td>{this.Kriterium3}</td>
                 <td>
                 <div>
-                <h4 class="regler-wertung">Erreichte Punkte: {this.regler} <span>0</span></h4>
+                <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value3}</span></h4>
                     <div class="regler-container">
                     <h4>0</h4>
-                    <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
                     <h4>10</h4>
                     </div>
                     </div>
@@ -87,10 +108,10 @@ export class AufklappButton {
                 <td>{this.Kriterium4}</td>
                 <td>
                 <div>
-                    <h4 class="regler-wertung">Erreichte Punkte: {this.regler} <span>0</span></h4>
+                    <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value4}</span></h4>
                     <div class="regler-container">
                     <h4>0</h4>
-                    <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
                     <h4>10</h4>
                     </div>
                     </div>
