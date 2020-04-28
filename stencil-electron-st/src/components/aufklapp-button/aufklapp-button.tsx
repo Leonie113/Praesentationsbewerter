@@ -1,4 +1,4 @@
-import { Component, Prop, State, h, Listen, Element } from '@stencil/core';
+import { Component, Prop, State, Listen, Element } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-button',
@@ -11,8 +11,8 @@ export class AufklappButton {
   @Prop() Kriterium3: string;
   @Prop() Kriterium4: string;
   @Prop() Ueberschrift: string;
-  @Prop() regler: string;
-  @Prop() value: number;
+  @State() regler: string;
+  @State() value: number;
   
   @State() visible = false;
   
@@ -20,20 +20,20 @@ export class AufklappButton {
 
   @Listen ('change', {capture: true})
       handleChangeEvent(){
-        let inputs = this.host.querySelectorAll('input');
+        let inputs = this.host.querySelector('input');
         
-        this.value1 = inputs[0].value;
-        this.value2 = inputs[1].value;
-        this.value3 = inputs[2].value;
-        this.value4 = inputs[3].value;
+        this.value1 = inputs[1].value;
+        this.value2 = inputs[2].value;
+        this.value3 = inputs[3].value;
+        this.value4 = inputs[4].value;
       }
 
-  @Prop() inputs = this.host.querySelectorAll('input');
+  // @State() inputs = this.host.querySelectorAll('input');
   
-  @Prop() value1 = this.inputs[0].value;
-  @Prop() value2 = this.inputs[1].value;
-  @Prop() value3 = this.inputs[2].value;
-  @Prop() value4 = this.inputs[3].value;
+  @State() value1: any;
+  @State() value2: any;
+  @State() value3: any;
+  @State() value4: any; 
 
   toggleVisibility = () => {
     this.visible = !this.visible;

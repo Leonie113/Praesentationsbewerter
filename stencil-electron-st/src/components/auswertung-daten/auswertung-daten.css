@@ -28,7 +28,7 @@
     background: white;
     margin: 10px;
     margin-top: 0px;
-    margin-left: 1.5%;
+    margin-left: 1.75%;
 }
 .table td{
     padding: 7px 20px 7px 20px;
@@ -46,6 +46,9 @@
     background: rgba(226, 226, 226, 0.623);
 }
 .table tr:nth-child(9){
+    background: rgba(226, 226, 226, 0.623);
+}
+.table tr:nth-child(11){
     background: rgba(226, 226, 226, 0.623);
 }
 .table td:nth-child(2){

@@ -50,15 +50,11 @@ export namespace Components {
     'Kriterium1': string;
     'Kriterium2': string;
     'Ueberschrift': string;
-    'regler': string;
-    'value': number;
   }
   interface AufklappButtonKurzAttributes extends StencilHTMLAttributes {
     'Kriterium1'?: string;
     'Kriterium2'?: string;
     'Ueberschrift'?: string;
-    'regler'?: string;
-    'value'?: number;
   }
 
   interface AufklappButton {
@@ -67,8 +63,6 @@ export namespace Components {
     'Kriterium3': string;
     'Kriterium4': string;
     'Ueberschrift': string;
-    'regler': string;
-    'value': number;
   }
   interface AufklappButtonAttributes extends StencilHTMLAttributes {
     'Kriterium1'?: string;
@@ -76,8 +70,6 @@ export namespace Components {
     'Kriterium3'?: string;
     'Kriterium4'?: string;
     'Ueberschrift'?: string;
-    'regler'?: string;
-    'value'?: number;
   }
 
   interface AufklappInput {
@@ -134,28 +126,12 @@ export namespace Components {
 
   interface AuswertungDaten {
     'Ueberschrift': string;
-    'dozent': string;
-    'gruppe': string;
-    'leistung': string;
-    'matrikelnummer1': string;
-    'matrikelnummer2': string;
-    'matrikelnummer3': string;
-    'matrikelnummer4': string;
-    'projekt': string;
     'regler': string;
     'text': string;
     'value': number;
   }
   interface AuswertungDatenAttributes extends StencilHTMLAttributes {
     'Ueberschrift'?: string;
-    'dozent'?: string;
-    'gruppe'?: string;
-    'leistung'?: string;
-    'matrikelnummer1'?: string;
-    'matrikelnummer2'?: string;
-    'matrikelnummer3'?: string;
-    'matrikelnummer4'?: string;
-    'projekt'?: string;
     'regler'?: string;
     'text'?: string;
     'value'?: number;

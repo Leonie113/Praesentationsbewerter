@@ -22,6 +22,18 @@ export class EingabeFelder{
   @State() public pruefung : string;
   @State() pruefungmeldung: any;
 
+  handleDozentInput(e: UIEvent){
+    const target = e.target as HTMLInputElement;
+    localStorage.setItem('dozent', target.value);
+  }
+  handleGruppeInput(e: UIEvent){
+    const target = e.target as HTMLInputElement;
+    localStorage.setItem('gruppe', target.value);
+  }
+  handleVeranstaltungInput(e: UIEvent){
+    const target = e.target as HTMLInputElement;
+    localStorage.setItem('veranstaltung', target.value);
+  }
 
     login() {
           
@@ -46,8 +58,6 @@ export class EingabeFelder{
           //event.preventDefault();
           //console.log("Hallo");
         }
-
-
  ueberpruefeEingabe(){
   
         if( this.dozent === '') {
@@ -116,11 +126,11 @@ export class EingabeFelder{
           <form class="login-form">
                 <label id="dozent">
                 <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
-                <input type="text" id="dozentinput" name="dozent" placeholder="Name des Lehrenden" maxlength="15" value=""/>
+                <input type="text" id="dozentinput" name="dozent" placeholder="Name des Lehrenden" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleDozentInput(e)}}/>
                 </label>
                 <label id="name">
                 <span class="meldung">Mindestens ein Name eines Studierenden muss angegeben werden.</span>
-                <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe" value=""/>
+                <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe" value="" onInput={(e: UIEvent) => { this.handleGruppeInput(e)}}/>
                 </label>
                 <span class="meldung">Bitte geben Sie mindestens eine Matrikelnummer im ersten Feld ein.</span>
                 <aufklapp-input class="aufklappbuttons"
@@ -133,7 +143,7 @@ export class EingabeFelder{
 
                 <label id="veranstaltung">
                 <span class="meldung">Die Bezeichnung der Lehrveranstaltung wird für die Auswertung benötigt.</span>
-                <input type="text" id="veranstaltunginput" name="veranstaltung" placeholder="Lehrveranstaltung" value=""/>
+                <input type="text" id="veranstaltunginput" name="veranstaltung" placeholder="Lehrveranstaltung" value=""  onInput={(e: UIEvent) => { this.handleVeranstaltungInput(e)}}/>
                 </label>
                 <radio-input                 
                   Ueberschrift="Prüfungsleistung" 

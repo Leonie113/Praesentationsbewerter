@@ -20,6 +20,23 @@ export class AufklappInput {
   @State() matrikelnummerdrei: string;
   @State() matrikelnummervier: string; 
 
+handleMatrikelnummereinsInput(e: UIEvent){
+  const target = e.target as HTMLInputElement;
+  localStorage.setItem('matrikelnummereins', target.value);
+}
+handleMatrikelnummerzweiInput(e: UIEvent){
+  const target = e.target as HTMLInputElement;
+  localStorage.setItem('matrikelnummerzwei', target.value);
+}
+handleMatrikelnummerdreiInput(e: UIEvent){
+  const target = e.target as HTMLInputElement;
+  localStorage.setItem('matrikelnummerdrei', target.value);
+}
+handleMatrikelnummervierInput(e: UIEvent){
+  const target = e.target as HTMLInputElement;
+  localStorage.setItem('matrikelnummervier', target.value);
+}
+
 matrikelnummern (){
   this.inputs = document.querySelectorAll('input');
   this.matrikelnummereins = this.inputs[1].value;
@@ -28,6 +45,7 @@ matrikelnummern (){
   this. matrikelnummerdrei = this.inputs[3].value;
   this.matrikelnummervier = this.inputs[4].value;
 } 
+
   
   @State() visible = false;
 
@@ -59,24 +77,24 @@ matrikelnummern (){
               <tr>
               <td>
               <label class="label">{this.Kriterium1}
-              <input id="matrikel" type="text"  name="matrikelnummereins" placeholder="Pflichtfeld" maxlength="15" onBlur={this.matrikelnummern} value=""/>
+              <input id="matrikel" type="text"  name="matrikelnummereins" placeholder="Pflichtfeld" maxlength="15" onBlur={this.matrikelnummern} value="" onInput={(e: UIEvent) => { this.handleMatrikelnummereinsInput(e)}}/>
               </label>
               </td>
               <td>
               <label class="label">{this.Kriterium2}
-              <input id="matrikel" type="text" name="matrikelnummerzwei" placeholder="optional" maxlength="15" value=""/>
+              <input id="matrikel" type="text" name="matrikelnummerzwei" placeholder="optional" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleMatrikelnummerzweiInput(e)}}/>
               </label>
               </td>  
               </tr>
               <tr>
               <td>
               <label class="label">{this.Kriterium3}
-              <input id="matrikel" type="text"  name="matrikelnummerdrei" placeholder="optional" maxlength="15" value=""/>
+              <input id="matrikel" type="text"  name="matrikelnummerdrei" placeholder="optional" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleMatrikelnummerdreiInput(e)}}/>
               </label>
               </td>
               <td>
               <label class="label">{this.Kriterium4}
-              <input id="matrikel" type="text"  name="matrikelnummervier" placeholder="optional" maxlength="15" value=""/>
+              <input id="matrikel" type="text"  name="matrikelnummervier" placeholder="optional" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleMatrikelnummervierInput(e)}}/>
               </label>
               </td>  
               </tr>                   

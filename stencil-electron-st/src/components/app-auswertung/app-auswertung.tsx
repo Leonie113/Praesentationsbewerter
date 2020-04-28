@@ -53,8 +53,7 @@ export class AppHome{
             ></auswertung-button>
 
             <auswertung-daten
-              Ueberschrift="Daten"
-              dozent={this.todoListElement.dozent = "Mester"}
+              Ueberschrift="Daten" 
             ></auswertung-daten>
 
           </div>

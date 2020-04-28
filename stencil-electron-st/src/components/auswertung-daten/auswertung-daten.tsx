@@ -8,14 +8,15 @@ import { Component, Prop, State } from '@stencil/core';
   shadow: true
 })
 export class AuswertungsButton{
-  @Prop() dozent: string = "Mester";
-  @Prop() gruppe: string;
-  @Prop() matrikelnummer1: string;
-  @Prop() matrikelnummer2: string;
-  @Prop() matrikelnummer3: string;
-  @Prop() matrikelnummer4: string;
-  @Prop() projekt: string;
-  @Prop() leistung: string;
+  @State() dozent: string;
+  @State() gruppe: string;
+  @State() matrikelnummereins: string;
+  @State() matrikelnummerzwei: string;
+  @State() matrikelnummerdrei: string;
+  @State() matrikelnummervier: string;
+  @State() projekt: string;
+  @State() leistung: string;
+  @State() veranstaltung: string;
   @Prop() Ueberschrift: string;
   @Prop() regler: string;
   @Prop() value: number;
@@ -23,6 +24,17 @@ export class AuswertungsButton{
   
   @State() visible = false;
 
+  componentWillLoad() {
+    this.dozent = localStorage.getItem('dozent');
+    this.gruppe = localStorage.getItem('gruppe');
+    this.matrikelnummereins = localStorage.getItem('matrikelnummereins');
+    this.matrikelnummerzwei = localStorage.getItem('matrikelnummerzwei');
+    this.matrikelnummerdrei = localStorage.getItem('matrikelnummerdrei');
+    this.matrikelnummervier = localStorage.getItem('matrikelnummervier');
+    this.projekt = localStorage.getItem('projekt');
+    this.leistung = localStorage.getItem('leistung');
+    this.veranstaltung = localStorage.getItem('veranstaltung');
+    }
   toggleVisibility = () => {
     this.visible = !this.visible;
   }
@@ -48,41 +60,38 @@ export class AuswertungsButton{
           <table class="table">
             <tbody>
               <tr>
-                <td><strong>Daten</strong></td>
-                <td></td>
+                <td><strong>Dozent:</strong></td>
+                <td>{this.dozent}</td>
               </tr>
               <tr>
-              <td>Dozent:</td>
-              <td>{this.dozent}</td>
+                <td><strong>Student/Gruppe:</strong></td>
+                <td>{this.gruppe}</td>
               </tr>
               <tr>
-              <td>Student/Gruppe:</td>
-              <td>{this.gruppe}</td>
+                <td><strong>1. Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummereins}</td> 
               </tr>
               <tr>
-              <td>1. Matrikelnummer:</td>
-              <td>{this.matrikelnummer1}</td>
+                <td><strong>2. Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummerzwei}</td>
               </tr>
               <tr>
-              <td>2. Matrikelnummer:</td>
-                <td>{this.matrikelnummer2}</td>
+                <td><strong>3. Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummervier}</td>
               </tr>
               <tr>
-              <td>3. Matrikelnummer:</td>
-              <td>{this.matrikelnummer3}</td>
-              </tr>
-              <tr>
-              <td>4. Matrikelnummer:</td>
-              <td>{this.matrikelnummer4}</td>
+                <td><strong>4. Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummervier}</td>
               </tr>    
               <tr>
-              <td>Projekt:</td>
-                <td>{this.projekt}</td>
-              </tr>
+                <td><strong>Veranstaltung:</strong></td>
+                <td>{this.veranstaltung}</td>
+              </tr>  
               <tr>
-              <td>Prüfungsleistung:</td>
+                <td><strong>Prüfungsleistung:</strong></td>
                 <td>{this.leistung}</td>
-              </tr>                      
+              </tr>   
+                                 
             </tbody>
           </table>
         </div>

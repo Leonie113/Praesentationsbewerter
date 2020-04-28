@@ -1,4 +1,4 @@
-import { Component, Prop, State, h, Listen, Element } from '@stencil/core';
+import { Component, Prop, State, Listen, Element } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-button-kurz',
@@ -10,8 +10,8 @@ export class AufklappButton {
   @Prop() Kriterium2: string;
 
   @Prop() Ueberschrift: string;
-  @Prop() regler: string;
-  @Prop() value: number;
+  @State() regler: string;
+  @State() value: number;
   
   @State() visible = false;
 
@@ -24,9 +24,9 @@ export class AufklappButton {
         this.value2 = inputs[1].value;
       }
 
-  @Prop() inputs = this.host.querySelectorAll('input');
-  @Prop() value1 = this.inputs[0].value;
-  @Prop() value2 = this.inputs[1].value;
+  @State() inputs = this.host.querySelectorAll('input');
+  @State() value1 = this.inputs[0].value;
+  @State() value2 = this.inputs[1].value;
  
   toggleVisibility = () => {
     this.visible = !this.visible;
