@@ -5,7 +5,7 @@ import { Component } from '@stencil/core';
     styleUrl: 'zurueck-button.css'
 })
 
-export class FooterLeonie {
+export class ZurueckButton {
     render() {
         return <img id="links" src="/assets/links.png"></img>
          
