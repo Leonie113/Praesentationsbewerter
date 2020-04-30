@@ -34,3 +34,31 @@
     background: rgb(201, 8, 8);
     cursor: pointer;
   }
+
+  #steplist {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    width: 68%;
+    margin-left: -69.05%;
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
+  
+  #steplist option {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    /* background: rgb(214, 213, 213); */
+    height: 8px;
+    line-height: 4;
+    z-index: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+  }
+
+  /* .regler-div {
+    height: 70px;
+  } */
