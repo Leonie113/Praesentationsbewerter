@@ -1,4 +1,4 @@
-import { Component, Prop, State, h, Listen, Element } from '@stencil/core';
+import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
   tag: 'aufklapp-button',
@@ -11,29 +11,12 @@ export class AufklappButton {
   @Prop() Kriterium3: string;
   @Prop() Kriterium4: string;
   @Prop() Ueberschrift: string;
-  @Prop() regler: string;
-  @Prop() value: number;
+  @State() regler: string;
+  @State() value: number;
   
   @State() visible = false;
   
   @Element() host: HTMLElement;
-
-  @Listen ('change', {capture: true})
-      handleChangeEvent(){
-        let inputs = this.host.querySelectorAll('input');
-        
-        this.value1 = inputs[0].value;
-        this.value2 = inputs[1].value;
-        this.value3 = inputs[2].value;
-        this.value4 = inputs[3].value;
-      }
-
-  @Prop() inputs = this.host.querySelectorAll('input');
-  
-  @Prop() value1 = this.inputs[0].value;
-  @Prop() value2 = this.inputs[1].value;
-  @Prop() value3 = this.inputs[2].value;
-  @Prop() value4 = this.inputs[3].value;
 
   toggleVisibility = () => {
     this.visible = !this.visible;
@@ -62,59 +45,31 @@ export class AufklappButton {
           <table class="table">
             <tbody>
               <tr>
-              <td></td>
+                <td></td>
                 <td><strong>Punktebewertung</strong></td>
               </tr>
               <tr>
-              <td>{this.Kriterium1}</td>
-              <td>        
-              <div>
-                    <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value1}</span></h4>
-                    <div class="regler-container">
-                    <h4>0</h4>
-                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
-                    <h4>10</h4>
-                    </div>
-                    </div>
-              </td>
+                <td>{this.Kriterium1}</td>
+                <td>        
+                <regler-wertung regler="reglereins"></regler-wertung> 
+                </td>
               </tr>
               <tr>
                 <td>{this.Kriterium2}</td>
                 <td>
-                <div>
-                <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value2}</span></h4>
-                    <div class="regler-container">
-                    <h4>0</h4>
-                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
-                    <h4>10</h4>
-                    </div>
-                    </div>
+                <regler-wertung regler="reglereins"></regler-wertung> 
                 </td>
               </tr>     
               <tr>
                 <td>{this.Kriterium3}</td>
                 <td>
-                <div>
-                <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value3}</span></h4>
-                    <div class="regler-container">
-                    <h4>0</h4>
-                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
-                    <h4>10</h4>
-                    </div>
-                    </div>
+                <regler-wertung regler="reglereins"></regler-wertung> 
                 </td>
               </tr>
               <tr>
                 <td>{this.Kriterium4}</td>
                 <td>
-                <div>
-                    <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value4}</span></h4>
-                    <div class="regler-container">
-                    <h4>0</h4>
-                    <input  name="range" id="myRange" class="slider"  min="0" max="10" type="range" step="1"  value='' ></input>
-                    <h4>10</h4>
-                    </div>
-                    </div>
+                <regler-wertung regler="reglereins"></regler-wertung> 
                 </td>
               </tr>                      
             </tbody>

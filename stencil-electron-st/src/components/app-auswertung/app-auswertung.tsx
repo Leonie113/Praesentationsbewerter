@@ -1,12 +1,44 @@
-import { Component, Prop, } from '@stencil/core';
+import { Component, Prop, State, } from '@stencil/core';
 
 
 @Component({
   tag: 'app-auswertung',
   styleUrl: 'app-auswertung.css',
 })
-export class AppHome{
+export class AppAuswertung{
   @Prop() test: string;
+  @State() reglereins : string;
+  @State() reglerzwei : string;
+  @State() reglerdrei : string;
+  @State() reglervier : string;
+  @State() reglerfuenf : string;
+  @State() reglersechs : string;
+  @State() reglersieben : string;
+  @State() regleracht : string;
+  @State() reglerneun : string;
+  @State() reglerzehn : string;
+  @State() reglerelf : string;
+  @State() reglerzwoelf : string;
+  @State() reglerdreizehn : string;
+  @State() reglervierzehn : string;
+
+
+  componentWillLoad() {
+    this.reglereins = localStorage.getItem('reglereins');
+    this.reglerzwei = localStorage.getItem('reglerzwei');
+    this.reglerdrei = localStorage.getItem('reglerdrei');
+    this.reglervier = localStorage.getItem('reglervier');
+    this.reglerfuenf = localStorage.getItem('reglerfuenf');
+    this.reglersechs = localStorage.getItem('reglersechs');
+    this.reglersieben = localStorage.getItem('reglersieben');
+    this.regleracht = localStorage.getItem('regleracht');
+    this.reglerneun = localStorage.getItem('reglerneun');
+    this.reglerzehn = localStorage.getItem('reglerzehn');
+    this.reglerelf = localStorage.getItem('reglerelf');
+    this.reglerzwoelf = localStorage.getItem('reglerzwoelf');
+    this.reglerdreizehn = localStorage.getItem('reglerdreizehn');
+    this.reglervierzehn = localStorage.getItem('reglervierzehn');
+    }
   handleClick(event: UIEvent) {
     
     // var inhalt = document.getElementById('save-button').value;
@@ -28,12 +60,18 @@ export class AppHome{
               Kriterium2="Nutzung von Fachwissen"
               Kriterium3="Struktur"
               Kriterium4="Dokumentation"
+              reglereins={this.reglereins}
+              reglerzwei={this.reglerzwei}
+              reglerdrei={this.reglerdrei}
+              reglervier={this.reglervier}
           ></auswertung-button >
 
             <auswertung-button-kurz class="aufklappbuttons"
               Ueberschrift="Produkt"
               Kriterium1="Umsetzbarkeit des Ergebnisses"
               Kriterium2="Kreativität"
+              reglerfuenf={this.reglerfuenf}
+              reglersechs={this.reglersechs}
             ></auswertung-button-kurz>
 
             <auswertung-button class="aufklappbuttons" 
@@ -42,6 +80,10 @@ export class AppHome{
               Kriterium2="Selbstständigkeit, Eigeninitiative"
               Kriterium3="Kommunikation"
               Kriterium4="Dokumentation"
+              reglereins={this.reglersieben}
+              reglerzwei={this.regleracht}
+              reglerdrei={this.reglerneun}
+              reglervier={this.reglerzehn}
             ></auswertung-button>
 
             <auswertung-button class="aufklappbuttons-last" 
@@ -50,11 +92,14 @@ export class AppHome{
               Kriterium2="Ansprache"
               Kriterium3="Medien"
               Kriterium4="Diskussion"
+              reglereins={this.reglerelf}
+              reglerzwei={this.reglerzwoelf}
+              reglerdrei={this.reglerdreizehn}
+              reglervier={this.reglervierzehn}
             ></auswertung-button>
 
             <auswertung-daten
-              Ueberschrift="Daten"
-              dozent={this.todoListElement.dozent = "Mester"}
+              Ueberschrift="Daten" 
             ></auswertung-daten>
 
           </div>

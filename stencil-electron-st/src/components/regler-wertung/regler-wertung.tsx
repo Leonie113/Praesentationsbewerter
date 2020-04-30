@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop,  State } from '@stencil/core';
 
 @Component({
   tag: 'regler-wertung',
@@ -8,10 +8,16 @@ import { Component, Prop } from '@stencil/core';
 
 
 export class regler {
-  @Prop() regler: string;
-  @Prop() value: number;
 
-  
+  @State() value: string | number;
+  @Prop() regler: string;
+
+
+  handleReglerInput(e: UIEvent) {
+    const target = e.target as HTMLInputElement;
+    this.value = target.value;
+    localStorage.setItem(this.regler, target.value);
+  }
   /**meinSlider=document.querySelector('#myRange')
 
   @Listen ('click', {capture: true})
@@ -23,60 +29,64 @@ export class regler {
 */
   render() {
     return (
-        <div>
-            <h1 class="regler-wertung">gewichtete Punkte von 0-10: {this.regler} <span>0</span></h1>
-            <input type="range" id="myRange" class="slider" value="0" min="0" max="10" ></input>
+      <div>
+        <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value}</span></h4>
+        <div class="regler-container">
+          <h4>0</h4>
+          <input name={this.regler} id="myRange" class="slider" min="0" max="10" type="range" step="1" value={this.value} onInput={(e: UIEvent) => { this.handleReglerInput(e) }} />
+          <h4>10</h4>
         </div>
+      </div>
     )
-}
-}
-
-
-
-
-         /**function rangeMove (): void {
-            var meinSlider: any = document.querySelector("input[type='range]");
-            meinSlider.addeventListener("change", function() {
-                document.querySelector("regler-wertung span").innerHTML = this.value;
-            }); 
-         };
-
-
-
-
-
-
-
-
-     }
   }
- /** import { Listen } from '@stencil/core';
+}
+
+
+
+
+/**function rangeMove (): void {
+   var meinSlider: any = document.querySelector("input[type='range]");
+   meinSlider.addeventListener("change", function() {
+       document.querySelector("regler-wertung span").innerHTML = this.value;
+   });
+};
+
+
+
+
+
+
+
+
+}
+}
+/** import { Listen } from '@stencil/core';
 
 @Listen('scroll', { target: 'window' })
 handleScroll(ev) {
-  console.log('the body was scrolled', ev);
+console.log('the body was scrolled', ev);
 }
- 
 
 
- * 
- * var slider = document.getElementById("myRange");
+
+*
+* var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
-  output.innerHTML = this.value;
+output.innerHTML = this.value;
 }
- * 
- * 
- * 
- * 
+*
+*
+*
+*
 
-function(){  
-    var slider = document.querySelector("input[type='range']");                          // Slider in Variable 'slider' speichern 
-    slider.addEventListener("change", function(){                                        //Eventlistener reagiert wenn Regler verschoben wird
-      document.querySelector(".regler-wertung span").innerHTML = this.value;           //Wert der Motivation soll angezeigt werden: this.value, in HTML ist span Element definiert
-    });
-  });
-  */
+function(){
+var slider = document.querySelector("input[type='range']");                          // Slider in Variable 'slider' speichern
+slider.addEventListener("change", function(){                                        //Eventlistener reagiert wenn Regler verschoben wird
+document.querySelector(".regler-wertung span").innerHTML = this.value;           //Wert der Motivation soll angezeigt werden: this.value, in HTML ist span Element definiert
+});
+});
+*/
