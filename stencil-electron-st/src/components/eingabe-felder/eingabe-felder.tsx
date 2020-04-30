@@ -139,6 +139,10 @@ export class EingabeFelder{
                   Kriterium2="2. Matrikelnummer"
                   Kriterium3="3. Matrikelnummer"
                   Kriterium4="4. Matrikelnummer"
+                  Kriterium5="5. Matrikelnummer"
+                  Kriterium6="6. Matrikelnummer"
+                  Kriterium7="7. Matrikelnummer"
+                  Kriterium8="8. Matrikelnummer"
                 ></aufklapp-input>
 
                 <label id="veranstaltung">
@@ -147,8 +151,6 @@ export class EingabeFelder{
                 </label>
                 <radio-input                 
                   Ueberschrift="Prüfungsleistung" 
-                  Kriterium1="1. Matrikelnummer"
-                  Kriterium2="2. Matrikelnummer"
                 ></radio-input>
                 <div class="buttons">
                 <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>

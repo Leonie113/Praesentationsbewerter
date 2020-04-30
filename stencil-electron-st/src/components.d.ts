@@ -17,17 +17,27 @@ import {
 export namespace Components {
 
   interface AnmerkungsFeld {
-    'name': string;
+    'anmerkung': string;
+    'guteAspekte': string;
+    'verbesserung': string;
   }
   interface AnmerkungsFeldAttributes extends StencilHTMLAttributes {
-    'name'?: string;
+    'anmerkung'?: string;
+    'guteAspekte'?: string;
+    'verbesserung'?: string;
   }
 
   interface AppAuswertung {
+    'anmerkung': string;
+    'guteAspekte': string;
     'test': string;
+    'verbesserung': string;
   }
   interface AppAuswertungAttributes extends StencilHTMLAttributes {
+    'anmerkung'?: string;
+    'guteAspekte'?: string;
     'test'?: string;
+    'verbesserung'?: string;
   }
 
   interface AppBewertung {}
@@ -66,6 +76,10 @@ export namespace Components {
     'Kriterium2': string;
     'Kriterium3': string;
     'Kriterium4': string;
+    'Kriterium5': string;
+    'Kriterium6': string;
+    'Kriterium7': string;
+    'Kriterium8': string;
     'Ueberschrift': string;
   }
   interface AufklappInputAttributes extends StencilHTMLAttributes {
@@ -73,6 +87,10 @@ export namespace Components {
     'Kriterium2'?: string;
     'Kriterium3'?: string;
     'Kriterium4'?: string;
+    'Kriterium5'?: string;
+    'Kriterium6'?: string;
+    'Kriterium7'?: string;
+    'Kriterium8'?: string;
     'Ueberschrift'?: string;
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
   }
