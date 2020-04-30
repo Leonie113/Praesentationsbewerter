@@ -21,6 +21,9 @@ export class AppAuswertung{
   @State() reglerzwoelf : string;
   @State() reglerdreizehn : string;
   @State() reglervierzehn : string;
+  @Prop() anmerkung : string;
+  @Prop() guteAspekte : string;
+  @Prop() verbesserung : string;
 
 
   componentWillLoad() {
@@ -38,13 +41,11 @@ export class AppAuswertung{
     this.reglerzwoelf = localStorage.getItem('reglerzwoelf');
     this.reglerdreizehn = localStorage.getItem('reglerdreizehn');
     this.reglervierzehn = localStorage.getItem('reglervierzehn');
+    this.anmerkung = localStorage.getItem('anmerkung');
+    this.guteAspekte = localStorage.getItem('guteAspekte');
+    this.verbesserung = localStorage.getItem('verbesserung');
     }
-  handleClick(event: UIEvent) {
-    
-    // var inhalt = document.getElementById('save-button').value;
-    alert("Deine Bewertung wird nun gespeichert");
-    console.log(event);
-  }
+  
   todoListElement: any = document.querySelector('eingabe-felder');
   render() {
     return (
@@ -104,9 +105,8 @@ export class AppAuswertung{
 
           </div>
           <div id="rechts" class="flex-item">
-            <anmerkungs-feld name="Anmerkungen"></anmerkungs-feld>
-            <anmerkungs-feld name="Das war gut"></anmerkungs-feld>
-            <anmerkungs-feld name="Verbesserungsvorschläge"></anmerkungs-feld>
+            <anmerkungs-feld></anmerkungs-feld>
+            
           </div>
         </div>
         <div>
