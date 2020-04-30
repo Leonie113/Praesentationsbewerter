@@ -36,11 +36,6 @@ textarea {
     font-size: 1em;
     outline: none;
 }
-#save-button {
-    background: #8D0011;
-    right: 50px; bottom: 8px;
-    position: absolute;
-    border: 1px white solid;
-    color: white;
-    border-radius: 5px;
+#background {
+    background: 0px;
 }

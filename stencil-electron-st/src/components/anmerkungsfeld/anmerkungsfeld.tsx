@@ -6,21 +6,40 @@ import { Component, Prop } from '@stencil/core';
   shadow: true,
 })
 export class AnmerkungsFeld {
-  @Prop() name: string;
-  
-  handleClick(event: UIEvent) {
-    
-    // var inhalt = document.getElementById('save-button').value;
-    alert("Du hast auf Speichern gedrückt");
-    console.log(event);
+  @Prop() anmerkung: string;
+  @Prop() guteAspekte: string;
+  @Prop() verbesserung: string;
+  handleAnmerkungInput(e: UIEvent){
+    const target = e.target as HTMLInputElement;
+    localStorage.setItem('anmerkung', target.value);
   }
+  handleGutInput(e: UIEvent){
+    const target = e.target as HTMLInputElement;
+    localStorage.setItem('guteAspekte', target.value);
+  }
+  handleVerbesserungInput(e: UIEvent){
+    const target = e.target as HTMLInputElement;
+    localStorage.setItem('verbesserung', target.value);
+  }
+
+  
   render() {
     return (
-        <div class="anmerkungs-feld">
-          <h1 class="ueberschrift">{this.name}</h1>
-          <textarea></textarea>
-          {/* <button id="save-button" onClick={ (event: UIEvent) => this.handleClick(event)}>Speichern</button>  */}
+        <div id="background">
+          <div class="anmerkungs-feld">
+            <h1 class="ueberschrift">Anmerkungen</h1>
+            <textarea onInput={(e: UIEvent) => { this.handleAnmerkungInput(e)}}></textarea>
+          </div>
+          <div class="anmerkungs-feld">
+            <h1 class="ueberschrift">Das war gut</h1>
+            <textarea onInput={(e: UIEvent) => { this.handleGutInput(e)}}></textarea>
+          </div>
+          <div class="anmerkungs-feld">
+            <h1 class="ueberschrift">Verbesserung</h1>
+            <textarea onInput={(e: UIEvent) => { this.handleVerbesserungInput(e)}}></textarea>
+          </div>
         </div>
+        
     );
   }
 }
