@@ -66,6 +66,10 @@ export namespace Components {
     'Kriterium2': string;
     'Kriterium3': string;
     'Kriterium4': string;
+    'Kriterium5': string;
+    'Kriterium6': string;
+    'Kriterium7': string;
+    'Kriterium8': string;
     'Ueberschrift': string;
   }
   interface AufklappInputAttributes extends StencilHTMLAttributes {
@@ -73,6 +77,10 @@ export namespace Components {
     'Kriterium2'?: string;
     'Kriterium3'?: string;
     'Kriterium4'?: string;
+    'Kriterium5'?: string;
+    'Kriterium6'?: string;
+    'Kriterium7'?: string;
+    'Kriterium8'?: string;
     'Ueberschrift'?: string;
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
   }

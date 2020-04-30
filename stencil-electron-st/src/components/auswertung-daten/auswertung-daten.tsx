@@ -1,7 +1,5 @@
 import { Component, Prop, State } from '@stencil/core';
 
-
-
 @Component({
   tag: 'auswertung-daten',
   styleUrl: 'auswertung-daten.css',
@@ -14,6 +12,10 @@ export class AuswertungsButton{
   @State() matrikelnummerzwei: string;
   @State() matrikelnummerdrei: string;
   @State() matrikelnummervier: string;
+  @State() matrikelnummerfuenf: string;
+  @State() matrikelnummersechs: string;
+  @State() matrikelnummersieben: string;
+  @State() matrikelnummeracht: string;
   @State() projekt: string;
   @State() leistung: string;
   @State() veranstaltung: string;
@@ -31,6 +33,10 @@ export class AuswertungsButton{
     this.matrikelnummerzwei = localStorage.getItem('matrikelnummerzwei');
     this.matrikelnummerdrei = localStorage.getItem('matrikelnummerdrei');
     this.matrikelnummervier = localStorage.getItem('matrikelnummervier');
+    this.matrikelnummerfuenf = localStorage.getItem('matrikelnummerfuenf');
+    this.matrikelnummersechs = localStorage.getItem('matrikelnummersechs');
+    this.matrikelnummersieben = localStorage.getItem('matrikelnummersieben');
+    this.matrikelnummeracht = localStorage.getItem('matrikelnummeracht');
     this.projekt = localStorage.getItem('projekt');
     this.leistung = localStorage.getItem('leistung');
     this.veranstaltung = localStorage.getItem('veranstaltung');
@@ -82,7 +88,23 @@ export class AuswertungsButton{
               <tr>
                 <td><strong>4. Matrikelnummer:</strong></td>
                 <td>{this.matrikelnummervier}</td>
-              </tr>    
+              </tr>
+              <tr>
+                <td><strong>5. Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummerfuenf}</td>
+              </tr> 
+              <tr>
+                <td><strong>6. Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummersechs}</td>
+              </tr> 
+              <tr>
+                <td><strong>7 Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummersieben}</td>
+              </tr> 
+              <tr>
+                <td><strong>8. Matrikelnummer:</strong></td>
+                <td>{this.matrikelnummeracht}</td>
+              </tr> 
               <tr>
                 <td><strong>Veranstaltung:</strong></td>
                 <td>{this.veranstaltung}</td>
