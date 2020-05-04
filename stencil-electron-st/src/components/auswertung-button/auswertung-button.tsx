@@ -8,19 +8,21 @@ import { Component, Prop, State } from '@stencil/core';
   shadow: true
 })
 export class AuswertungsButton{
-  @Prop() Kriterium1: string;
-  @Prop() Kriterium2: string;
-  @Prop() Kriterium3: string;
-  @Prop() Kriterium4: string;
-  @Prop() Ueberschrift: string;
+  @Prop() ueberschrift: string;
+  @Prop() kriteriumeins: string;
+  @Prop() kriteriumzwei: string;
+  @Prop() kriteriumdrei: string;
+  @Prop() kriteriumvier: string;
   @Prop() regler: string;
   @Prop() value: number;
   @Prop() reglereins : string;
   @Prop() reglerzwei : string;
   @Prop() reglerdrei : string;
   @Prop() reglervier : string; 
+  @Prop() hallo : string;
+  @Prop() punkte: string;
   
-  @Prop() gesamt : string = " XX/40 P";
+  @Prop() gesamt : string = "/40 P";
   @State() visible = false;
 
   toggleVisibility = () => {
@@ -39,7 +41,7 @@ export class AuswertungsButton{
             changeradius: this.visible // <-- using an object to toggle the class here
           }}
           type="button"
-          value={this.Ueberschrift + this.gesamt} 
+          value={this.ueberschrift + " " + this.punkte + this.gesamt} 
         />
         <div
           class={{
@@ -54,25 +56,25 @@ export class AuswertungsButton{
                 <td><strong>Punktebewertung</strong></td>
               </tr>
               <tr>
-              <td>{this.Kriterium1}</td>
+              <td>{this.kriteriumeins}</td>
               <td>        
                 {this.reglereins}
               </td>
               </tr>
               <tr>
-                <td>{this.Kriterium2}</td>
+                <td>{this.kriteriumzwei}</td>
                 <td>
                 {this.reglerzwei}
                 </td>
               </tr>     
               <tr>
-                <td>{this.Kriterium3}</td>
+                <td>{this.kriteriumdrei}</td>
                 <td>
                 {this.reglerdrei}
                 </td>
               </tr>
               <tr>
-                <td>{this.Kriterium4}</td>
+                <td>{this.kriteriumvier}</td>
                 <td>
                 {this.reglervier}
                 </td>

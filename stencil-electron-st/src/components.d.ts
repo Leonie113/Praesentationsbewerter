@@ -28,16 +28,10 @@ export namespace Components {
   }
 
   interface AppAuswertung {
-    'anmerkung': string;
-    'guteAspekte': string;
     'test': string;
-    'verbesserung': string;
   }
   interface AppAuswertungAttributes extends StencilHTMLAttributes {
-    'anmerkung'?: string;
-    'guteAspekte'?: string;
     'test'?: string;
-    'verbesserung'?: string;
   }
 
   interface AppBewertung {}
@@ -107,52 +101,58 @@ export namespace Components {
   }
 
   interface AuswertungButtonKurz {
-    'Kriterium1': string;
-    'Kriterium2': string;
-    'Ueberschrift': string;
     'gesamt': string;
+    'kriteriumeins': string;
+    'kriteriumzwei': string;
+    'punkte': string;
     'regler': string;
     'reglerfuenf': string;
     'reglersechs': string;
+    'ueberschrift': string;
     'value': number;
   }
   interface AuswertungButtonKurzAttributes extends StencilHTMLAttributes {
-    'Kriterium1'?: string;
-    'Kriterium2'?: string;
-    'Ueberschrift'?: string;
     'gesamt'?: string;
+    'kriteriumeins'?: string;
+    'kriteriumzwei'?: string;
+    'punkte'?: string;
     'regler'?: string;
     'reglerfuenf'?: string;
     'reglersechs'?: string;
+    'ueberschrift'?: string;
     'value'?: number;
   }
 
   interface AuswertungButton {
-    'Kriterium1': string;
-    'Kriterium2': string;
-    'Kriterium3': string;
-    'Kriterium4': string;
-    'Ueberschrift': string;
     'gesamt': string;
+    'hallo': string;
+    'kriteriumdrei': string;
+    'kriteriumeins': string;
+    'kriteriumvier': string;
+    'kriteriumzwei': string;
+    'punkte': string;
     'regler': string;
     'reglerdrei': string;
     'reglereins': string;
     'reglervier': string;
     'reglerzwei': string;
+    'ueberschrift': string;
     'value': number;
   }
   interface AuswertungButtonAttributes extends StencilHTMLAttributes {
-    'Kriterium1'?: string;
-    'Kriterium2'?: string;
-    'Kriterium3'?: string;
-    'Kriterium4'?: string;
-    'Ueberschrift'?: string;
     'gesamt'?: string;
+    'hallo'?: string;
+    'kriteriumdrei'?: string;
+    'kriteriumeins'?: string;
+    'kriteriumvier'?: string;
+    'kriteriumzwei'?: string;
+    'punkte'?: string;
     'regler'?: string;
     'reglerdrei'?: string;
     'reglereins'?: string;
     'reglervier'?: string;
     'reglerzwei'?: string;
+    'ueberschrift'?: string;
     'value'?: number;
   }
 
@@ -292,6 +292,13 @@ export namespace Components {
     'regler'?: string;
   }
 
+  interface TestLarissa {
+    'button': string;
+  }
+  interface TestLarissaAttributes extends StencilHTMLAttributes {
+    'button'?: string;
+  }
+
   interface WeiterButton {}
   interface WeiterButtonAttributes extends StencilHTMLAttributes {}
 
@@ -326,6 +333,7 @@ declare global {
     'Kategorie4Button': Components.Kategorie4Button;
     'RadioInput': Components.RadioInput;
     'ReglerWertung': Components.ReglerWertung;
+    'TestLarissa': Components.TestLarissa;
     'WeiterButton': Components.WeiterButton;
     'ZurueckButton': Components.ZurueckButton;
   }
@@ -356,6 +364,7 @@ declare global {
     'kategorie4-button': Components.Kategorie4ButtonAttributes;
     'radio-input': Components.RadioInputAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
+    'test-larissa': Components.TestLarissaAttributes;
     'weiter-button': Components.WeiterButtonAttributes;
     'zurueck-button': Components.ZurueckButtonAttributes;
   }
@@ -511,6 +520,12 @@ declare global {
     new (): HTMLReglerWertungElement;
   };
 
+  interface HTMLTestLarissaElement extends Components.TestLarissa, HTMLStencilElement {}
+  var HTMLTestLarissaElement: {
+    prototype: HTMLTestLarissaElement;
+    new (): HTMLTestLarissaElement;
+  };
+
   interface HTMLWeiterButtonElement extends Components.WeiterButton, HTMLStencilElement {}
   var HTMLWeiterButtonElement: {
     prototype: HTMLWeiterButtonElement;
@@ -549,6 +564,7 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement
     'radio-input': HTMLRadioInputElement
     'regler-wertung': HTMLReglerWertungElement
+    'test-larissa': HTMLTestLarissaElement
     'weiter-button': HTMLWeiterButtonElement
     'zurueck-button': HTMLZurueckButtonElement
   }
@@ -579,6 +595,7 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement;
     'radio-input': HTMLRadioInputElement;
     'regler-wertung': HTMLReglerWertungElement;
+    'test-larissa': HTMLTestLarissaElement;
     'weiter-button': HTMLWeiterButtonElement;
     'zurueck-button': HTMLZurueckButtonElement;
   }

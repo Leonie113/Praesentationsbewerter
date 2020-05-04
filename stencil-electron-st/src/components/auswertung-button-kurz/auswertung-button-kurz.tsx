@@ -6,17 +6,18 @@ import { Component, Prop, State } from '@stencil/core';
   shadow: true
 })
 export class AuswertungsButtonKurz {
-  @Prop() Kriterium1: string;
-  @Prop() Kriterium2: string;
+  @Prop() kriteriumeins: string;
+  @Prop() kriteriumzwei: string;
+  @Prop() punkte : string;
 
-  @Prop() Ueberschrift: string;
+  @Prop() ueberschrift: string;
   @Prop() regler: string;
   @Prop() value: number;
 
   @Prop() reglerfuenf: string;
   @Prop() reglersechs: string;
 
-  @Prop() gesamt : string = " XX/20 P";
+  @Prop() gesamt : string = "/20 P";
   
   @State() visible = false;
 
@@ -34,7 +35,7 @@ export class AuswertungsButtonKurz {
             changeradius: this.visible // <-- using an object to toggle the class here
           }}
           type="button"
-          value={this.Ueberschrift + this.gesamt} 
+          value={this.ueberschrift + " " + this.punkte + this.gesamt} 
         />
         <div
           class={{
@@ -49,13 +50,13 @@ export class AuswertungsButtonKurz {
                 <td><strong>Punktebewertung</strong></td>
               </tr>
               <tr>
-              <td>{this.Kriterium1}</td>
+              <td>{this.kriteriumeins}</td>
               <td>        
               {this.reglerfuenf}
               </td>
               </tr>
               <tr>
-                <td>{this.Kriterium2}</td>
+                <td>{this.kriteriumzwei}</td>
                 <td>
                 {this.reglersechs}
                 </td>

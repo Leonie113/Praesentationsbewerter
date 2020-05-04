@@ -19,7 +19,14 @@
   "dependencies": {
     "@stencil/core": "0.18.0",
     "@stencil/router": "~0.3.1",
-    "electron-is-dev": "^1.0.1"
+    "@types/jquery": "^3.3.37",
+    "alasql": "^0.6.0",
+    "csv-export": "^1.0.2",
+    "electron-is-dev": "^1.0.1",
+    "excellentexport": "^3.4.3",
+    "export-to-csv": "^0.2.1",
+    "jquery": "^3.5.0",
+    "ts-export-to-csv": "^0.3.3"
   },
   "license": "MIT",
   "devDependencies": {
