@@ -24,3 +24,7 @@
 #example-table{
     display: block;
 }
+
+#txtArea1{
+    display: none;
+}
