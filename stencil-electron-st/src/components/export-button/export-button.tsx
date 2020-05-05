@@ -110,10 +110,11 @@ export class ExportierButton {
   }
 csv(event){
   console.log(this.datei);
+  console.log(event);
   var json = this.datei;
   console.log(json);
 var fields = Object.keys(json[0]);
-var replacer = function(key:any, value) { return value === null ? '' : value } 
+var replacer = function(key, value) { return value === null ? '' : value } 
 var csv = json.map(function(row){
   return fields.map(function(fieldName){
     return JSON.stringify(row[fieldName], replacer)
@@ -134,12 +135,12 @@ hiddenElement.click();
       <table id='example-table'>
         <thead>
           <tr>
-            <th colspan="5" >Auswertungstabelle des Präsentationsbewerters</th>
+            <th colSpan={4}> Auswertungstabelle des Präsentationsbewerters</th>
           </tr>
         </thead>
         <thead>
           <tr>
-            <th colspan="3" >Daten zur Bewertung:</th>
+            <th colSpan={3} >Daten zur Bewertung:</th>
           </tr>
         </thead>
         <tr>
@@ -151,7 +152,7 @@ hiddenElement.click();
           <td>{this.gruppe}</td>
         </tr>
         <tr>
-          <td rowspan="4">Matrikelnummer(n):</td>
+          <td rowSpan={4}>Matrikelnummer(n):</td>
           <td>{this.matrikelnummereins}</td>
           <td>{this.matrikelnummerzwei}</td>
         </tr>
@@ -179,7 +180,7 @@ hiddenElement.click();
         <td>Gesamt Punktzahl (Kategorie):</td>
         </tr>
         <tr>
-        <td rowspan="4">Thematische Ausarbeitung:</td>
+        <td rowSpan={4}>Thematische Ausarbeitung:</td>
         <td>Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)</td>
         <td>{this.reglereins}</td>
         <td>10</td>
@@ -204,7 +205,7 @@ hiddenElement.click();
         <td>{this.ergebnisTA}/40P</td>
         </tr>
         <tr>
-        <td rowspan="2">Produkt:</td>
+        <td rowSpan={2}>Produkt:</td>
         <td>Umsetzbarkeit des Ergebnisses</td>
         <td>{this.reglerfuenf}</td>
         <td>10</td>
@@ -217,7 +218,7 @@ hiddenElement.click();
         <td>{this.ergebnisPR}/20P</td>
         </tr>
         <tr>
-        <td rowspan="4">Herangehensweise:</td>
+        <td rowSpan={4}>Herangehensweise:</td>
         <td>Methodik</td>
         <td>{this.reglersieben}</td>
         <td>10</td>
@@ -242,7 +243,7 @@ hiddenElement.click();
         <td>{this.ergebnisHW}/40P</td>
         </tr>
         <tr>
-        <td rowspan="4">Präsentation:</td>
+        <td rowSpan={4}>Präsentation:</td>
         <td>Rhetorik</td>
         <td>{this.reglerelf}</td>
         <td>10</td>
