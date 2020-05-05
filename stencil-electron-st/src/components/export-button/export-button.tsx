@@ -26,6 +26,29 @@ export class ExportierButton {
   @State() reglerdreizehn : string;
   @State() reglervierzehn : string;
 
+  @State() dozent: string;
+  @State() gruppe: string;
+  @State() matrikelnummereins: string;
+  @State() matrikelnummerzwei: string;
+  @State() matrikelnummerdrei: string;
+  @State() matrikelnummervier: string;
+  @State() matrikelnummerfuenf: string;
+  @State() matrikelnummersechs: string;
+  @State() matrikelnummersieben: string;
+  @State() matrikelnummeracht: string;
+  @State() projekt: string;
+  @State() leistung: string;
+  @State() veranstaltung: string;
+
+  @State() anmerkungen: string;
+  @State() guteaspekte: string;
+  @State() verbesserung: string;
+
+  @State() ergebnisTA : string;
+  @State() ergebnisPR : string;
+  @State() ergebnisHW : string;
+  @State() ergebnisPAE : string;
+
   componentDidLoad() {
     console.log(this.element.querySelector<HTMLTableElement>('#example-table'));
     console.log(this.tableToJson(this.element.querySelector<HTMLTableElement>('#example-table')));
@@ -43,6 +66,29 @@ export class ExportierButton {
     this.reglerzwoelf = localStorage.getItem('reglerzwoelf');
     this.reglerdreizehn = localStorage.getItem('reglerdreizehn');
     this.reglervierzehn = localStorage.getItem('reglervierzehn');
+
+    this.dozent = localStorage.getItem('dozent');
+    this.gruppe = localStorage.getItem('gruppe');
+    this.matrikelnummereins = localStorage.getItem('matrikelnummereins');
+    this.matrikelnummerzwei = localStorage.getItem('matrikelnummerzwei');
+    this.matrikelnummerdrei = localStorage.getItem('matrikelnummerdrei');
+    this.matrikelnummervier = localStorage.getItem('matrikelnummervier');
+    this.matrikelnummerfuenf = localStorage.getItem('matrikelnummerfuenf');
+    this.matrikelnummersechs = localStorage.getItem('matrikelnummersechs');
+    this.matrikelnummersieben = localStorage.getItem('matrikelnummersieben');
+    this.matrikelnummeracht = localStorage.getItem('matrikelnummeracht');
+    this.projekt = localStorage.getItem('projekt');
+    this.leistung = localStorage.getItem('leistung');
+    this.veranstaltung = localStorage.getItem('veranstaltung');
+
+    this.anmerkungen = localStorage.getItem('anmerkung');
+    this.guteaspekte = localStorage.getItem('guteAspekte');
+    this.verbesserung = localStorage.getItem('verbesserung');
+
+    this.ergebnisTA = localStorage.getItem('ergebnisTA');
+    this.ergebnisPR = localStorage.getItem('ergebnisPR');
+    this.ergebnisHW = localStorage.getItem('ergebnisHW');
+    this.ergebnisPAE = localStorage.getItem('ergebnisPAE');
   }
 
   tableToJson(table: HTMLTableElement) {
@@ -88,49 +134,150 @@ hiddenElement.click();
       <table id='example-table'>
         <thead>
           <tr>
-            <th></th>
-            <th colspan="2" >Thematische Ausarbeitung</th>
-            <th>Price</th>
-            <th>Tax</th>
+            <th colspan="5" >Auswertungstabelle des Präsentationsbewerters</th>
           </tr>
         </thead>
         <thead>
           <tr>
-            <th>Kriterium</th>
-            <th>Punkte</th>
-            <th>Test</th>
-            <th>Tax</th>
+            <th colspan="3" >Daten zur Bewertung:</th>
           </tr>
         </thead>
         <tr>
-          <td>Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)</td>
-          <td>{this.reglereins}</td>
-          <td>94</td>
-          <td>250</td>
-          <td>81</td>
+          <td>Dozent:</td>
+          <td>{this.dozent}</td>
         </tr>
         <tr>
-          <td>Nutzung von Fachwissen</td>
-          <td>{this.reglerzwei}</td>
-          <td>94</td>
-          <td>250</td>
-          <td>81</td>
+          <td>Name des Studierenden/Gruppe:</td>
+          <td>{this.gruppe}</td>
         </tr>
         <tr>
-          <td>Struktur</td>
-          <td>{this.reglerdrei}</td>
-          <td>80</td>
-          <td>950</td>
-          <td>412</td>
+          <td rowspan="4">Matrikelnummer(n):</td>
+          <td>{this.matrikelnummereins}</td>
+          <td>{this.matrikelnummerzwei}</td>
         </tr>
         <tr>
-          <td>Dokumentation</td>
-          <td>{this.reglervier}</td>
-          <td>67</td>
-          <td>750</td>
-          <td>941</td>
+        <td>{this.matrikelnummerdrei}</td>
+          <td>{this.matrikelnummervier}</td>
         </tr>
-
+        <tr>
+        <td>{this.matrikelnummerfuenf}</td>
+          <td>{this.matrikelnummersechs}</td>
+        </tr>
+        <tr>
+        <td>{this.matrikelnummersieben}</td>
+          <td>{this.matrikelnummeracht}</td>
+        </tr>
+        <tr>
+        <td>Lehrveranstaltung:</td>
+        <td>{this.veranstaltung}</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>Kriterium:</td>
+        <td>Erreichte Punktzahl:</td>
+        <td>Mögliche Punktzahl:</td>
+        <td>Gesamt Punktzahl (Kategorie):</td>
+        </tr>
+        <tr>
+        <td rowspan="4">Thematische Ausarbeitung:</td>
+        <td>Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)</td>
+        <td>{this.reglereins}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Nutzung von Fachwissen</td>
+        <td>{this.reglerzwei}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Struktur</td>
+        <td>{this.reglerdrei}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Dokumentation</td>
+        <td>{this.reglervier}</td>
+        <td>10</td>
+        <td>{this.ergebnisTA}/40P</td>
+        </tr>
+        <tr>
+        <td rowspan="2">Produkt:</td>
+        <td>Umsetzbarkeit des Ergebnisses</td>
+        <td>{this.reglerfuenf}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Kreativität</td>
+        <td>{this.reglersechs}</td>
+        <td>10</td>
+        <td>{this.ergebnisPR}/20P</td>
+        </tr>
+        <tr>
+        <td rowspan="4">Herangehensweise:</td>
+        <td>Methodik</td>
+        <td>{this.reglersieben}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Selbstständigkeit, Eigeninitiative</td>
+        <td>{this.regleracht}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Kommunikation</td>
+        <td>{this.reglerneun}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Dokumentation</td>
+        <td>{this.reglerzehn}</td>
+        <td>10</td>
+        <td>{this.ergebnisHW}/40P</td>
+        </tr>
+        <tr>
+        <td rowspan="4">Präsentation:</td>
+        <td>Rhetorik</td>
+        <td>{this.reglerelf}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Ansprache</td>
+        <td>{this.reglerzwoelf}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Medien</td>
+        <td>{this.reglerdreizehn}</td>
+        <td>10</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Diskussion</td>
+        <td>{this.reglervierzehn}</td>
+        <td>10</td>
+        <td>{this.ergebnisPAE}/40P</td>
+        </tr>
+        <tr>
+        <td>Anmerkungen:</td>
+        <td>{this.anmerkungen}</td>
+        </tr>
+        <tr>
+        <td>Gute Aspekte:</td>
+        <td>{this.guteaspekte}</td>
+        </tr>
+        <tr>
+        <td>Verbesserungsvorschläge:</td>
+        <td>{this.verbesserung}</td>
+        </tr>
       </table>
     <button class="button-text" onClick={(event:UIEvent) => this.csv(event)}>{this.button}</button>
       </div>

@@ -89,6 +89,7 @@ export class AppAuswertung{
     console.log(x);
     this.ergebnisTA = x.toString()
     console.log(this.ergebnisTA);
+    localStorage.setItem('ergebnisTA',this.ergebnisTA);
   }
 
   addiereProdukt(){
@@ -96,6 +97,7 @@ export class AppAuswertung{
     console.log(x);
     this.ergebnisPR = x.toString()
     console.log(this.ergebnisPR);
+    localStorage.setItem('ergebnisPR',this.ergebnisPR);
   }
 
   addiereHerangehensweise(){
@@ -103,6 +105,7 @@ export class AppAuswertung{
     console.log(x);
     this.ergebnisHW = x.toString()
     console.log(this.ergebnisHW);
+    localStorage.setItem('ergebnisHW',this.ergebnisHW);
   }
 
   addierePraesentation(){
@@ -110,6 +113,7 @@ export class AppAuswertung{
     console.log(x);
     this.ergebnisPAE = x.toString()
     console.log(this.ergebnisPAE);
+    localStorage.setItem('ergebnisPAE',this.ergebnisPAE);
   }
 
   render() {
