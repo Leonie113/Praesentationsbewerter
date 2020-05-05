@@ -5,10 +5,10 @@ import { Component, State, Event, EventEmitter,  Element } from '@stencil/core';
   styleUrl: 'eingabe-felder.css',
 })
 export class EingabeFelder{
-  @State() forgotPasswordUrl: string ="hallo";
+  @State() forgotPasswordUrl: string;
   @Event() loginShouldOccur: EventEmitter;
   @Element() host: HTMLElement;
-  @State() public dozent : string = "Mester";
+  @State() public dozent : string;
   @State() dozentmeldung: any;
   @State() public name : string;
   @State() namemeldung: any;
@@ -126,7 +126,7 @@ export class EingabeFelder{
           <form class="login-form">
                 <label id="dozent">
                 <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
-                <input type="text" id="dozentinput" name="dozent" placeholder="Name des Lehrenden" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleDozentInput(e)}}/>
+                <input type="text" id="dozentinput" name="dozent" placeholder="Ihr Name" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleDozentInput(e)}}/>
                 </label>
                 <label id="name">
                 <span class="meldung">Mindestens ein Name eines Studierenden muss angegeben werden.</span>
