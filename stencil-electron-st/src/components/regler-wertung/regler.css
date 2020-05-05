@@ -57,6 +57,7 @@
     z-index: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 10px;
+    -webkit-user-select: None;
   }
 
   /* .regler-div {
