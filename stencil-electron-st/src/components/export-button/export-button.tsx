@@ -89,7 +89,7 @@ hiddenElement.click();
         <thead>
           <tr>
             <th></th>
-            <th >Thematische Ausarbeitung</th>
+            <th colspan="2" >Thematische Ausarbeitung</th>
             <th>Price</th>
             <th>Tax</th>
           </tr>
@@ -98,7 +98,7 @@ hiddenElement.click();
           <tr>
             <th>Kriterium</th>
             <th>Punkte</th>
-            <th>Price</th>
+            <th>Test</th>
             <th>Tax</th>
           </tr>
         </thead>
