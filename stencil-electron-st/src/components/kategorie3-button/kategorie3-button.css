@@ -100,17 +100,11 @@
     width: 20px;
     height: 20px;
     border-radius: 50%; 
-    background: rgb(201, 8, 8);
+    background: #8D0011;
     cursor: pointer;
   }
   
-  .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgb(201, 8, 8);
-    cursor: pointer;
-  }
+ 
 
 .regler-container {
     width: 100%;

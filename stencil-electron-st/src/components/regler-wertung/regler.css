@@ -1,39 +1,5 @@
-.regler-wertung {
-    color: rgb(8, 8, 8);
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-.slider {
-    -webkit-appearance: none;
-    width: 40%;
-    height: 10px;
-    border-radius: 5px;  
-    background: #d3d3d3;
-    outline: none;
-    /**opacity: 0.7;*/
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
 
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%; 
-    background: rgb(201, 8, 8);
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgb(201, 8, 8);
-    cursor: pointer;
-  }
 
   #steplist {
     display: flex;
@@ -59,3 +25,5 @@
     font-size: 10px;
     -webkit-user-select: None;
   }
+
+  
