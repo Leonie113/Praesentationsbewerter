@@ -28,15 +28,15 @@ export class AnmerkungsFeld {
         <div id="background">
           <div class="anmerkungs-feld">
             <h1 class="ueberschrift">Anmerkungen</h1>
-            <textarea onInput={(e: UIEvent) => { this.handleAnmerkungInput(e)}}></textarea>
+            <textarea  placeholder="Text eingeben" onInput={(e: UIEvent) => { this.handleAnmerkungInput(e)}}></textarea>
           </div>
           <div class="anmerkungs-feld">
-            <h1 class="ueberschrift">Das war gut</h1>
-            <textarea onInput={(e: UIEvent) => { this.handleGutInput(e)}}></textarea>
+            <h1 class="ueberschrift">Gute Aspekte</h1>
+            <textarea  placeholder="Text eingeben" onInput={(e: UIEvent) => { this.handleGutInput(e)}}></textarea>
           </div>
           <div class="anmerkungs-feld">
-            <h1 class="ueberschrift">Verbesserung</h1>
-            <textarea onInput={(e: UIEvent) => { this.handleVerbesserungInput(e)}}></textarea>
+            <h1 class="ueberschrift">Verbesserungsvorschläge</h1>
+            <textarea  placeholder="Text eingeben" onInput={(e: UIEvent) => { this.handleVerbesserungInput(e)}}></textarea>
           </div>
         </div>
         
