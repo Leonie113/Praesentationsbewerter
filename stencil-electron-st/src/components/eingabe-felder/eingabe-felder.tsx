@@ -134,7 +134,7 @@ export class EingabeFelder{
                 </label>
                 <span class="meldung">Bitte geben Sie mindestens eine Matrikelnummer im ersten Feld ein.</span>
                 <aufklapp-input class="aufklappbuttons"
-                  Ueberschrift="Matrikelnummern der Studierenden" 
+                  Ueberschrift="Matrikelnummern der Studierenden  ▼" 
                   Kriterium1="1. Matrikelnummer"
                   Kriterium2="2. Matrikelnummer"
                   Kriterium3="3. Matrikelnummer"
@@ -150,7 +150,7 @@ export class EingabeFelder{
                 <input type="text" id="veranstaltunginput" name="veranstaltung" placeholder="Lehrveranstaltung" value=""  onInput={(e: UIEvent) => { this.handleVeranstaltungInput(e)}}/>
                 </label>
                 <radio-input                 
-                  Ueberschrift="Prüfungsleistung" 
+                  Ueberschrift="Prüfungsleistung  ▼" 
                 ></radio-input>
                 <div class="buttons">
                 <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>
