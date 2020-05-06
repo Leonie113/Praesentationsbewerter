@@ -22,7 +22,7 @@ export class AuswertungsButton{
   @Prop() hallo : string;
   @Prop() punkte: string;
   
-  @Prop() gesamt : string = "/40 P";
+  @Prop() gesamt : string = "/40 P   ▼";
   @State() visible = false;
 
   toggleVisibility = () => {

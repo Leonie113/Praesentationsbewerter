@@ -1,6 +1,6 @@
 .aufklapp-button-kurz{
     font-family: 'Segoe UI', sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
     text-align: center;
     align-items: center;
     color: white;
@@ -135,12 +135,15 @@ input{
     background-color: #474747;
     color: #fff;
     font-weight: 700;
+    font-size: 1em;
 }
 #matrikel {
     padding-top: 1px;
     padding-bottom: 1px;
     margin-top: 10px;
     height: 25px;
+    font-size: 1em;
+
 }
 
 input[type=text]:focus, select {

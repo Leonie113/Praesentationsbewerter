@@ -1,6 +1,6 @@
 .aufklapp-kurz{
     font-family: 'Segoe UI', sans-serif;
-    font-size: 18pt;
+    font-size: 1.3em;
     text-align: center;
     align-items: center;
     color: white;
@@ -18,7 +18,7 @@
 
 .table {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 13pt;
+    font-size: 1em;
     text-align: left;
     width: 60%;
     overflow: hidden;

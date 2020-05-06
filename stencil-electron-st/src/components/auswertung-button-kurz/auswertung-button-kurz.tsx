@@ -17,7 +17,7 @@ export class AuswertungsButtonKurz {
   @Prop() reglerfuenf: string;
   @Prop() reglersechs: string;
 
-  @Prop() gesamt : string = "/20 P";
+  @Prop() gesamt : string = "/20 P   ▼";
   
   @State() visible = false;
 
