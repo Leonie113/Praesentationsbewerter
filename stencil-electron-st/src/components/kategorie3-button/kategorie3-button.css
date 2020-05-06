@@ -1,8 +1,8 @@
 .kategorieeins-button{
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 18pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     align-items: center;
+    font-size: 18pt;
     color: white;
     background: #7F868D;
     padding: 5px 30px 10px 30px;
@@ -17,8 +17,8 @@
 }
 
 .table {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 13pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20pt;
     text-align: left;
     width: 60%;
     overflow: hidden;
@@ -100,17 +100,11 @@
     width: 20px;
     height: 20px;
     border-radius: 50%; 
-    background: rgb(201, 8, 8);
+    background: #8D0011;
     cursor: pointer;
   }
   
-  .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgb(201, 8, 8);
-    cursor: pointer;
-  }
+ 
 
 .regler-container {
     width: 100%;

@@ -1,9 +1,9 @@
 .auswertung-button{
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18pt;
     text-align: center;
     align-items: center;
-    color: #000;
+    color:white;
     background: #7F868D;
     padding: 5px 30px 10px 30px;
     width: 100%;
@@ -15,7 +15,7 @@
     outline: none;
 }
 .table {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13pt;
     text-align: left;
     width: 100%;

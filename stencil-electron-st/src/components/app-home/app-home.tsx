@@ -12,10 +12,11 @@ export class AppHome {
       <div class='app-home'>
         <headline-mittig text="Herzlich Willkommen beim Präsentationsbewerter"></headline-mittig>
         <img id="presentation" src="/assets/presentation.svg"></img>
-        <div >
+        <div class="weiter">
           <stencil-route-link url="/profile/stencil">
           <weiter-button></weiter-button>
           </stencil-route-link>
+            <p>Start</p>
         </div>
       </div>
     );

@@ -10,8 +10,9 @@
 
 .ueberschrift{
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
     display: block;
-    font-family: sans-serif;
     visibility: visible;
     margin: 5px 15px;
     font-size: 1.5em;
@@ -22,7 +23,6 @@
 div{
     background-color: rgb(255, 255, 255);
     display: block;
-    font-family: sans-serif;
     visibility: visible;   
 }
 textarea {
