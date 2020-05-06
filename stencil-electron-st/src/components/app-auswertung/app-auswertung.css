@@ -46,7 +46,6 @@ img {
 }
 #gesamt{
   width:100%;
-  float: left;
   margin-left: 3%;
 }
 
@@ -54,10 +53,13 @@ img {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 800;
   color: #8D0011;
-  width: 10%;
+}
+#headlines{
+  width: 50%;
+  float: left;
+}
+body {
+  overflow: hidden;
 }
 
-#headline{
-  width: 10%;
-}
   
