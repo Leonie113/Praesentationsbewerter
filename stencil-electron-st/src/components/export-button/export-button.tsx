@@ -114,13 +114,13 @@ csv(event){
   var json = this.datei;
   console.log(json);
 var fields = Object.keys(json[0]);
-var replacer = function(key, value) { return value === null ? '' : value } 
+var replacer = function(key, value) { console.log(key); return value === null ? '' : value } 
 var csv = json.map(function(row){
   return fields.map(function(fieldName){
     return JSON.stringify(row[fieldName], replacer)
-  }).join(';')
+  }).join(',')
 })
-csv.unshift(fields.join(';')) // add header column
+csv.unshift(fields.join(',')) // add header column
  csv = csv.join('\r\n');
 console.log(csv)
 var hiddenElement = document.createElement('a');
