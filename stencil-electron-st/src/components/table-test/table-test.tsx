@@ -1,8 +1,8 @@
 import { Component, Element, Prop, State } from "@stencil/core";
 
 @Component({
-  tag: "export-button",
-  styleUrl: "export-button.css",
+  tag: "table-teste",
+  styleUrl: "table-test.css",
   shadow: false,
 })
 export class ExportierButton {
@@ -49,10 +49,12 @@ export class ExportierButton {
   @State() ergebnisPAE: string;
 
   componentDidLoad() {
-
-      this.tableToJson(
-        this.element.querySelector<HTMLTableElement>("#example-table")
-    );
+    // console.log(this.element.querySelector<HTMLTableElement>("#example-table"));
+    // console.log(
+    //   this.tableToJson(
+    //     this.element.querySelector<HTMLTableElement>("#example-table")
+    //   )
+    // );
     this.reglereins = localStorage.getItem("reglereins");
     this.reglerzwei = localStorage.getItem("reglerzwei");
     this.reglerdrei = localStorage.getItem("reglerdrei");
@@ -92,54 +94,8 @@ export class ExportierButton {
     this.ergebnisPAE = localStorage.getItem("ergebnisPAE");
   }
 
-  tableToJson(table: HTMLTableElement) {
-    var data = []; // first row needs to be headers var headers = [];
-    console.log(data);
-    for (var i = 0; i < table.rows[0].cells.length; i++) {
-      Headers[i] = table.rows[0].cells[i].innerHTML
-        .toLowerCase()
-        .replace(/ /gi, "");
-    }
-    // go through cells
-    for (var i = 1; i < table.rows.length; i++) {
-      var tableRow = table.rows[i];
-      var rowData = {};
-      for (var j = 0; j < tableRow.cells.length; j++) {
-        rowData[Headers[j]] = tableRow.cells[j].innerHTML;
-      }
-      data.push(rowData);
-      console.log(rowData);
-    }
-    console.log(data);
-    this.datei = data;
-    console.log(this.datei);
-    return data;
-  }
-csv(event){
-  console.log(this.datei);
-  console.log(event);
-  var json = this.datei;
-  console.log(json);
-var fields = Object.keys(json[0]);
-console.log(fields);
-var replacer = function(key, value) { console.log(key); return value === null ? '' : value } 
-var csv = json.map(function(row){
-  return fields.map(function(fieldName){
-    return JSON.stringify(row[fieldName], replacer)
-  }).join(',')
-})
-csv.unshift(fields.join(',')) // add header column
- csv = csv.join('\r\n');
-console.log(csv);
-var hiddenElement = document.createElement('a');
-hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
-hiddenElement.target = '_blank';
-hiddenElement.download = 'bewertung.csv';
-hiddenElement.click();
-}
   render() {
     return (
-      <div>
         <table id="example-table">
           <thead>
             <tr>
@@ -289,13 +245,7 @@ hiddenElement.click();
             <td>{this.verbesserung}</td>
           </tr>
         </table>
-        <button
-          class="button-text"
-          onClick={(event: UIEvent) => this.csv(event)}
-        >
-          {this.button}
-        </button>
-      </div>
+
     );
   }
 }

@@ -292,6 +292,13 @@ export namespace Components {
     'regler'?: string;
   }
 
+  interface TableTeste {
+    'button': string;
+  }
+  interface TableTesteAttributes extends StencilHTMLAttributes {
+    'button'?: string;
+  }
+
   interface TestLarissa {
     'button': string;
   }
@@ -333,6 +340,7 @@ declare global {
     'Kategorie4Button': Components.Kategorie4Button;
     'RadioInput': Components.RadioInput;
     'ReglerWertung': Components.ReglerWertung;
+    'TableTeste': Components.TableTeste;
     'TestLarissa': Components.TestLarissa;
     'WeiterButton': Components.WeiterButton;
     'ZurueckButton': Components.ZurueckButton;
@@ -364,6 +372,7 @@ declare global {
     'kategorie4-button': Components.Kategorie4ButtonAttributes;
     'radio-input': Components.RadioInputAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
+    'table-teste': Components.TableTesteAttributes;
     'test-larissa': Components.TestLarissaAttributes;
     'weiter-button': Components.WeiterButtonAttributes;
     'zurueck-button': Components.ZurueckButtonAttributes;
@@ -520,6 +529,12 @@ declare global {
     new (): HTMLReglerWertungElement;
   };
 
+  interface HTMLTableTesteElement extends Components.TableTeste, HTMLStencilElement {}
+  var HTMLTableTesteElement: {
+    prototype: HTMLTableTesteElement;
+    new (): HTMLTableTesteElement;
+  };
+
   interface HTMLTestLarissaElement extends Components.TestLarissa, HTMLStencilElement {}
   var HTMLTestLarissaElement: {
     prototype: HTMLTestLarissaElement;
@@ -564,6 +579,7 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement
     'radio-input': HTMLRadioInputElement
     'regler-wertung': HTMLReglerWertungElement
+    'table-teste': HTMLTableTesteElement
     'test-larissa': HTMLTestLarissaElement
     'weiter-button': HTMLWeiterButtonElement
     'zurueck-button': HTMLZurueckButtonElement
@@ -595,6 +611,7 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement;
     'radio-input': HTMLRadioInputElement;
     'regler-wertung': HTMLReglerWertungElement;
+    'table-teste': HTMLTableTesteElement;
     'test-larissa': HTMLTestLarissaElement;
     'weiter-button': HTMLWeiterButtonElement;
     'zurueck-button': HTMLZurueckButtonElement;
