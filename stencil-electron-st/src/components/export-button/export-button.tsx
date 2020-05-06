@@ -115,47 +115,39 @@ export class ExportierButton {
     console.log(this.datei);
     return data;
   }
-  csv(event) {
-    console.log(this.datei);
-    console.log(event);
-    var json = this.datei;
-    console.log(json);
-    var fields = Object.keys(json[0]);
-    var replacer = function (key, value) {
-      // console.log(key);
-      return value === null ? "" : value;
-    };
-    var csv = json.map(function (row) {
-      return fields
-        .map(function (fieldName) {
-          return JSON.stringify(row[fieldName], replacer);
-        })
-        .join(";");
-    });
-    csv.unshift(fields.join(";")); // add header column
-    csv = csv.join("\r\n");
-    console.log(csv);
-    var hiddenElement = document.createElement("a");
-    hiddenElement.href = "data:text/csv;charset=utf-8," + encodeURI(csv);
-    hiddenElement.target = "_blank";
-    hiddenElement.download = "bewertung.csv";
-    hiddenElement.click();
-  }
-
+csv(event){
+  console.log(this.datei);
+  console.log(event);
+  var json = this.datei;
+  console.log(json);
+var fields = Object.keys(json[0]);
+var replacer = function(key, value) { console.log(key); return value === null ? '' : value } 
+var csv = json.map(function(row){
+  return fields.map(function(fieldName){
+    return JSON.stringify(row[fieldName], replacer)
+  }).join(',')
+})
+csv.unshift(fields.join(',')) // add header column
+ csv = csv.join('\r\n');
+console.log(csv)
+var hiddenElement = document.createElement('a');
+hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+hiddenElement.target = '_blank';
+hiddenElement.download = 'bewertung.csv';
+hiddenElement.click();
+}
   render() {
     return (
       <div>
         <table id="example-table">
           <thead>
             <tr>
-            <th colSpan={4}> Auswertungstabelle des Präsentationsbewerters</th>     <th> Auswertungstabelle des Präsentationsbewerters</th>
+            <th colSpan={4}> Auswertungstabelle des Präsentationsbewerters</th>    
             </tr>
           </thead>
-          <tr>
             <tr>
             <th colSpan={3} >Daten zur Bewertung:</th>
             </tr>
-          </tr>
           <tr>
             <td>Dozent:</td>
             <td>{this.dozent}</td>
