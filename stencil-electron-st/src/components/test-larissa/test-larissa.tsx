@@ -9,39 +9,39 @@ export class ExportierButton {
   @State() test: string = "hallloooo";
   @State() export: unknown;
 
-  handleClick() {
-    console.log(this.test);
-  }
+  // handleClick() {
+  //   console.log(this.test);
+  // }
 
-  auto = "test objekt für json";
+  // auto = "test objekt für json";
 
-  componentDidLoad() {
-    var testObject = { one: 1, two: 2, three: 3 };
-    // Put the object into storage
-    localStorage.setItem("testObject", JSON.stringify(testObject));
-    // Retrieve the object from storage
-    var retrievedObject = localStorage.getItem("testObject");
-    this.export = retrievedObject;
-  }
+  // componentDidLoad() {
+  //   var testObject = { one: 1, two: 2, three: 3 };
+  //   // Put the object into storage
+  //   localStorage.setItem("testObject", JSON.stringify(testObject));
+  //   // Retrieve the object from storage
+  //   var retrievedObject = localStorage.getItem("testObject");
+  //   this.export = retrievedObject;
+  // }
 
-  csv() {
-    const jsonData: string = localStorage.getItem("testObject");
+  // csv() {
+  //   const jsonData: string = localStorage.getItem("testObject");
 
-    let array = [JSON.parse(jsonData)];
-    var str = "";
+  //   let array = [JSON.parse(jsonData)];
+  //   var str = "";
 
-    for (var i = 0; i < array.length; i++) {
-      var line = "";
-      for (var index in array[i]) {
-        if (line != "") line += ",";
+  //   for (var i = 0; i < array.length; i++) {
+  //     var line = "";
+  //     for (var index in array[i]) {
+  //       if (line != "") line += ",";
 
-        line += array[i][index];
-      }
+  //       line += array[i][index];
+  //     }
 
-      str += line + "\r\n";
-    }
-    console.log(str);
-    return str;
+  //     str += line + "\r\n";
+  //   }
+  //   console.log(str);
+  //   return str;
 
     /* let fields = Object.keys(json[0]);
     let replacer = function (key, value) {
@@ -63,11 +63,11 @@ export class ExportierButton {
     hiddenElement.target = "_blank";
     hiddenElement.download = "bewertung.csv";
     hiddenElement.click(); */
-  }
+  // }
 
   render() {
     return (
-      <button class="button-text" onClick={this.csv}>
+      <button class="button-text">
         {this.button}
       </button>
     );

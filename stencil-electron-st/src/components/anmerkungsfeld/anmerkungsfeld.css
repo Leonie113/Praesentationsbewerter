@@ -14,7 +14,7 @@
     font-weight: 400;
     display: block;
     visibility: visible;
-    margin: 5px 15px;
+    margin: 0px 15px;
     font-size: 1.5em;
     font-weight: 500;
     padding: 10px 0px 0px;
@@ -39,4 +39,8 @@ textarea {
 }
 #background {
     background: 0px;
+}
+
+#auswertungs-buttons{
+    float: left;
 }

@@ -6,7 +6,7 @@ import { Component, Element, Prop, State } from "@stencil/core";
   shadow: false,
 })
 export class ExportierButton {
-  @Prop() button: string = "Exportieren";
+  @Prop() button: string;
   @Element() element: HTMLElement;
   @State() datei;
 

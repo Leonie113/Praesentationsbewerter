@@ -12,6 +12,10 @@ export class AppAuswertung{
   @State() ergebnisPR : string;
   @State() ergebnisHW : string;
   @State() ergebnisPAE : string;
+  @State() ergebnisPunkte : string;
+  @State() ergebnisProzent : string;
+  @State() prozent : number;
+  @State() note : string;
 
   @State() werteins : number;
   @State() wertzwei : number;
@@ -75,6 +79,9 @@ export class AppAuswertung{
     this.wertdreizehn = Number(localStorage.getItem('reglerdreizehn'));
     this.wertvierzehn = Number(localStorage.getItem('reglervierzehn'));
 
+    this.addiereGesamtPunkte();
+    this.addiereGesamtProzent();
+    this.berechneNote();
     }
   handleClick(event: UIEvent) {
     
@@ -114,6 +121,37 @@ export class AppAuswertung{
     this.ergebnisPAE = x.toString()
     console.log(this.ergebnisPAE);
     localStorage.setItem('ergebnisPAE',this.ergebnisPAE);
+  }
+
+  addiereGesamtPunkte(){
+    var a = Number(this.ergebnisTA);
+    var b = Number(this.ergebnisPR);
+    var c = Number(this.ergebnisPAE);
+    var d = Number(this.ergebnisHW);
+    var e = (a + b + c + d);
+    console.log(e);
+    this.ergebnisPunkte = e.toString();
+    console.log(this.ergebnisPunkte);
+  }
+
+  addiereGesamtProzent(){
+    var f = Number(this.ergebnisTA);
+    var g = Number(this.ergebnisPR);
+    var h = Number(this.ergebnisPAE);
+    var i = Number(this.ergebnisHW);
+    var j = (f + g + h + i);
+    var k = (j*0.71428571);
+    var l = Math.round(k)
+    this.prozent = l;
+    this.ergebnisProzent = l.toString();
+    console.log(this.ergebnisProzent);
+  }
+
+  berechneNote(){
+    var y = ((100-this.prozent)*0.05)+1
+    var x = Math.round (y * 100) / 100;
+    this.note = x.toString();
+    console.log(this.note);
   }
 
   render() {
@@ -182,12 +220,20 @@ export class AppAuswertung{
           </div>
           <div id="rechts" class="flex-item">
             <anmerkungs-feld></anmerkungs-feld>
-            
+            <div id="gesamt">
+              <div id="headlines">
+          <p class="end">Gesamt in Punkten: {this.ergebnisPunkte}/140P</p>
+          <p class="end">Gesamt in Prozent: {this.ergebnisProzent}%</p>
+          <p class="end">Note: {this.note}</p>
           </div>
-        </div>
-        <div>
-          <export-button></export-button>
+          <div id="auswertungs-buttons">
+          <export-button button = "Exportieren"></export-button>
           <bewertung-end></bewertung-end>
+        </div>
+          </div>
+
+
+          </div>
         </div>
         <div>
           <stencil-route-link url="/bewertung">
