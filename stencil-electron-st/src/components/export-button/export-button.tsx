@@ -135,12 +135,12 @@ hiddenElement.click();
       <table id='example-table'>
         <thead>
           <tr>
-            <th colSpan={4}> Auswertungstabelle des Präsentationsbewerters</th>
+            <th> Auswertungstabelle des Präsentationsbewerters</th>
           </tr>
         </thead>
         <thead>
           <tr>
-            <th colSpan={3} >Daten zur Bewertung:</th>
+            <th>Daten zur Bewertung:</th>
           </tr>
         </thead>
         <tr>
@@ -152,7 +152,7 @@ hiddenElement.click();
           <td>{this.gruppe}</td>
         </tr>
         <tr>
-          <td rowSpan={4}>Matrikelnummer(n):</td>
+          <td>Matrikelnummer(n):</td>
           <td>{this.matrikelnummereins}</td>
           <td>{this.matrikelnummerzwei}</td>
         </tr>
@@ -173,30 +173,30 @@ hiddenElement.click();
         <td>{this.veranstaltung}</td>
         </tr>
         <tr>
-        <td></td>
+        
         <td>Kriterium:</td>
         <td>Erreichte Punktzahl:</td>
         <td>Mögliche Punktzahl:</td>
         <td>Gesamt Punktzahl (Kategorie):</td>
         </tr>
         <tr>
-        <td rowSpan={4}>Thematische Ausarbeitung:</td>
+        <td>Thematische Ausarbeitung:</td>
         <td>Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)</td>
         <td>{this.reglereins}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Nutzung von Fachwissen</td>
         <td>{this.reglerzwei}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Struktur</td>
         <td>{this.reglerdrei}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Dokumentation</td>
@@ -205,11 +205,11 @@ hiddenElement.click();
         <td>{this.ergebnisTA}/40P</td>
         </tr>
         <tr>
-        <td rowSpan={2}>Produkt:</td>
+        <td>Produkt:</td>
         <td>Umsetzbarkeit des Ergebnisses</td>
         <td>{this.reglerfuenf}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Kreativität</td>
@@ -218,23 +218,23 @@ hiddenElement.click();
         <td>{this.ergebnisPR}/20P</td>
         </tr>
         <tr>
-        <td rowSpan={4}>Herangehensweise:</td>
+        <td>Herangehensweise:</td>
         <td>Methodik</td>
         <td>{this.reglersieben}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Selbstständigkeit, Eigeninitiative</td>
         <td>{this.regleracht}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Kommunikation</td>
         <td>{this.reglerneun}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Dokumentation</td>
@@ -243,23 +243,22 @@ hiddenElement.click();
         <td>{this.ergebnisHW}/40P</td>
         </tr>
         <tr>
-        <td rowSpan={4}>Präsentation:</td>
+        <td>Präsentation:</td>
         <td>Rhetorik</td>
         <td>{this.reglerelf}</td>
         <td>10</td>
-        <td></td>
+  
         </tr>
         <tr>
         <td>Ansprache</td>
         <td>{this.reglerzwoelf}</td>
         <td>10</td>
-        <td></td>
         </tr>
         <tr>
         <td>Medien</td>
         <td>{this.reglerdreizehn}</td>
         <td>10</td>
-        <td></td>
+        
         </tr>
         <tr>
         <td>Diskussion</td>

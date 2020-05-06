@@ -188,7 +188,6 @@ export class AppAuswertung{
         <div>
           <export-button></export-button>
           <bewertung-end></bewertung-end>
-          <test-larissa></test-larissa>
         </div>
         <div>
           <stencil-route-link url="/bewertung">
