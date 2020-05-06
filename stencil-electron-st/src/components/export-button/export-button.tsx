@@ -122,7 +122,7 @@ export class ExportierButton {
     console.log(json);
     var fields = Object.keys(json[0]);
     var replacer = function (key, value) {
-      console.log(key);
+      // console.log(key);
       return value === null ? "" : value;
     };
     var csv = json.map(function (row) {
