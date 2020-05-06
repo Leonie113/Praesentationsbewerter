@@ -17,12 +17,13 @@
 input{
     border-radius: 50em;
     text-align: center;
+    font-size: 1.3em;
 }
 
 input[type=text] {
     background-color: #7F868D;
     color: #fff;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 400;
     height: 2.5em;
     margin-bottom: 1em;
@@ -33,6 +34,8 @@ input[type=text] {
     background-color: #7F868D;;
     outline: none;
     width: 100%;
+    font-size: 1.3em;
+
   }
 
   ::placeholder {
@@ -50,6 +53,8 @@ input[type=reset] {
     font-size: 1.3em;
     padding-bottom: 1%;
     padding-left: 1%;
+    font-size: 1.3em;
+
     
 }
 
@@ -63,11 +68,9 @@ input[type=reset]:focus {
 
 #submit{
     border-radius: 5em;
-    font-size: 1.0em;
-    font-weight: 400;
+    font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #474747;
-    font-weight: 900;
     color: #fff;
     padding: 1.0%;
     width: 30%;

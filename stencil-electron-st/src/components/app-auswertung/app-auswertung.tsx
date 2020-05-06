@@ -176,7 +176,7 @@ export class AppAuswertung{
               punkte = {this.ergebnisPAE}
     > </auswertung-button>
             <auswertung-daten
-              Ueberschrift="Überblick" 
+              Ueberschrift="Überblick   ▼" 
             ></auswertung-daten>
 
           </div>

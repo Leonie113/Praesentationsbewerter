@@ -15,7 +15,7 @@ export class AppBewertung {
         
         <headline-mittig text="Bewertung"></headline-mittig>
         <kategorie1-button class="aufklappbuttons"
-          Ueberschrift="Thematische Ausarbeitung" 
+          Ueberschrift="Thematische Ausarbeitung   ▼" 
           Kriterium1="Fachliche Bearbeitung (unter Berücksichtung des Schwierigkeitsgrads)"
           Kriterium2="Nutzung von Fachwissen"
           Kriterium3="Struktur"
@@ -23,13 +23,13 @@ export class AppBewertung {
         ></kategorie1-button>
 
         <kategorie2-button class="aufklappbuttons"
-        Ueberschrift="Produkt"
+        Ueberschrift="Produkt   ▼"
         Kriterium1="Umsetzbarkeit des Ergebnisses"
         Kriterium2="Kreativität"
         ></kategorie2-button>
 
         <kategorie3-button class="aufklappbuttons" 
-          Ueberschrift="Herangehensweise"
+          Ueberschrift="Herangehensweise   ▼"
           Kriterium1="Methodik"
           Kriterium2="Selbstständigkeit, Eigeninitiative"
           Kriterium3="Kommunikation"
@@ -37,7 +37,7 @@ export class AppBewertung {
         ></kategorie3-button>
 
         <kategorie4-button class="aufklappbuttons-last" 
-          Ueberschrift="Präsentation"
+          Ueberschrift="Präsentation  ▼"
           Kriterium1="Rhetorik"
           Kriterium2="Ansprache"
           Kriterium3="Medien"
