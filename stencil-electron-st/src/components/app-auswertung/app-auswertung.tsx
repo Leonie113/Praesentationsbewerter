@@ -52,24 +52,6 @@ export class AppAuswertung{
 
 
   componentWillLoad() {
-    // const customTable: HTMLElement = <table-test></table-test>;
-    // const tableEl = customTable.querySelector<HTMLTableElement>('table')
-    // this.tableToJson(tableEl);
-    // this.tabelle = 
-    //               // <table>
-    //               //   <thead>
-    //               //     <tr>
-    //               //     <td>hiii</td>
-    //               //     <td>hallo</td>
-    //               //     </tr>
-    //               //   </thead>
-    //               //   <tr>
-    //               //     <td>hahaah</td>
-    //               //     <td>guhug</td>
-    //               //   </tr>
-    //               // </table>
-    // console.log(this.tabelle);
-
     this.reglereins = localStorage.getItem('reglereins');
     this.reglerzwei = localStorage.getItem('reglerzwei');
     this.reglerdrei = localStorage.getItem('reglerdrei');
@@ -100,56 +82,9 @@ export class AppAuswertung{
     this.wertdreizehn = Number(localStorage.getItem('reglerdreizehn'));
     this.wertvierzehn = Number(localStorage.getItem('reglervierzehn'));
 
-    this.addiereGesamtPunkte();
-    this.addiereGesamtProzent();
-    this.berechneNote();
     }
 
-  
-  // tableToJson(table: HTMLTableElement) {
-  //     var data = []; // first row needs to be headers var headers = [];
-  //     console.log(data);
-  //     for (var i = 0; i < table.rows[0].cells.length; i++) {
-  //       Headers[i] = table.rows[0].cells[i].innerHTML
-  //         .toLowerCase()
-  //         .replace(/ /gi, "");
-  //     }
-  //     // go through cells
-  //     for (var i = 1; i < table.rows.length; i++) {
-  //       var tableRow = table.rows[i];
-  //       var rowData = {};
-  //       for (var j = 0; j < tableRow.cells.length; j++) {
-  //         rowData[Headers[j]] = tableRow.cells[j].innerHTML;
-  //       }
-  //       data.push(rowData);
-  //       console.log(rowData);
-  //     }
-  //     console.log(data);
-  //     this.datei = data;
-  //     console.log(this.datei);
-  //     return data;
-  //   }
-  // csv(event){
-  //   console.log(this.datei);
-  //   console.log(event);
-  //   var json = this.datei;
-  //   console.log(json);
-  // var fields = Object.keys(json[0]);
-  // var replacer = function(key, value) { console.log(key); return value === null ? '' : value } 
-  // var csv = json.map(function(row){
-  //   return fields.map(function(fieldName){
-  //     return JSON.stringify(row[fieldName], replacer)
-  //   }).join(',')
-  // })
-  // csv.unshift(fields.join(',')) // add header column
-  //  csv = csv.join('\r\n');
-  // console.log(csv)
-  // var hiddenElement = document.createElement('a');
-  // hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
-  // hiddenElement.target = '_blank';
-  // hiddenElement.download = 'bewertung.csv';
-  // hiddenElement.click();
-  // }
+
 
   handleClick(event: UIEvent) {
     
@@ -192,34 +127,39 @@ export class AppAuswertung{
   }
 
   addiereGesamtPunkte(){
-    var a = Number(this.ergebnisTA);
-    var b = Number(this.ergebnisPR);
-    var c = Number(this.ergebnisPAE);
-    var d = Number(this.ergebnisHW);
-    var e = (a + b + c + d);
+    var a : number = Number(this.ergebnisTA);
+    var b : number = Number(this.ergebnisPR);
+    var c : number = Number(this.ergebnisPAE);
+    var d : number = Number(this.ergebnisHW);
+    var e : number = (a + b + c + d);
     console.log(e);
     this.ergebnisPunkte = e.toString();
     console.log(this.ergebnisPunkte);
+    localStorage.setItem('punkte',this.ergebnisPunkte);
   }
 
   addiereGesamtProzent(){
-    var f = Number(this.ergebnisTA);
-    var g = Number(this.ergebnisPR);
-    var h = Number(this.ergebnisPAE);
-    var i = Number(this.ergebnisHW);
-    var j = (f + g + h + i);
-    var k = (j*0.71428571);
-    var l = Math.round(k)
+    var f : number = Number(this.ergebnisTA);
+    var g  : number= Number(this.ergebnisPR);
+    var h : number = Number(this.ergebnisPAE);
+    var i : number = Number(this.ergebnisHW);
+    var j : number = (f + g + h + i);
+    var k : number = (j*0.71428571);
+    var l : number = Math.round(k)
     this.prozent = l;
     this.ergebnisProzent = l.toString();
     console.log(this.ergebnisProzent);
+    localStorage.setItem('prozent',this.ergebnisProzent);
   }
 
   berechneNote(){
-    var y = ((100-this.prozent)*0.05)+1
-    var x = Math.round (y * 100) / 100;
-    this.note = x.toString();
+    var y : number = ((100-this.prozent)*0.05)+1
+    var x  : number= Math.round (y * 100) / 100;
+    var j = x.toString();
+    console.log(j);
+    this.note = j.replace(".",",");
     console.log(this.note);
+    localStorage.setItem('note',this.note);
   }
 
   render() {
@@ -231,6 +171,9 @@ export class AppAuswertung{
         {this.addiereProdukt()}
         {this.addiereHerangehensweise()}
         {this.addierePraesentation()}
+        {this.addiereGesamtPunkte()}
+        {this.addiereGesamtProzent()}
+        {this.berechneNote()}
         <div class="flex-container">
           <div id="linkeSeite" class="flex-item">
             
@@ -309,6 +252,7 @@ export class AppAuswertung{
           <zurueck-button></zurueck-button>
           </stencil-route-link>
         </div>
+        <table-test></table-test>
       </div>
     );
   }

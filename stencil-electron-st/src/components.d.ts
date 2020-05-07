@@ -292,12 +292,8 @@ export namespace Components {
     'regler'?: string;
   }
 
-  interface TableTeste {
-    'button': string;
-  }
-  interface TableTesteAttributes extends StencilHTMLAttributes {
-    'button'?: string;
-  }
+  interface TableTest {}
+  interface TableTestAttributes extends StencilHTMLAttributes {}
 
   interface TestLarissa {
     'noteend': any;
@@ -344,7 +340,7 @@ declare global {
     'Kategorie4Button': Components.Kategorie4Button;
     'RadioInput': Components.RadioInput;
     'ReglerWertung': Components.ReglerWertung;
-    'TableTeste': Components.TableTeste;
+    'TableTest': Components.TableTest;
     'TestLarissa': Components.TestLarissa;
     'WeiterButton': Components.WeiterButton;
     'ZurueckButton': Components.ZurueckButton;
@@ -376,7 +372,7 @@ declare global {
     'kategorie4-button': Components.Kategorie4ButtonAttributes;
     'radio-input': Components.RadioInputAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
-    'table-teste': Components.TableTesteAttributes;
+    'table-test': Components.TableTestAttributes;
     'test-larissa': Components.TestLarissaAttributes;
     'weiter-button': Components.WeiterButtonAttributes;
     'zurueck-button': Components.ZurueckButtonAttributes;
@@ -533,10 +529,10 @@ declare global {
     new (): HTMLReglerWertungElement;
   };
 
-  interface HTMLTableTesteElement extends Components.TableTeste, HTMLStencilElement {}
-  var HTMLTableTesteElement: {
-    prototype: HTMLTableTesteElement;
-    new (): HTMLTableTesteElement;
+  interface HTMLTableTestElement extends Components.TableTest, HTMLStencilElement {}
+  var HTMLTableTestElement: {
+    prototype: HTMLTableTestElement;
+    new (): HTMLTableTestElement;
   };
 
   interface HTMLTestLarissaElement extends Components.TestLarissa, HTMLStencilElement {}
@@ -583,7 +579,7 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement
     'radio-input': HTMLRadioInputElement
     'regler-wertung': HTMLReglerWertungElement
-    'table-teste': HTMLTableTesteElement
+    'table-test': HTMLTableTestElement
     'test-larissa': HTMLTestLarissaElement
     'weiter-button': HTMLWeiterButtonElement
     'zurueck-button': HTMLZurueckButtonElement
@@ -615,7 +611,7 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement;
     'radio-input': HTMLRadioInputElement;
     'regler-wertung': HTMLReglerWertungElement;
-    'table-teste': HTMLTableTesteElement;
+    'table-test': HTMLTableTestElement;
     'test-larissa': HTMLTestLarissaElement;
     'weiter-button': HTMLWeiterButtonElement;
     'zurueck-button': HTMLZurueckButtonElement;

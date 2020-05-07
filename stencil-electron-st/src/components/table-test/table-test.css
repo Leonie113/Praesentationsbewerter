@@ -24,9 +24,6 @@
 }
 
 #example-table{
-    display: none;
+    display: block;
 }
 
-#txtArea1{
-    display: none;
-}

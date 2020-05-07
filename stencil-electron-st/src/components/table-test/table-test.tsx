@@ -1,14 +1,14 @@
-import { Component, Element, Prop, State } from "@stencil/core";
+import { Component, ComponentInterface, Element, State } from "@stencil/core";
 
 @Component({
-  tag: "table-teste",
+  tag: "table-test",
   styleUrl: "table-test.css",
   shadow: false,
 })
-export class ExportierButton {
-  @Prop() button: string;
-  @Element() element: HTMLElement;
-  @State() datei;
+export class TabelleTest implements ComponentInterface {
+  @Element() el: Element;
+  @State() table: HTMLTableElement;
+  @State() exampleData;
 
   @State() reglereins: string;
   @State() reglerzwei: string;
@@ -48,13 +48,66 @@ export class ExportierButton {
   @State() ergebnisHW: string;
   @State() ergebnisPAE: string;
 
+  @State() punkte : string;
+  @State() prozent : string;
+  @State() note : string;
+  
   componentDidLoad() {
-    // console.log(this.element.querySelector<HTMLTableElement>("#example-table"));
-    // console.log(
-    //   this.tableToJson(
-    //     this.element.querySelector<HTMLTableElement>("#example-table")
-    //   )
-    // );
+    this.getTable();
+    const json = this.tableToJson(this.table);
+    console.log(json);
+    this.toCSV(json);
+  }
+  
+  getTable() {
+    this.table = this.el.querySelector("#example-table") as HTMLTableElement;
+    console.log(this.table);
+  }
+
+
+  tableToJson(table: HTMLTableElement) {
+    var data = [];
+    for (var i = 0; i < table.rows.length; i++) {
+      var tableRow = table.rows[i];
+      var rowData = [];
+      for (var j = 0; j < tableRow.cells.length; j++) {
+        rowData.push(tableRow.cells[j].innerHTML);
+      }
+      data.push(rowData);
+    }
+    console.log(data);
+    return data;
+  }
+  toCSV(json: JSON[]){
+  var json =    json = Object.values(json);
+  console.log(json);
+  var fields = Object.keys(json[0]);
+  console.log(fields);
+  var replacer = function(key, value) { console.log(key); return value === null ? '' : value } 
+  var csv : any = json.map(function(row){
+  return fields.map(function(fieldName){
+    return JSON.stringify(row[fieldName], replacer)
+  }).join(',')
+  })
+  csv.unshift(fields.join(',')) // add header column
+  csv  = csv.join('\r\n');
+  console.log(csv);
+  localStorage.setItem('csvdatei', csv);
+  }
+  // toCSV(json: JSON[]) {
+  //   json = Object.values(json);
+  //   console.log(json);
+  //   var csv = "";
+  //   var keys = (json[0] && Object.keys(json[0])) || [];
+  //   for (var line of json) {
+  //     csv += keys.map((key) => line[key]).join(",") + "\n";
+  //   }
+  //   console.log(csv);
+  //   localStorage.setItem('csvdatei', csv);
+  //   return csv;
+  // }
+
+  componentWillLoad() {
     this.reglereins = localStorage.getItem("reglereins");
     this.reglerzwei = localStorage.getItem("reglerzwei");
     this.reglerdrei = localStorage.getItem("reglerdrei");
@@ -92,6 +145,10 @@ export class ExportierButton {
     this.ergebnisPR = localStorage.getItem("ergebnisPR");
     this.ergebnisHW = localStorage.getItem("ergebnisHW");
     this.ergebnisPAE = localStorage.getItem("ergebnisPAE");
+
+    this.punkte = localStorage.getItem("punkte");
+    this.prozent = localStorage.getItem("prozent");
+    this.note = localStorage.getItem("note");
   }
 
   render() {
@@ -99,7 +156,7 @@ export class ExportierButton {
         <table id="example-table">
           <thead>
             <tr>
-            <th colSpan={4}> Auswertungstabelle des Präsentationsbewerters</th>    
+            <th colSpan={4}> Auswertungstabelle des Praesentationsbewerters</th>    
             </tr>
           </thead>
             <tr>
@@ -107,143 +164,115 @@ export class ExportierButton {
             </tr>
           <tr>
             <td>Dozent:</td>
-            <td>{this.dozent}</td>
+          </tr>
+          <tr>
+          <td>{this.dozent}</td>
           </tr>
           <tr>
             <td>Name des Studierenden/Gruppe:</td>
+          </tr>
+          <tr>
             <td>{this.gruppe}</td>
           </tr>
-          <tr>
-          <td rowSpan={4}>Matrikelnummer(n):</td>
-            <td>{this.matrikelnummereins}</td>
-            <td>{this.matrikelnummerzwei}</td>
-          </tr>
-          <tr>
-            <td>{this.matrikelnummerdrei}</td>
-            <td>{this.matrikelnummervier}</td>
-          </tr>
-          <tr>
-            <td>{this.matrikelnummerfuenf}</td>
-            <td>{this.matrikelnummersechs}</td>
-          </tr>
-          <tr>
-            <td>{this.matrikelnummersieben}</td>
-            <td>{this.matrikelnummeracht}</td>
-          </tr>
+          <tr><td>Matrikelnummer(n):</td></tr>
+          <tr><td>{this.matrikelnummereins}</td></tr>
+          <tr><td>{this.matrikelnummerzwei}</td></tr>
+          <tr><td>{this.matrikelnummerdrei}</td></tr>
+          <tr><td>{this.matrikelnummervier}</td></tr>
+          <tr><td>{this.matrikelnummerfuenf}</td></tr>
+          <tr><td>{this.matrikelnummersechs}</td></tr>
+          <tr><td>{this.matrikelnummersieben}</td></tr>
           <tr>
             <td>Lehrveranstaltung:</td>
-            <td>{this.veranstaltung}</td>
           </tr>
-          <tr>
-            <td></td>
-            <td>Kriterium:</td>
-            <td>Erreichte Punktzahl:</td>
-            <td>Mögliche Punktzahl:</td>
-            <td>Gesamt Punktzahl (Kategorie):</td>
-          </tr>
-          <tr>
-          <td rowSpan={4}>Thematische Ausarbeitung:</td>
-            <td>
-              Fachliche Bearbeitung (unter Berücksichtung des
-              Schwierigkeitsgrads)
-            </td>
-            <td>{this.reglereins}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Nutzung von Fachwissen</td>
-            <td>{this.reglerzwei}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Struktur</td>
-            <td>{this.reglerdrei}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Dokumentation</td>
-            <td>{this.reglervier}</td>
-            <td>10</td>
-            <td>{this.ergebnisTA}/40P</td>
-          </tr>
-          <tr>
-          <td rowSpan={2}>Produkt:</td>
-            <td>Umsetzbarkeit des Ergebnisses</td>
-            <td>{this.reglerfuenf}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Kreativität</td>
-            <td>{this.reglersechs}</td>
-            <td>10</td>
-            <td>{this.ergebnisPR}/20P</td>
-          </tr>
-          <tr>
-          <td rowSpan={4}>Herangehensweise:</td>
-            <td>Methodik</td>
-            <td>{this.reglersieben}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Selbstständigkeit, Eigeninitiative</td>
-            <td>{this.regleracht}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Kommunikation</td>
-            <td>{this.reglerneun}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Dokumentation</td>
-            <td>{this.reglerzehn}</td>
-            <td>10</td>
-            <td>{this.ergebnisHW}/40P</td>
-          </tr>
-          <tr>
-          <td rowSpan={4}>Präsentation:</td>
-            <td>Rhetorik</td>
-            <td>{this.reglerelf}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Ansprache</td>
-            <td>{this.reglerzwoelf}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Medien</td>
-            <td>{this.reglerdreizehn}</td>
-            <td>10</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Diskussion</td>
-            <td>{this.reglervierzehn}</td>
-            <td>10</td>
-            <td>{this.ergebnisPAE}/40P</td>
-          </tr>
-          <tr>
-            <td>Anmerkungen:</td>
-            <td>{this.anmerkungen}</td>
-          </tr>
-          <tr>
-            <td>Gute Aspekte:</td>
-            <td>{this.guteaspekte}</td>
-          </tr>
-          <tr>
-            <td>Verbesserungsvorschläge:</td>
-            <td>{this.verbesserung}</td>
-          </tr>
+          <tr><td>{this.veranstaltung}</td></tr>
+
+          <tr><td></td></tr>
+
+          <tr><td>Thematische Ausarbeitung: Gesamt Punktzahl: {this.ergebnisTA}/40P</td></tr>
+          <tr><td>Kriterium:
+              Fachliche Bearbeitung (unter Beruecksichtung des
+              Schwierigkeitsgrads)</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglereins}/10</td></tr>
+
+          <tr><td>Kriterium:
+            Nutzung von Fachwissen</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerzwei}/10</td></tr>
+
+          <tr><td>Kriterium:
+              Struktur</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerdrei}/10</td></tr>
+
+          <tr><td>Kriterium:
+           Recherche</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglervier}/10</td></tr>
+
+          <tr><td></td></tr>
+                    
+          <tr><td>Produkt: Gesamt Punktzahl: {this.ergebnisPR}/20P</td></tr>
+          <tr><td>Kriterium:
+          Umsetzbarkeit des Ergebnisses</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerfuenf}/10</td></tr>
+
+          <tr><td>Kriterium:
+          Kreativitaet</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglersechs}/10</td></tr>
+
+          <tr><td></td></tr>
+
+          
+          <tr><td>Herangehensweise: Gesamt Punktzahl: {this.ergebnisHW}/40P</td></tr>
+          <tr><td>Kriterium:
+          Methodik</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglersieben}/10</td></tr>
+
+          <tr><td>Kriterium:
+          Selbststaendigkeit, Eigeninitiative</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.regleracht}/10</td></tr>
+
+          <tr><td>Kriterium:
+          Kommunikation</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerneun}/10</td></tr>
+
+          <tr><td>Kriterium:
+           Dokumentation</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerzehn}/10</td></tr>
+
+          <tr><td></td></tr>
+          
+          <tr><td>Praesentation: Gesamt Punktzahl: {this.ergebnisPAE}/40P</td></tr>
+          <tr><td>Kriterium:
+          Rhetorik</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerelf}/10</td></tr>
+
+          <tr><td>Kriterium:
+          Ansprache</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerzwoelf}/10</td></tr>
+
+          <tr><td>Kriterium:
+          Medien</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglerdreizehn}/10</td></tr>
+
+          <tr><td>Kriterium:
+          Diskussion</td></tr>
+          <tr><td>Erreichte Punktzahl: {this.reglervierzehn}/10</td></tr>
+
+          <tr><td></td></tr>
+
+          <tr><td>Anmerkungen:</td></tr>
+          <tr><td>{this.anmerkungen}</td></tr>  
+          <tr><td>Gute Aspekte:</td></tr>
+          <tr><td>{this.guteaspekte}</td></tr>
+          <tr><td>Verbesserungsvorschlaege:</td></tr>
+          <tr><td>{this.verbesserung}</td></tr>
+
+          <tr><td></td></tr>
+          <tr><td>Gesamt Punkte:</td></tr>
+          <tr><td>{this.punkte}</td></tr>  
+          <tr><td>Gesamt Prozent:</td></tr>
+          <tr><td>{this.prozent}</td></tr>
+          <tr><td>Note:</td></tr>
+          <tr><td>{this.note}</td></tr>
         </table>
 
     );
