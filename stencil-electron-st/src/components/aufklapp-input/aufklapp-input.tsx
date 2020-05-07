@@ -57,14 +57,14 @@ handleMatrikelnummerachtInput(e: UIEvent){
   localStorage.setItem('matrikelnummeracht', target.value);
 }
 
-matrikelnummern (){
-  this.inputs = document.querySelectorAll('input');
-  this.matrikelnummereins = this.inputs[1].value;
-  console.log(this.matrikelnummereins);
-  this.matrikelnummerzwei = this.inputs[2].value;
-  this. matrikelnummerdrei = this.inputs[3].value;
-  this.matrikelnummervier = this.inputs[4].value;
-} 
+// matrikelnummern (){
+//   this.inputs = document.querySelectorAll('input');
+//   this.matrikelnummereins = this.inputs[1].value;
+//   console.log(this.matrikelnummereins);
+//   this.matrikelnummerzwei = this.inputs[2].value;
+//   this. matrikelnummerdrei = this.inputs[3].value;
+//   this.matrikelnummervier = this.inputs[4].value;
+// } 
 
   
   @State() visible = false;
@@ -97,7 +97,7 @@ matrikelnummern (){
               <tr>
               <td>
               <label class="label">{this.Kriterium1}
-              <input id="matrikel" type="text"  name="matrikelnummereins" placeholder="Pflichtfeld" maxlength="15" onBlur={this.matrikelnummern} value="" onInput={(e: UIEvent) => { this.handleMatrikelnummereinsInput(e)}}/>
+              <input id="matrikel" type="text"  name="matrikelnummereins" placeholder="Pflichtfeld" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleMatrikelnummereinsInput(e)}}/>
               </label>
               </td>
               <td>

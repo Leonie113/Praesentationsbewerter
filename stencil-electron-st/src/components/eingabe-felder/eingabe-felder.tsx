@@ -44,6 +44,7 @@ export class EingabeFelder{
           console.log(this.dozent);
           this.name = inputs[1].value;
           this.matrikelnummereins = inputs[3].value;
+          console.log(this.matrikelnummereins);
           this.matrikelnummerzwei = inputs[4].value;
           this.matrikelnummerdrei = inputs[5].value;
           this.matrikelnummervier = inputs[6].value;
