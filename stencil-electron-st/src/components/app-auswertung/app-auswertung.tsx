@@ -295,8 +295,8 @@ export class AppAuswertung{
           <p class="end">Note: {this.note}</p>
           </div>
           <div id="auswertungs-buttons">
-          {/* <button onClick={this.csv}>EXPORTOIEREN</button> */}
-          <export-button button="Exporren"></export-button>
+
+          <export-button button="Exportieren"></export-button>
           <bewertung-end></bewertung-end>
         </div>
           </div>
