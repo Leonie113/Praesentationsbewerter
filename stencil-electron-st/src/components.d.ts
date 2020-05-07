@@ -300,10 +300,14 @@ export namespace Components {
   }
 
   interface TestLarissa {
-    'button': string;
+    'noteend': any;
+    'prozent': any;
+    'punkte': any;
   }
   interface TestLarissaAttributes extends StencilHTMLAttributes {
-    'button'?: string;
+    'noteend'?: any;
+    'prozent'?: any;
+    'punkte'?: any;
   }
 
   interface WeiterButton {}

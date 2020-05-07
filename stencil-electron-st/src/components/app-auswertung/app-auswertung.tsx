@@ -289,11 +289,11 @@ export class AppAuswertung{
           <div id="rechts" class="flex-item">
             <anmerkungs-feld></anmerkungs-feld>
             <div id="gesamt">
-              <div id="headlines">
-          <p class="end">Gesamt in Punkten: {this.ergebnisPunkte}/140P</p>
-          <p class="end">Gesamt in Prozent: {this.ergebnisProzent}%</p>
-          <p class="end">Note: {this.note}</p>
-          </div>
+          <test-larissa
+          punkte ={this.ergebnisPunkte}
+          prozent ={this.ergebnisProzent}
+          noteend ={this.note}>
+          </test-larissa>
           <div id="auswertungs-buttons">
 
           <export-button button="Exportieren"></export-button>
