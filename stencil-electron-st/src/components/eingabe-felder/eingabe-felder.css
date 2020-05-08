@@ -35,12 +35,10 @@ input[type=text] {
     outline: none;
     width: 100%;
     font-size: 1.3em;
-
   }
 
   ::placeholder {
     color: #ffffff80;
-
   }
 
   
@@ -54,8 +52,6 @@ input[type=reset] {
     padding-bottom: 1%;
     padding-left: 1%;
     font-size: 1.3em;
-
-    
 }
 
 input[type=reset]:hover {
@@ -68,14 +64,13 @@ input[type=reset]:focus {
 
 #submit{
     border-radius: 5em;
-    font-size: 14px;
+    font-size: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #474747;
     color: #fff;
     padding: 1.0%;
     width: 30%;
     margin-left: 65%;
-
 }
 
 #submit:focus{

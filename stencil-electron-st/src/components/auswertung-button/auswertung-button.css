@@ -1,3 +1,6 @@
+#container-button {
+    margin-top: px;
+}
 .auswertung-button{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.3em;
@@ -12,7 +15,8 @@
     border-radius: 35px; 
     cursor: pointer;
     margin: 10px;
-    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     outline: none;
 }
 .table {
@@ -28,7 +32,7 @@
     border-bottom-right-radius: 35px;
     background: white;
     margin: 10px;
-    margin-top: 0px;
+    margin-top: -10px;
 }
 .table td{
     padding: 7px 20px 7px 20px;

@@ -81,10 +81,7 @@ export class AppAuswertung{
     this.wertzwoelf = Number(localStorage.getItem('reglerzwoelf'));
     this.wertdreizehn = Number(localStorage.getItem('reglerdreizehn'));
     this.wertvierzehn = Number(localStorage.getItem('reglervierzehn'));
-
     }
-
-
 
   handleClick(event: UIEvent) {
     
@@ -232,19 +229,16 @@ export class AppAuswertung{
           <div id="rechts" class="flex-item">
             <anmerkungs-feld></anmerkungs-feld>
             <div id="gesamt">
-          <test-larissa
-          punkte ={this.ergebnisPunkte}
-          prozent ={this.ergebnisProzent}
-          noteend ={this.note}>
-          </test-larissa>
-          <div id="auswertungs-buttons">
-
-          <export-button button="Exportieren"></export-button>
-          <bewertung-end></bewertung-end>
-        </div>
-          </div>
-
-
+              <test-larissa
+              punkte ={this.ergebnisPunkte}
+              prozent ={this.ergebnisProzent}
+              noteend ={this.note}>
+              </test-larissa>
+              <div id="auswertungs-buttons">
+                <export-button button="Exportieren"></export-button>
+                <bewertung-end></bewertung-end>
+              </div>
+            </div>
           </div>
         </div>
         <div>
