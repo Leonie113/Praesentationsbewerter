@@ -126,12 +126,12 @@ export class EingabeFelder{
 
           <form class="login-form">
                 <label id="dozent">
-                <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
-                <input type="text" id="dozentinput" name="dozent" placeholder="Ihr Name" maxlength="15" value="" onInput={(e: UIEvent) => { this.handleDozentInput(e)}}/>
+                  <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
+                  <input type="text" id="dozentinput" name="dozent" placeholder="Ihr Name" maxlength="30" value="" onInput={(e: UIEvent) => { this.handleDozentInput(e)}}/>
                 </label>
                 <label id="name">
-                <span class="meldung">Mindestens ein Name eines Studierenden muss angegeben werden.</span>
-                <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe" value="" onInput={(e: UIEvent) => { this.handleGruppeInput(e)}}/>
+                  <span class="meldung">Mindestens ein Name eines Studierenden muss angegeben werden.</span>
+                  <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe" value="" onInput={(e: UIEvent) => { this.handleGruppeInput(e)}}/>
                 </label>
                 <span class="meldung">Bitte geben Sie mindestens eine Matrikelnummer im ersten Feld ein.</span>
                 <aufklapp-input class="aufklappbuttons"
@@ -145,14 +145,10 @@ export class EingabeFelder{
                   Kriterium7="7. Matrikelnummer"
                   Kriterium8="8. Matrikelnummer"
                 ></aufklapp-input>
-
-                <label id="veranstaltung">
-                <span class="meldung">Die Bezeichnung der Lehrveranstaltung wird für die Auswertung benötigt.</span>
-                <input type="text" id="veranstaltunginput" name="veranstaltung" placeholder="Lehrveranstaltung" value=""  onInput={(e: UIEvent) => { this.handleVeranstaltungInput(e)}}/>
-                </label>
-                <radio-input                 
-                  Ueberschrift="Prüfungsleistung  ▼" 
-                ></radio-input>
+                <div class="container-info">
+                  <img id="information" src="/assets/info.svg" alt="Information"></img>
+                  <h2 id="text">Dieser Bewertungsbogen ist für einen Projektvortrag</h2>
+                </div>
                 <div class="buttons">
                 <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>
                 <button id="submit" type="button"  onClick={() => { this.login(); }}>Speichern</button>
