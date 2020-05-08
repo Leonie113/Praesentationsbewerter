@@ -14,7 +14,7 @@ export class AppHome {
         <img id="presentation" src="/assets/presentation.svg"></img>
         <div class="weiter">
           <stencil-route-link url="/profile/stencil">
-          <weiter-button></weiter-button>
+          <start-button></start-button>
           </stencil-route-link>
           <div  id="start">
             <p>Start</p>
