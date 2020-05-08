@@ -13,6 +13,8 @@ export class AufklappButton {
   @Prop() Ueberschrift: string;
   @State() regler: string;
   @State() value: number;
+
+  @State() valueeins
   
   @State() visible = false;
   
@@ -22,7 +24,9 @@ export class AufklappButton {
     this.visible = !this.visible;
   }
 
-  
+  componentWillUpdate(){
+
+  }
   
   render() {
     return (
