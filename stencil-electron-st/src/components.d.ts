@@ -215,6 +215,10 @@ export namespace Components {
     'Kriterium2': string;
     'Kriterium3': string;
     'Kriterium4': string;
+    'KriteriumDetail1': string;
+    'KriteriumDetail2': string;
+    'KriteriumDetail3': string;
+    'KriteriumDetail4': string;
     'Ueberschrift': string;
   }
   interface Kategorie1ButtonAttributes extends StencilHTMLAttributes {
@@ -222,17 +226,25 @@ export namespace Components {
     'Kriterium2'?: string;
     'Kriterium3'?: string;
     'Kriterium4'?: string;
+    'KriteriumDetail1'?: string;
+    'KriteriumDetail2'?: string;
+    'KriteriumDetail3'?: string;
+    'KriteriumDetail4'?: string;
     'Ueberschrift'?: string;
   }
 
   interface Kategorie2Button {
     'Kriterium1': string;
     'Kriterium2': string;
+    'KriteriumDetail1': string;
+    'KriteriumDetail2': string;
     'Ueberschrift': string;
   }
   interface Kategorie2ButtonAttributes extends StencilHTMLAttributes {
     'Kriterium1'?: string;
     'Kriterium2'?: string;
+    'KriteriumDetail1'?: string;
+    'KriteriumDetail2'?: string;
     'Ueberschrift'?: string;
   }
 
@@ -241,6 +253,10 @@ export namespace Components {
     'Kriterium2': string;
     'Kriterium3': string;
     'Kriterium4': string;
+    'KriteriumDetail1': string;
+    'KriteriumDetail2': string;
+    'KriteriumDetail3': string;
+    'KriteriumDetail4': string;
     'Ueberschrift': string;
   }
   interface Kategorie3ButtonAttributes extends StencilHTMLAttributes {
@@ -248,6 +264,10 @@ export namespace Components {
     'Kriterium2'?: string;
     'Kriterium3'?: string;
     'Kriterium4'?: string;
+    'KriteriumDetail1'?: string;
+    'KriteriumDetail2'?: string;
+    'KriteriumDetail3'?: string;
+    'KriteriumDetail4'?: string;
     'Ueberschrift'?: string;
   }
 
@@ -256,6 +276,10 @@ export namespace Components {
     'Kriterium2': string;
     'Kriterium3': string;
     'Kriterium4': string;
+    'KriteriumDetail1': string;
+    'KriteriumDetail2': string;
+    'KriteriumDetail3': string;
+    'KriteriumDetail4': string;
     'Ueberschrift': string;
   }
   interface Kategorie4ButtonAttributes extends StencilHTMLAttributes {
@@ -263,6 +287,10 @@ export namespace Components {
     'Kriterium2'?: string;
     'Kriterium3'?: string;
     'Kriterium4'?: string;
+    'KriteriumDetail1'?: string;
+    'KriteriumDetail2'?: string;
+    'KriteriumDetail3'?: string;
+    'KriteriumDetail4'?: string;
     'Ueberschrift'?: string;
   }
 
