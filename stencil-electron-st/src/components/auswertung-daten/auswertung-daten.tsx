@@ -17,7 +17,6 @@ export class AuswertungsButton{
   @State() matrikelnummersieben: string;
   @State() matrikelnummeracht: string;
   @State() projekt: string;
-  @State() leistung: string;
   @State() veranstaltung: string;
   @Prop() Ueberschrift: string;
   @Prop() regler: string;
@@ -38,7 +37,6 @@ export class AuswertungsButton{
     this.matrikelnummersieben = localStorage.getItem('matrikelnummersieben');
     this.matrikelnummeracht = localStorage.getItem('matrikelnummeracht');
     this.projekt = localStorage.getItem('projekt');
-    this.leistung = localStorage.getItem('leistung');
     this.veranstaltung = localStorage.getItem('veranstaltung');
     }
   toggleVisibility = () => {
@@ -111,7 +109,7 @@ export class AuswertungsButton{
               </tr>  
               <tr>
                 <td><strong>Prüfungsleistung:</strong></td>
-                <td>{this.leistung}</td>
+                <td>Projektvortrag</td>
               </tr>   
                                  
             </tbody>
