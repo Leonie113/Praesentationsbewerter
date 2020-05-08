@@ -292,9 +292,6 @@ export namespace Components {
     'regler'?: string;
   }
 
-  interface StartButton {}
-  interface StartButtonAttributes extends StencilHTMLAttributes {}
-
   interface TableTest {}
   interface TableTestAttributes extends StencilHTMLAttributes {}
 
@@ -343,7 +340,6 @@ declare global {
     'Kategorie4Button': Components.Kategorie4Button;
     'RadioInput': Components.RadioInput;
     'ReglerWertung': Components.ReglerWertung;
-    'StartButton': Components.StartButton;
     'TableTest': Components.TableTest;
     'TestLarissa': Components.TestLarissa;
     'WeiterButton': Components.WeiterButton;
@@ -376,7 +372,6 @@ declare global {
     'kategorie4-button': Components.Kategorie4ButtonAttributes;
     'radio-input': Components.RadioInputAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
-    'start-button': Components.StartButtonAttributes;
     'table-test': Components.TableTestAttributes;
     'test-larissa': Components.TestLarissaAttributes;
     'weiter-button': Components.WeiterButtonAttributes;
@@ -534,12 +529,6 @@ declare global {
     new (): HTMLReglerWertungElement;
   };
 
-  interface HTMLStartButtonElement extends Components.StartButton, HTMLStencilElement {}
-  var HTMLStartButtonElement: {
-    prototype: HTMLStartButtonElement;
-    new (): HTMLStartButtonElement;
-  };
-
   interface HTMLTableTestElement extends Components.TableTest, HTMLStencilElement {}
   var HTMLTableTestElement: {
     prototype: HTMLTableTestElement;
@@ -590,7 +579,6 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement
     'radio-input': HTMLRadioInputElement
     'regler-wertung': HTMLReglerWertungElement
-    'start-button': HTMLStartButtonElement
     'table-test': HTMLTableTestElement
     'test-larissa': HTMLTestLarissaElement
     'weiter-button': HTMLWeiterButtonElement
@@ -623,7 +611,6 @@ declare global {
     'kategorie4-button': HTMLKategorie4ButtonElement;
     'radio-input': HTMLRadioInputElement;
     'regler-wertung': HTMLReglerWertungElement;
-    'start-button': HTMLStartButtonElement;
     'table-test': HTMLTableTestElement;
     'test-larissa': HTMLTestLarissaElement;
     'weiter-button': HTMLWeiterButtonElement;
