@@ -9,6 +9,7 @@ export class ExportierButton {
   @Prop() button: string= "Bewertung abschließen";
 
   handleClick() {
+    console.log(localStorage);
     alert("Die Bewertung wurde abgeschlossen.");
   }
 
