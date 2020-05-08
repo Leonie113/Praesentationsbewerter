@@ -21,6 +21,7 @@ export class EingabeFelder{
   @State() veranstaltungmeldung:any;
   @State() public pruefung : string;
   @State() pruefungmeldung: any;
+  @State() inputs;
 
   handleDozentInput(e: UIEvent){
     const target = e.target as HTMLInputElement;
@@ -35,9 +36,10 @@ export class EingabeFelder{
     localStorage.setItem('veranstaltung', target.value);
   }
 
-    login() {
-          
+    login(e:Event) {
+          e.preventDefault();
           let inputs = this.host.querySelectorAll('input');
+          this.inputs = inputs;
           console.log(inputs);
           let meldungen = this.host.querySelectorAll('.meldung');
           this.dozent = inputs[0].value;
@@ -56,19 +58,16 @@ export class EingabeFelder{
           this.veranstaltungmeldung = meldungen[3];
           console.log(meldungen);
           this.ueberpruefeEingabe();
-          //event.preventDefault();
           //console.log("Hallo");
         }
  ueberpruefeEingabe(){
-  
         if( this.dozent === '') {
             this.dozentmeldung.classList.add('meldungfehlerhaft');
-            
         }
 
         else{
           this.dozentmeldung.classList.remove('meldungfehlerhaft');
-          this.dozent = this.dozent;
+          this.inputs[0].value = this.dozent;
         }
     
         if( this.name === "" ){
@@ -76,7 +75,8 @@ export class EingabeFelder{
         }
 
         else{
-          this.namemeldung.classList.remove('meldungfehlerhaft');  
+          this.namemeldung.classList.remove('meldungfehlerhaft'); 
+          this.inputs[1].value = this.name;
         }
 
         if( this.matrikelnummereins === "" ){
@@ -84,7 +84,8 @@ export class EingabeFelder{
         }
 
         else{
-        this.matrikelnummermeldung.classList.remove('meldungfehlerhaft');  
+        this.matrikelnummermeldung.classList.remove('meldungfehlerhaft'); 
+        this.inputs[3].value = this.matrikelnummereins;
         }
             
         if( this.veranstaltung === "" ){
@@ -92,9 +93,9 @@ export class EingabeFelder{
            }
 
         else{
-          this.veranstaltungmeldung.classList.remove('meldungfehlerhaft');
-        }
-            
+        this.veranstaltungmeldung.classList.remove('meldungfehlerhaft');
+        this.inputs[7].value = this.veranstaltung;
+        }            
     }
 
     remove(){
@@ -127,11 +128,11 @@ export class EingabeFelder{
           <form class="login-form">
                 <label id="dozent">
                   <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
-                  <input type="text" id="dozentinput" name="dozent" placeholder="Ihr Name" maxlength="30" value="" onInput={(e: UIEvent) => { this.handleDozentInput(e)}}/>
+                  <input type="text" id="dozentinput" name="dozent" placeholder="Ihr Name" maxlength="30"  onInput={(e: UIEvent) => { this.handleDozentInput(e)}}/>
                 </label>
                 <label id="name">
                   <span class="meldung">Mindestens ein Name eines Studierenden muss angegeben werden.</span>
-                  <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe" value="" onInput={(e: UIEvent) => { this.handleGruppeInput(e)}}/>
+                  <input type="text" id="gruppeinput" name="name" placeholder="Name des Studierenden / der Gruppe" onInput={(e: UIEvent) => { this.handleGruppeInput(e)}}/>
                 </label>
                 <span class="meldung">Bitte geben Sie mindestens eine Matrikelnummer im ersten Feld ein.</span>
                 <aufklapp-input class="aufklappbuttons"
@@ -147,15 +148,15 @@ export class EingabeFelder{
                 ></aufklapp-input>
                 <label id="name">
                   <span class="meldung">Die Lehrveranstaltung wird für die Auswertung am Ende benötigt</span>
-                  <input type="text" id="veranstaltunginput" name="name" placeholder="Name der Veranstaltung" value="" onInput={(e: UIEvent) => { this.handleVeranstaltungInput(e)}}/>
+                  <input type="text" id="veranstaltunginput" name="name" placeholder="Name der Veranstaltung"  onInput={(e: UIEvent) => { this.handleVeranstaltungInput(e)}}/>
                 </label>
                 <div class="container-info">
                   <img id="information" src="/assets/info.svg" alt="Information"></img>
                   <h2 id="text">Dieser Bewertungsbogen ist für einen Projektvortrag</h2>
                 </div>
                 <div class="buttons">
-                <input type="reset" id="reset" value="x" onClick={() => { this.remove(); }}/>
-                <button id="submit" type="button"  onClick={() => { this.login(); }}>Speichern</button>
+                <input type="reset" id="reset" value="x" onClick={() => this.remove()}/>
+                <button id="submit" type="button"  onClick={(e: Event) => this.login(e)}>Speichern</button>
                 </div>
           </form>
         </div>
