@@ -7,9 +7,13 @@ import { Component, Prop, State, Element } from '@stencil/core';
 })
 export class AufklappButton {
   @Prop() Kriterium1: string;
+  @Prop() KriteriumDetail1: string;
   @Prop() Kriterium2: string;
+  @Prop() KriteriumDetail2: string;
   @Prop() Kriterium3: string;
+  @Prop() KriteriumDetail3: string;
   @Prop() Kriterium4: string;
+  @Prop() KriteriumDetail4: string;
   @Prop() Ueberschrift: string;
   @State() regler: string;
   @State() value: number;
@@ -49,25 +53,25 @@ export class AufklappButton {
                 <td><strong>Punktebewertung</strong></td>
               </tr>
               <tr>
-                <td>{this.Kriterium1}</td>
+                <td>{this.Kriterium1}<br></br>{this.KriteriumDetail1}</td>
                 <td>        
                 <regler-wertung regler="reglersieben"></regler-wertung> 
                 </td>
               </tr>
               <tr>
-                <td>{this.Kriterium2}</td>
+                <td>{this.Kriterium2}<br></br>{this.KriteriumDetail2}</td>
                 <td>
                 <regler-wertung regler="regleracht"></regler-wertung> 
                 </td>
               </tr>     
               <tr>
-                <td>{this.Kriterium3}</td>
+                <td>{this.Kriterium3}<br></br>{this.KriteriumDetail3}</td>
                 <td>
                 <regler-wertung regler="reglerneun"></regler-wertung> 
                 </td>
               </tr>
               <tr>
-                <td>{this.Kriterium4}</td>
+                <td>{this.Kriterium4}<br></br>{this.KriteriumDetail4}</td>
                 <td>
                 <regler-wertung regler="reglerzehn"></regler-wertung> 
                 </td>
