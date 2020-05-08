@@ -145,6 +145,10 @@ export class EingabeFelder{
                   Kriterium7="7. Matrikelnummer"
                   Kriterium8="8. Matrikelnummer"
                 ></aufklapp-input>
+                <label id="name">
+                  <span class="meldung">Die Lehrveranstaltung wird für die Auswertung am Ende benötigt</span>
+                  <input type="text" id="veranstaltunginput" name="name" placeholder="Name der Veranstaltung" value="" onInput={(e: UIEvent) => { this.handleVeranstaltungInput(e)}}/>
+                </label>
                 <div class="container-info">
                   <img id="information" src="/assets/info.svg" alt="Information"></img>
                   <h2 id="text">Dieser Bewertungsbogen ist für einen Projektvortrag</h2>
