@@ -79,3 +79,21 @@ input[type=reset]:focus {
     outline: none;
 }
 
+#information {
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-left: 20%;
+    margin-top: 0px;
+}
+#text{
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 20%;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.container-info{
+    margin-top: 10px;
+}
