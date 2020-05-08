@@ -16,6 +16,10 @@ export class EingabeFelder{
   @State() matrikelnummerzwei: string;
   @State() matrikelnummerdrei: string;
   @State() matrikelnummervier: string;
+  @State() matrikelnummerfuenf: string;
+  @State() matrikelnummersechs: string;
+  @State() matrikelnummersieben: string;
+  @State() matrikelnummeracht: string;
   @State() matrikelnummermeldung: any;
   @State() public veranstaltung : string;
   @State() veranstaltungmeldung:any;
@@ -50,7 +54,7 @@ export class EingabeFelder{
           this.matrikelnummerzwei = inputs[4].value;
           this.matrikelnummerdrei = inputs[5].value;
           this.matrikelnummervier = inputs[6].value;
-          this.veranstaltung = inputs[7].value;
+          this.veranstaltung = inputs[11].value;
           this.pruefungmeldung = inputs[8].value;
           this.dozentmeldung = meldungen[0];
           this.namemeldung = meldungen[1];
@@ -94,7 +98,7 @@ export class EingabeFelder{
 
         else{
         this.veranstaltungmeldung.classList.remove('meldungfehlerhaft');
-        this.inputs[7].value = this.veranstaltung;
+        this.inputs[11].value = this.veranstaltung;
         }            
     }
 
@@ -120,7 +124,20 @@ export class EingabeFelder{
         this.pruefungmeldung.classList.add('meldung');
       }
     }
-
+    componentWillUpdate(){
+      let inputs = this.host.querySelectorAll('input');
+      inputs[0].value = this.dozent = localStorage.getItem('dozent');
+      inputs[1].value = this.name = localStorage.getItem('gruppe');
+      inputs[3].value = this.matrikelnummereins = localStorage.getItem('matrikelnummereins');
+      inputs[4].value = this.matrikelnummerzwei = localStorage.getItem('matrikelnummerzwei');
+      inputs[5].value = this.matrikelnummerdrei = localStorage.getItem('matrikelnummerdrei');
+      inputs[6].value = this.matrikelnummervier = localStorage.getItem('matrikelnummervier');
+      inputs[7].value = this.matrikelnummerfuenf = localStorage.getItem('matrikelnummerfuenf');
+      inputs[8].value = this.matrikelnummersechs = localStorage.getItem('matrikelnummersechs');
+      inputs[9].value = this.matrikelnummersieben = localStorage.getItem('matrikelnummersieben');
+      inputs[10].value = this.matrikelnummeracht = localStorage.getItem('matrikelnummeracht');
+      inputs[11].value = this.veranstaltung = localStorage.getItem('veranstaltung');
+    }
   render() {
       return (
         <div class="login-container">
