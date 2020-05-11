@@ -19,6 +19,12 @@ export class AufklappButton {
   @State() value: number;
   
   @State() visible = false;
+
+  
+  @State() valueeins : string;
+  @State() valuezwei : string;
+  @State() valuedrei : string;
+  @State() valuevier : string;
   
   @Element() host: HTMLElement;
 
@@ -26,7 +32,12 @@ export class AufklappButton {
     this.visible = !this.visible;
   }
 
-  
+  componentWillUpdate(){
+    this.valueeins = localStorage.getItem('reglersieben');
+    this.valuezwei = localStorage.getItem('regleracht');
+    this.valuedrei = localStorage.getItem('reglerneun');
+    this.valuevier = localStorage.getItem('reglerzehn');
+     }
   
   render() {
     return (
@@ -55,25 +66,25 @@ export class AufklappButton {
               <tr>
                 <td>{this.Kriterium1}<br></br>{this.KriteriumDetail1}</td>
                 <td>        
-                <regler-wertung regler="reglersieben"></regler-wertung> 
+                <regler-wertung regler="reglersieben" wert={this.valueeins}></regler-wertung> 
                 </td>
               </tr>
               <tr>
                 <td>{this.Kriterium2}<br></br>{this.KriteriumDetail2}</td>
                 <td>
-                <regler-wertung regler="regleracht"></regler-wertung> 
+                <regler-wertung regler="regleracht" wert={this.valuezwei}></regler-wertung> 
                 </td>
               </tr>     
               <tr>
                 <td>{this.Kriterium3}<br></br>{this.KriteriumDetail3}</td>
                 <td>
-                <regler-wertung regler="reglerneun"></regler-wertung> 
+                <regler-wertung regler="reglerneun" wert={this.valuedrei}></regler-wertung> 
                 </td>
               </tr>
               <tr>
                 <td>{this.Kriterium4}<br></br>{this.KriteriumDetail4}</td>
                 <td>
-                <regler-wertung regler="reglerzehn"></regler-wertung> 
+                <regler-wertung regler="reglerzehn" wert={this.valuevier}></regler-wertung> 
                 </td>
               </tr>                      
             </tbody>

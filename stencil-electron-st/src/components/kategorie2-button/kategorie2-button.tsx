@@ -18,6 +18,15 @@ export class AufklappButton {
   
   @Element() host: HTMLElement;
 
+  
+  @State() valueeins : string;
+  @State() valuezwei : string;
+
+
+  componentWillUpdate(){
+    this.valueeins = localStorage.getItem('reglerfuenf');
+    this.valuezwei = localStorage.getItem('reglersechs');
+     }
 
   toggleVisibility = () => {
     this.visible = !this.visible;
@@ -49,13 +58,13 @@ export class AufklappButton {
               <tr>
                 <td>{this.Kriterium1}<br></br>{this.KriteriumDetail1}</td>
                 <td>        
-                <regler-wertung regler="reglerfuenf"></regler-wertung>  
+                <regler-wertung regler="reglerfuenf" wert={this.valueeins}></regler-wertung>  
                 </td>
               </tr>
               <tr>
                 <td>{this.Kriterium2}<br></br>{this.KriteriumDetail2}</td>
                 <td>
-                <regler-wertung regler="reglersechs"></regler-wertung> 
+                <regler-wertung regler="reglersechs"  wert={this.valuezwei}></regler-wertung> 
                 </td>
               </tr>                        
             </tbody>

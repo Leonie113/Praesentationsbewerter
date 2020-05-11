@@ -315,9 +315,11 @@ export namespace Components {
 
   interface ReglerWertung {
     'regler': string;
+    'wert': string;
   }
   interface ReglerWertungAttributes extends StencilHTMLAttributes {
     'regler'?: string;
+    'wert'?: string;
   }
 
   interface StartButton {}

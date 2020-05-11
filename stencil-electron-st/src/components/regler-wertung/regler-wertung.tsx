@@ -10,6 +10,7 @@ import { Component, Prop,  State } from '@stencil/core';
 export class regler {
 
   @State() value: string | number;
+  @Prop() wert:string;
   @Prop() regler: string;
 
 
@@ -25,7 +26,7 @@ export class regler {
         <h4 class="regler-wertung">Erreichte Punkte: <span>{this.value}</span></h4>
         <div class="regler-container">
           {/* <h4>0</h4> */}
-          <input name={this.regler} id="myRange" class="slider" min="0" max="10" type="range" step="1" list='steplist' value={this.value} onInput={(e: UIEvent) => { this.handleReglerInput(e) }} />
+          <input name={this.regler} id="myRange" class="slider" min="0" max="10" type="range" step="1" list='steplist' value={this.wert} onInput={(e: UIEvent) => { this.handleReglerInput(e) }} />
           {/* <h4>10</h4> */}
           <datalist id='steplist'>
                   <option>0</option>

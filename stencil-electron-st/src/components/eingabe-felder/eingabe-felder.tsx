@@ -27,6 +27,10 @@ export class EingabeFelder{
   @State() pruefungmeldung: any;
   @State() inputs;
 
+ public hallo(){
+    console.log("bliblablub");
+  }
+
   handleDozentInput(e: UIEvent){
     const target = e.target as HTMLInputElement;
     localStorage.setItem('dozent', target.value);
@@ -138,10 +142,11 @@ export class EingabeFelder{
       inputs[10].value = this.matrikelnummeracht = localStorage.getItem('matrikelnummeracht');
       inputs[11].value = this.veranstaltung = localStorage.getItem('veranstaltung');
     }
+
   render() {
+
       return (
         <div class="login-container">
-
           <form class="login-form">
                 <label id="dozent">
                   <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
@@ -179,4 +184,6 @@ export class EingabeFelder{
         </div>
       );
   }
+
+
 }

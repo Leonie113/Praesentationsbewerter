@@ -7,7 +7,7 @@ import { Component } from '@stencil/core';
 
 export class ZurueckButton {
     render() {
-        return <img id="links" src="/assets/links.png"></img>
+    return <img id="links" src="/assets/links.png"></img>
          
     }
 }

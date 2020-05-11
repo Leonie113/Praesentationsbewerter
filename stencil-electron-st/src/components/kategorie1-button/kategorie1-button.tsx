@@ -17,8 +17,13 @@ export class AufklappButton {
   @Prop() Ueberschrift: string;
   @State() regler: string;
   @State() value: number;
+  
 
-  @State() valueeins
+  @State() valueeins : string;
+  @State() valuezwei : string;
+  @State() valuedrei : string;
+  @State() valuevier : string;
+
   
   @State() visible = false;
   
@@ -29,7 +34,10 @@ export class AufklappButton {
   }
 
   componentWillUpdate(){
-
+ this.valueeins = localStorage.getItem('reglereins');
+ this.valuezwei = localStorage.getItem('reglerzwei');
+ this.valuedrei = localStorage.getItem('reglerdrei');
+ this.valuevier = localStorage.getItem('reglervier');
   }
   
   render() {
@@ -59,25 +67,25 @@ export class AufklappButton {
               <tr>
                 <td>{this.Kriterium1}<br></br>{this.KriteriumDetail1}</td>
                 <td>        
-                <regler-wertung regler="reglereins"></regler-wertung> 
+                <regler-wertung regler="reglereins" wert={this.valueeins}></regler-wertung> 
                 </td>
               </tr>
               <tr>
                 <td>{this.Kriterium2}<br></br>{this.KriteriumDetail2}</td>
                 <td>
-                <regler-wertung regler="reglerzwei"></regler-wertung> 
+                <regler-wertung regler="reglerzwei" wert={this.valuezwei}></regler-wertung> 
                 </td>
               </tr>     
               <tr>
                 <td>{this.Kriterium3}<br></br>{this.KriteriumDetail3}</td>
                 <td>
-                <regler-wertung regler="reglerdrei"></regler-wertung> 
+                <regler-wertung regler="reglerdrei" wert={this.valuedrei}></regler-wertung> 
                 </td>
               </tr>
               <tr>
                 <td>{this.Kriterium4}<br></br>{this.KriteriumDetail4}</td>
                 <td>
-                <regler-wertung regler="reglervier"></regler-wertung> 
+                <regler-wertung regler="reglervier" wert={this.valuevier}></regler-wertung> 
                 </td>
               </tr>                      
             </tbody>
