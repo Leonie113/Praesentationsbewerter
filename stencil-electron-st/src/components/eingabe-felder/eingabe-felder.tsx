@@ -8,9 +8,9 @@ export class EingabeFelder{
   @State() forgotPasswordUrl: string;
   @Event() loginShouldOccur: EventEmitter;
   @Element() host: HTMLElement;
-  @State() public dozent : string;
+  @State()  dozent : string;
   @State() dozentmeldung: any;
-  @State() public name : string;
+  @State()  name : string;
   @State() namemeldung: any;
   @State() matrikelnummereins: string;
   @State() matrikelnummerzwei: string;
@@ -21,9 +21,9 @@ export class EingabeFelder{
   @State() matrikelnummersieben: string;
   @State() matrikelnummeracht: string;
   @State() matrikelnummermeldung: any;
-  @State() public veranstaltung : string;
+  @State()  veranstaltung : string;
   @State() veranstaltungmeldung:any;
-  @State() public pruefung : string;
+  @State()  pruefung : string;
   @State() pruefungmeldung: any;
   @State() inputs;
 
@@ -128,7 +128,8 @@ export class EingabeFelder{
         this.pruefungmeldung.classList.add('meldung');
       }
     }
-    componentWillUpdate(){
+    componentWillLoad(){
+      console.log("hallo");
       let inputs = this.host.querySelectorAll('input');
       inputs[0].value = this.dozent = localStorage.getItem('dozent');
       inputs[1].value = this.name = localStorage.getItem('gruppe');
@@ -143,10 +144,15 @@ export class EingabeFelder{
       inputs[11].value = this.veranstaltung = localStorage.getItem('veranstaltung');
     }
 
+    grueßen(){
+      console.log("hallo");
+    }
+
   render() {
 
       return (
         <div class="login-container">
+{this.grueßen()}
           <form class="login-form">
                 <label id="dozent">
                   <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>
