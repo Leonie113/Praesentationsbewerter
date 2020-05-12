@@ -6,10 +6,8 @@ import { Component } from '@stencil/core';
 })
 
 export class WeiterButton {
-    clearStorage(){
-        localStorage.clear();
-    }
+
     render() {
-        return <button onClick={this.clearStorage}><img id="rechts" src="/assets/rechts.png"></img></button>
+        return <button><img id="rechts" src="/assets/rechts.png"></img></button>
     }
 }

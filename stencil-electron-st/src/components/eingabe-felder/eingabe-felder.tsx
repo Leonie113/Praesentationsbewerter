@@ -27,9 +27,6 @@ export class EingabeFelder{
   @State() pruefungmeldung: any;
   @State() inputs;
 
- public hallo(){
-    console.log("bliblablub");
-  }
 
   handleDozentInput(e: UIEvent){
     const target = e.target as HTMLInputElement;
@@ -128,8 +125,8 @@ export class EingabeFelder{
         this.pruefungmeldung.classList.add('meldung');
       }
     }
-    componentWillLoad(){
-      console.log("hallo");
+    public testDaten(){
+
       let inputs = this.host.querySelectorAll('input');
       inputs[0].value = this.dozent = localStorage.getItem('dozent');
       inputs[1].value = this.name = localStorage.getItem('gruppe');
@@ -144,15 +141,15 @@ export class EingabeFelder{
       inputs[11].value = this.veranstaltung = localStorage.getItem('veranstaltung');
     }
 
-    grueßen(){
-      console.log("hallo");
-    }
+    // grueßen(){
+    //   console.log("hallo");
+    // }
 
   render() {
 
       return (
         <div class="login-container">
-{this.grueßen()}
+{/* {this.grueßen()} */}
           <form class="login-form">
                 <label id="dozent">
                   <span class="meldung">Ihr Name wird für die Auswertung am Ende benötigt.</span>

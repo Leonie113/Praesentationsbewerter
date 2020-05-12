@@ -6,11 +6,11 @@ import { Component, Prop, Listen } from '@stencil/core';
   shadow: true
 })
 export class ExportierButton {
-  @Prop() button: string= "Bewertung abschließen";
+  @Prop() button: string= "Bewertungsbogen leeren!";
 
   handleClick() {
-    console.log(localStorage);
-    alert("Die Bewertung wurde abgeschlossen.");
+    localStorage.clear();
+    alert("Die Daten der Bewertung wurden erfolgreich zurückgesetzt!");
   }
 
   @Listen("click")

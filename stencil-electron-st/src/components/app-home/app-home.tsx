@@ -19,6 +19,7 @@ export class AppHome {
           <div  id="start">
             <p>Start</p>
             </div>
+            {/* <datei-einlesen button="Bewertung Importieren"></datei-einlesen> */}
         </div>
       </div>
     );
