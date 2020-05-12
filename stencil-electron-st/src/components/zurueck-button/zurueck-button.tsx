@@ -7,7 +7,10 @@ import { Component } from '@stencil/core';
 
 export class ZurueckButton {
     render() {
-    return <img id="links" src="/assets/links.png"></img>
+    return <div id="pfeil">
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+</div>
          
     }
 }
