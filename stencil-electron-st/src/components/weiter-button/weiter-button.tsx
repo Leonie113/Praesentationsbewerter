@@ -7,6 +7,9 @@ import { Component } from '@stencil/core';
 
 export class WeiterButton {
     render() {
-        return 
+        return <div id="pfeil2">
+        <div class="shape3"></div>
+        <div class="shape4"></div>
+    </div>
     }
 }
