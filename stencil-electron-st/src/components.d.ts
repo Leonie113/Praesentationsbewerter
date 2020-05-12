@@ -176,13 +176,6 @@ export namespace Components {
     'button'?: string;
   }
 
-  interface DateiEinlesen {
-    'button': string;
-  }
-  interface DateiEinlesenAttributes extends StencilHTMLAttributes {
-    'button'?: string;
-  }
-
   interface EingabeFelder {}
   interface EingabeFelderAttributes extends StencilHTMLAttributes {
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
@@ -368,7 +361,6 @@ declare global {
     'AuswertungButton': Components.AuswertungButton;
     'AuswertungDaten': Components.AuswertungDaten;
     'BewertungEnd': Components.BewertungEnd;
-    'DateiEinlesen': Components.DateiEinlesen;
     'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
@@ -402,7 +394,6 @@ declare global {
     'auswertung-button': Components.AuswertungButtonAttributes;
     'auswertung-daten': Components.AuswertungDatenAttributes;
     'bewertung-end': Components.BewertungEndAttributes;
-    'datei-einlesen': Components.DateiEinlesenAttributes;
     'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
@@ -499,12 +490,6 @@ declare global {
   var HTMLBewertungEndElement: {
     prototype: HTMLBewertungEndElement;
     new (): HTMLBewertungEndElement;
-  };
-
-  interface HTMLDateiEinlesenElement extends Components.DateiEinlesen, HTMLStencilElement {}
-  var HTMLDateiEinlesenElement: {
-    prototype: HTMLDateiEinlesenElement;
-    new (): HTMLDateiEinlesenElement;
   };
 
   interface HTMLEingabeFelderElement extends Components.EingabeFelder, HTMLStencilElement {}
@@ -623,7 +608,6 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement
     'auswertung-daten': HTMLAuswertungDatenElement
     'bewertung-end': HTMLBewertungEndElement
-    'datei-einlesen': HTMLDateiEinlesenElement
     'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
@@ -657,7 +641,6 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement;
     'auswertung-daten': HTMLAuswertungDatenElement;
     'bewertung-end': HTMLBewertungEndElement;
-    'datei-einlesen': HTMLDateiEinlesenElement;
     'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;

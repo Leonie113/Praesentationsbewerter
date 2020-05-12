@@ -8,7 +8,7 @@ let win;
 
 function createWindow() {
   // Create the browser window.
-  win = new BrowserWindow({ width: 1920, height: 1080 });
+  win = new BrowserWindow({ width: 1920, height: 1080, icon: path.join(__dirname, 'build/icon.icns') });
   // and load the index.html of the app.
   win.loadURL(
     isDev
