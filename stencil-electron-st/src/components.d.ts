@@ -344,6 +344,9 @@ export namespace Components {
 
   interface ZurueckButton {}
   interface ZurueckButtonAttributes extends StencilHTMLAttributes {}
+
+  interface ZurueckZwei {}
+  interface ZurueckZweiAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
@@ -378,6 +381,7 @@ declare global {
     'TestLarissa': Components.TestLarissa;
     'WeiterButton': Components.WeiterButton;
     'ZurueckButton': Components.ZurueckButton;
+    'ZurueckZwei': Components.ZurueckZwei;
   }
 
   interface StencilIntrinsicElements {
@@ -411,6 +415,7 @@ declare global {
     'test-larissa': Components.TestLarissaAttributes;
     'weiter-button': Components.WeiterButtonAttributes;
     'zurueck-button': Components.ZurueckButtonAttributes;
+    'zurueck-zwei': Components.ZurueckZweiAttributes;
   }
 
 
@@ -594,6 +599,12 @@ declare global {
     new (): HTMLZurueckButtonElement;
   };
 
+  interface HTMLZurueckZweiElement extends Components.ZurueckZwei, HTMLStencilElement {}
+  var HTMLZurueckZweiElement: {
+    prototype: HTMLZurueckZweiElement;
+    new (): HTMLZurueckZweiElement;
+  };
+
   interface HTMLElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement
     'app-auswertung': HTMLAppAuswertungElement
@@ -625,6 +636,7 @@ declare global {
     'test-larissa': HTMLTestLarissaElement
     'weiter-button': HTMLWeiterButtonElement
     'zurueck-button': HTMLZurueckButtonElement
+    'zurueck-zwei': HTMLZurueckZweiElement
   }
 
   interface ElementTagNameMap {
@@ -658,6 +670,7 @@ declare global {
     'test-larissa': HTMLTestLarissaElement;
     'weiter-button': HTMLWeiterButtonElement;
     'zurueck-button': HTMLZurueckButtonElement;
+    'zurueck-zwei': HTMLZurueckZweiElement;
   }
 
 
