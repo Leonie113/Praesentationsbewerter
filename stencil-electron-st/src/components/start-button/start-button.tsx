@@ -8,6 +8,11 @@ import { Component } from '@stencil/core';
 export class WeiterButton {
 
     render() {
-        return <button><img id="rechts" src="/assets/rechts.png"></img></button>
+        return <button>
+            <div id="pfeil2">
+        <div class="shape3"></div>
+        <div class="shape4"></div>
+    </div>
+        </button>
     }
 }

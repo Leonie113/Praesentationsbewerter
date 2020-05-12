@@ -7,3 +7,26 @@ button{
     border: none;
     background-color: transparent;
 }
+#pfeil2 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: 55%;
+    transform: rotate(-90deg);
+    margin-top: -100px;
+    padding-top: 80px;
+}
+#pfeil2 .shape3, #pfeil2 .shape4 {
+    border-width: 40px;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    border-color: #8D0011 transparent transparent transparent;
+    top: 10px;
+    position: absolute;
+}
+ 
+#pfeil2 .shape4 {
+    top: 0px;
+    border-color: #fff transparent transparent transparent;
+}

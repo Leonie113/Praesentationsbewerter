@@ -1,0 +1,22 @@
+#pfeil3 {
+    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+    margin-left: 40%;
+    margin-top: 40px;
+    padding-top: 80px;
+}
+#pfeil3 .shape5, #pfeil3 .shape6 {
+    border-width: 40px;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    border-color:#8D0011 transparent transparent transparent;
+    top: 10px;
+    position: absolute;
+}
+ 
+#pfeil3 .shape6 {
+    top: 0px;
+    border-color: #fff transparent transparent transparent;
+}

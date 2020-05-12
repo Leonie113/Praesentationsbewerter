@@ -176,7 +176,7 @@ export class EingabeFelder{
                   <input type="text" id="veranstaltunginput" name="name" placeholder="Name der Veranstaltung"  onInput={(e: UIEvent) => { this.handleVeranstaltungInput(e)}}/>
                 </label>
                 <div class="container-info">
-                  <img id="information" src="/assets/info.svg" alt="Information"></img>
+  
                   <h2 id="text">Dieser Bewertungsbogen ist für einen Projektvortrag</h2>
                 </div>
                 <div class="buttons">
