@@ -1,4 +1,22 @@
-img {
-    margin-top: 10px;
-    margin-right: 10px;
+#pfeil {
+    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+    margin-left: 40%;
+    margin-top: 40px;
+    padding-top: 80px;
+}
+#pfeil .shape1, #pfeil .shape2 {
+    border-width: 40px;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    border-color:#8D0011 transparent transparent transparent;
+    top: 10px;
+    position: absolute;
+}
+ 
+#pfeil .shape2 {
+    top: 0px;
+    border-color: #fff transparent transparent transparent;
 }
