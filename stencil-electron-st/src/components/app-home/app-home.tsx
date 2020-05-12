@@ -11,7 +11,6 @@ export class AppHome {
     return (
       <div class='app-home'>
         <headline-mittig text="Herzlich Willkommen beim Präsentationsbewerter"></headline-mittig>
-        <img id="presentation" src="/assets/presentation.svg"></img>
         <div class="weiter">
           <stencil-route-link url="/profile/stencil">
           <start-button></start-button>
