@@ -342,6 +342,9 @@ export namespace Components {
   interface WeiterButton {}
   interface WeiterButtonAttributes extends StencilHTMLAttributes {}
 
+  interface WeiterZwei {}
+  interface WeiterZweiAttributes extends StencilHTMLAttributes {}
+
   interface ZurueckButton {}
   interface ZurueckButtonAttributes extends StencilHTMLAttributes {}
 
@@ -380,6 +383,7 @@ declare global {
     'TableTest': Components.TableTest;
     'TestLarissa': Components.TestLarissa;
     'WeiterButton': Components.WeiterButton;
+    'WeiterZwei': Components.WeiterZwei;
     'ZurueckButton': Components.ZurueckButton;
     'ZurueckZwei': Components.ZurueckZwei;
   }
@@ -414,6 +418,7 @@ declare global {
     'table-test': Components.TableTestAttributes;
     'test-larissa': Components.TestLarissaAttributes;
     'weiter-button': Components.WeiterButtonAttributes;
+    'weiter-zwei': Components.WeiterZweiAttributes;
     'zurueck-button': Components.ZurueckButtonAttributes;
     'zurueck-zwei': Components.ZurueckZweiAttributes;
   }
@@ -593,6 +598,12 @@ declare global {
     new (): HTMLWeiterButtonElement;
   };
 
+  interface HTMLWeiterZweiElement extends Components.WeiterZwei, HTMLStencilElement {}
+  var HTMLWeiterZweiElement: {
+    prototype: HTMLWeiterZweiElement;
+    new (): HTMLWeiterZweiElement;
+  };
+
   interface HTMLZurueckButtonElement extends Components.ZurueckButton, HTMLStencilElement {}
   var HTMLZurueckButtonElement: {
     prototype: HTMLZurueckButtonElement;
@@ -635,6 +646,7 @@ declare global {
     'table-test': HTMLTableTestElement
     'test-larissa': HTMLTestLarissaElement
     'weiter-button': HTMLWeiterButtonElement
+    'weiter-zwei': HTMLWeiterZweiElement
     'zurueck-button': HTMLZurueckButtonElement
     'zurueck-zwei': HTMLZurueckZweiElement
   }
@@ -669,6 +681,7 @@ declare global {
     'table-test': HTMLTableTestElement;
     'test-larissa': HTMLTestLarissaElement;
     'weiter-button': HTMLWeiterButtonElement;
+    'weiter-zwei': HTMLWeiterZweiElement;
     'zurueck-button': HTMLZurueckButtonElement;
     'zurueck-zwei': HTMLZurueckZweiElement;
   }

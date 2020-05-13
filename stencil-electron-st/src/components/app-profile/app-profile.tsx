@@ -33,7 +33,7 @@ console.log(csv);
           </stencil-route-link>
           
           <stencil-route-link url='/bewertung'>
-            <weiter-button></weiter-button>
+            <weiter-zwei></weiter-zwei>
           </stencil-route-link> 
 
         </div>

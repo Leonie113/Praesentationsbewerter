@@ -1,0 +1,23 @@
+#pfeil5 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: 58%;
+    transform: rotate(-90deg);
+    margin-top: -100px;
+    padding-top: 80px;
+}
+#pfeil5 .shape8, #pfeil5 .shape9 {
+    border-width: 40px;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    border-color: #8D0011 transparent transparent transparent;
+    top: 10px;
+    position: absolute;
+}
+ 
+#pfeil5 .shape9 {
+    top: 0px;
+    border-color: #E1E1E1 transparent transparent transparent;
+}

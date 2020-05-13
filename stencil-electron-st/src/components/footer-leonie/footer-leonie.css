@@ -1,6 +1,7 @@
 footer-leonie{
-    padding-top: 80%;
+    padding-top: 100%;
     font-family: Segoe UI;
+    height: 100%;
 }
 @media screen and (max-width: 750px) {
     .footer-leonie{
@@ -18,7 +19,7 @@ footer-leonie{
     box-shadow: 1px 1px 1px #ccc;
     font-size: 3px;
     height: 85px;
-    top: 50%;
+    top: 1000%;
     justify-content: center; /* mittig */
     align-items: flex-start; /* mittig */
     display: flex;
