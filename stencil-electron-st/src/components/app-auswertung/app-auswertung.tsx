@@ -201,7 +201,7 @@ export class AppAuswertung{
               kriteriumeins="Methodik"
               kriteriumzwei="Selbstständigkeit, Eigeninitiative"
               kriteriumdrei="Kommunikation"
-              kriteriumvier="Dokumentation"
+              kriteriumvier="Recherche"
               reglereins={this.reglersieben}
               reglerzwei={this.regleracht}
               reglerdrei={this.reglerneun}
@@ -235,15 +235,23 @@ export class AppAuswertung{
               noteend ={this.note}>
               </test-larissa>
               <div id="auswertungs-buttons">
+              <div id="ex">
                 <export-button button="Exportieren"></export-button>
+                </div>  
                 <bewertung-end></bewertung-end>
+
               </div>
             </div>
           </div>
         </div>
-        <div>
-          <stencil-route-link url="/bewertung">
+        <div id="lin">  
+  
+           <stencil-route-link url="/bewertung">
           <zurueck-button></zurueck-button>
+          </stencil-route-link>
+
+          <stencil-route-link url="/tabelle">
+           <weiter-button></weiter-button> 
           </stencil-route-link>
         </div>
         <table-test></table-test>

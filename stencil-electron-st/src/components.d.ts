@@ -50,6 +50,13 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
+  interface AppTabelle {
+    'test': string;
+  }
+  interface AppTabelleAttributes extends StencilHTMLAttributes {
+    'test'?: string;
+  }
+
   interface AufklappButton {
     'Kriterium1': string;
     'Kriterium2': string;
@@ -173,13 +180,6 @@ export namespace Components {
     'button': string;
   }
   interface BewertungEndAttributes extends StencilHTMLAttributes {
-    'button'?: string;
-  }
-
-  interface DateiEinlesen {
-    'button': string;
-  }
-  interface DateiEinlesenAttributes extends StencilHTMLAttributes {
     'button'?: string;
   }
 
@@ -361,6 +361,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'AppTabelle': Components.AppTabelle;
     'AufklappButton': Components.AufklappButton;
     'AufklappInput': Components.AufklappInput;
     'AufklappKurz': Components.AufklappKurz;
@@ -368,7 +369,6 @@ declare global {
     'AuswertungButton': Components.AuswertungButton;
     'AuswertungDaten': Components.AuswertungDaten;
     'BewertungEnd': Components.BewertungEnd;
-    'DateiEinlesen': Components.DateiEinlesen;
     'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
@@ -395,6 +395,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'app-tabelle': Components.AppTabelleAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
     'aufklapp-input': Components.AufklappInputAttributes;
     'aufklapp-kurz': Components.AufklappKurzAttributes;
@@ -402,7 +403,6 @@ declare global {
     'auswertung-button': Components.AuswertungButtonAttributes;
     'auswertung-daten': Components.AuswertungDatenAttributes;
     'bewertung-end': Components.BewertungEndAttributes;
-    'datei-einlesen': Components.DateiEinlesenAttributes;
     'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
@@ -459,6 +459,12 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLAppTabelleElement extends Components.AppTabelle, HTMLStencilElement {}
+  var HTMLAppTabelleElement: {
+    prototype: HTMLAppTabelleElement;
+    new (): HTMLAppTabelleElement;
+  };
+
   interface HTMLAufklappButtonElement extends Components.AufklappButton, HTMLStencilElement {}
   var HTMLAufklappButtonElement: {
     prototype: HTMLAufklappButtonElement;
@@ -499,12 +505,6 @@ declare global {
   var HTMLBewertungEndElement: {
     prototype: HTMLBewertungEndElement;
     new (): HTMLBewertungEndElement;
-  };
-
-  interface HTMLDateiEinlesenElement extends Components.DateiEinlesen, HTMLStencilElement {}
-  var HTMLDateiEinlesenElement: {
-    prototype: HTMLDateiEinlesenElement;
-    new (): HTMLDateiEinlesenElement;
   };
 
   interface HTMLEingabeFelderElement extends Components.EingabeFelder, HTMLStencilElement {}
@@ -616,6 +616,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'app-tabelle': HTMLAppTabelleElement
     'aufklapp-button': HTMLAufklappButtonElement
     'aufklapp-input': HTMLAufklappInputElement
     'aufklapp-kurz': HTMLAufklappKurzElement
@@ -623,7 +624,6 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement
     'auswertung-daten': HTMLAuswertungDatenElement
     'bewertung-end': HTMLBewertungEndElement
-    'datei-einlesen': HTMLDateiEinlesenElement
     'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
@@ -650,6 +650,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'app-tabelle': HTMLAppTabelleElement;
     'aufklapp-button': HTMLAufklappButtonElement;
     'aufklapp-input': HTMLAufklappInputElement;
     'aufklapp-kurz': HTMLAufklappKurzElement;
@@ -657,7 +658,6 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement;
     'auswertung-daten': HTMLAuswertungDatenElement;
     'bewertung-end': HTMLBewertungEndElement;
-    'datei-einlesen': HTMLDateiEinlesenElement;
     'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;

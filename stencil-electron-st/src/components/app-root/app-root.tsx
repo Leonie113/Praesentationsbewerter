@@ -21,6 +21,7 @@ export class AppRoot {
               <stencil-route url='/profile/:name' component='app-profile' />
               <stencil-route url='/bewertung' component='app-bewertung' />
               <stencil-route url='/auswertung' component='app-auswertung' />
+              <stencil-route url='/tabelle' component='app-tabelle' />
             </stencil-route-switch>
           </stencil-router>
         </main>
