@@ -46,7 +46,7 @@
     "forceCodeSigning": false,
     "asar": false,
     "mac": {
-      "icon": "build/icons/icon.icns",
+      "icon": "build/icon.icns",
       "target":"pkg"
    }
   }
