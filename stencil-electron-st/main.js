@@ -1,6 +1,6 @@
 const { app, BrowserWindow} = require("electron");
 const url = require("url");
-const path = require("path");
+var path = require('path');
 let isDev = require("electron-is-dev");
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -8,7 +8,7 @@ let win;
 
 function createWindow() {
   // Create the browser window.
-  win = new BrowserWindow({ width: 1920, height: 1080, icon: path.join(__dirname, 'build/icon.icns') });
+  win = new BrowserWindow({ width: 1920, height: 1080, icon: path.join(__dirname, 'build/icons/icon.icns') });
   // and load the index.html of the app.
   win.loadURL(
     isDev
