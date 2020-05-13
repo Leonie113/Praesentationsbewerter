@@ -38,9 +38,11 @@ export class datenOben{
             return (
               <div id="daten-oben">
                   <ul id="daten-liste">
+                        <li><strong>Daten:</strong></li>
                         <li>{this.dozent}</li>
                         <li>{this.gruppe}</li>
-                        <li>{this.veranstaltung}</li> 
+                        <li>{this.veranstaltung}</li>
+                        <li><strong>Matrikelnummern:</strong></li> 
                         <li>{this.matrikelnummereins}</li> 
                         <li>{this.matrikelnummerzwei}</li>
                         <li>{this.matrikelnummervier}</li>
