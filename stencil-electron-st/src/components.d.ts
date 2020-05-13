@@ -27,16 +27,6 @@ export namespace Components {
     'verbesserung'?: string;
   }
 
-  interface AppAuswertung {
-    'test': string;
-  }
-  interface AppAuswertungAttributes extends StencilHTMLAttributes {
-    'test'?: string;
-  }
-
-  interface AppBewertung {}
-  interface AppBewertungAttributes extends StencilHTMLAttributes {}
-
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
@@ -176,13 +166,6 @@ export namespace Components {
     'button'?: string;
   }
 
-  interface DateiEinlesen {
-    'button': string;
-  }
-  interface DateiEinlesenAttributes extends StencilHTMLAttributes {
-    'button'?: string;
-  }
-
   interface EingabeFelder {}
   interface EingabeFelderAttributes extends StencilHTMLAttributes {
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
@@ -215,90 +198,6 @@ export namespace Components {
   }
   interface HeadlineMittigAttributes extends StencilHTMLAttributes {
     'text'?: string;
-  }
-
-  interface Kategorie1Button {
-    'Kriterium1': string;
-    'Kriterium2': string;
-    'Kriterium3': string;
-    'Kriterium4': string;
-    'KriteriumDetail1': string;
-    'KriteriumDetail2': string;
-    'KriteriumDetail3': string;
-    'KriteriumDetail4': string;
-    'Ueberschrift': string;
-  }
-  interface Kategorie1ButtonAttributes extends StencilHTMLAttributes {
-    'Kriterium1'?: string;
-    'Kriterium2'?: string;
-    'Kriterium3'?: string;
-    'Kriterium4'?: string;
-    'KriteriumDetail1'?: string;
-    'KriteriumDetail2'?: string;
-    'KriteriumDetail3'?: string;
-    'KriteriumDetail4'?: string;
-    'Ueberschrift'?: string;
-  }
-
-  interface Kategorie2Button {
-    'Kriterium1': string;
-    'Kriterium2': string;
-    'KriteriumDetail1': string;
-    'KriteriumDetail2': string;
-    'Ueberschrift': string;
-  }
-  interface Kategorie2ButtonAttributes extends StencilHTMLAttributes {
-    'Kriterium1'?: string;
-    'Kriterium2'?: string;
-    'KriteriumDetail1'?: string;
-    'KriteriumDetail2'?: string;
-    'Ueberschrift'?: string;
-  }
-
-  interface Kategorie3Button {
-    'Kriterium1': string;
-    'Kriterium2': string;
-    'Kriterium3': string;
-    'Kriterium4': string;
-    'KriteriumDetail1': string;
-    'KriteriumDetail2': string;
-    'KriteriumDetail3': string;
-    'KriteriumDetail4': string;
-    'Ueberschrift': string;
-  }
-  interface Kategorie3ButtonAttributes extends StencilHTMLAttributes {
-    'Kriterium1'?: string;
-    'Kriterium2'?: string;
-    'Kriterium3'?: string;
-    'Kriterium4'?: string;
-    'KriteriumDetail1'?: string;
-    'KriteriumDetail2'?: string;
-    'KriteriumDetail3'?: string;
-    'KriteriumDetail4'?: string;
-    'Ueberschrift'?: string;
-  }
-
-  interface Kategorie4Button {
-    'Kriterium1': string;
-    'Kriterium2': string;
-    'Kriterium3': string;
-    'Kriterium4': string;
-    'KriteriumDetail1': string;
-    'KriteriumDetail2': string;
-    'KriteriumDetail3': string;
-    'KriteriumDetail4': string;
-    'Ueberschrift': string;
-  }
-  interface Kategorie4ButtonAttributes extends StencilHTMLAttributes {
-    'Kriterium1'?: string;
-    'Kriterium2'?: string;
-    'Kriterium3'?: string;
-    'Kriterium4'?: string;
-    'KriteriumDetail1'?: string;
-    'KriteriumDetail2'?: string;
-    'KriteriumDetail3'?: string;
-    'KriteriumDetail4'?: string;
-    'Ueberschrift'?: string;
   }
 
   interface RadioInput {
@@ -356,8 +255,6 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'AnmerkungsFeld': Components.AnmerkungsFeld;
-    'AppAuswertung': Components.AppAuswertung;
-    'AppBewertung': Components.AppBewertung;
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
@@ -368,17 +265,12 @@ declare global {
     'AuswertungButton': Components.AuswertungButton;
     'AuswertungDaten': Components.AuswertungDaten;
     'BewertungEnd': Components.BewertungEnd;
-    'DateiEinlesen': Components.DateiEinlesen;
     'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
     'FormularLarissa': Components.FormularLarissa;
     'HeaderLeonie': Components.HeaderLeonie;
     'HeadlineMittig': Components.HeadlineMittig;
-    'Kategorie1Button': Components.Kategorie1Button;
-    'Kategorie2Button': Components.Kategorie2Button;
-    'Kategorie3Button': Components.Kategorie3Button;
-    'Kategorie4Button': Components.Kategorie4Button;
     'RadioInput': Components.RadioInput;
     'ReglerWertung': Components.ReglerWertung;
     'StartButton': Components.StartButton;
@@ -390,8 +282,6 @@ declare global {
 
   interface StencilIntrinsicElements {
     'anmerkungs-feld': Components.AnmerkungsFeldAttributes;
-    'app-auswertung': Components.AppAuswertungAttributes;
-    'app-bewertung': Components.AppBewertungAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
@@ -402,17 +292,12 @@ declare global {
     'auswertung-button': Components.AuswertungButtonAttributes;
     'auswertung-daten': Components.AuswertungDatenAttributes;
     'bewertung-end': Components.BewertungEndAttributes;
-    'datei-einlesen': Components.DateiEinlesenAttributes;
     'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
     'formular-larissa': Components.FormularLarissaAttributes;
     'header-leonie': Components.HeaderLeonieAttributes;
     'headline-mittig': Components.HeadlineMittigAttributes;
-    'kategorie1-button': Components.Kategorie1ButtonAttributes;
-    'kategorie2-button': Components.Kategorie2ButtonAttributes;
-    'kategorie3-button': Components.Kategorie3ButtonAttributes;
-    'kategorie4-button': Components.Kategorie4ButtonAttributes;
     'radio-input': Components.RadioInputAttributes;
     'regler-wertung': Components.ReglerWertungAttributes;
     'start-button': Components.StartButtonAttributes;
@@ -427,18 +312,6 @@ declare global {
   var HTMLAnmerkungsFeldElement: {
     prototype: HTMLAnmerkungsFeldElement;
     new (): HTMLAnmerkungsFeldElement;
-  };
-
-  interface HTMLAppAuswertungElement extends Components.AppAuswertung, HTMLStencilElement {}
-  var HTMLAppAuswertungElement: {
-    prototype: HTMLAppAuswertungElement;
-    new (): HTMLAppAuswertungElement;
-  };
-
-  interface HTMLAppBewertungElement extends Components.AppBewertung, HTMLStencilElement {}
-  var HTMLAppBewertungElement: {
-    prototype: HTMLAppBewertungElement;
-    new (): HTMLAppBewertungElement;
   };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
@@ -501,12 +374,6 @@ declare global {
     new (): HTMLBewertungEndElement;
   };
 
-  interface HTMLDateiEinlesenElement extends Components.DateiEinlesen, HTMLStencilElement {}
-  var HTMLDateiEinlesenElement: {
-    prototype: HTMLDateiEinlesenElement;
-    new (): HTMLDateiEinlesenElement;
-  };
-
   interface HTMLEingabeFelderElement extends Components.EingabeFelder, HTMLStencilElement {}
   var HTMLEingabeFelderElement: {
     prototype: HTMLEingabeFelderElement;
@@ -541,30 +408,6 @@ declare global {
   var HTMLHeadlineMittigElement: {
     prototype: HTMLHeadlineMittigElement;
     new (): HTMLHeadlineMittigElement;
-  };
-
-  interface HTMLKategorie1ButtonElement extends Components.Kategorie1Button, HTMLStencilElement {}
-  var HTMLKategorie1ButtonElement: {
-    prototype: HTMLKategorie1ButtonElement;
-    new (): HTMLKategorie1ButtonElement;
-  };
-
-  interface HTMLKategorie2ButtonElement extends Components.Kategorie2Button, HTMLStencilElement {}
-  var HTMLKategorie2ButtonElement: {
-    prototype: HTMLKategorie2ButtonElement;
-    new (): HTMLKategorie2ButtonElement;
-  };
-
-  interface HTMLKategorie3ButtonElement extends Components.Kategorie3Button, HTMLStencilElement {}
-  var HTMLKategorie3ButtonElement: {
-    prototype: HTMLKategorie3ButtonElement;
-    new (): HTMLKategorie3ButtonElement;
-  };
-
-  interface HTMLKategorie4ButtonElement extends Components.Kategorie4Button, HTMLStencilElement {}
-  var HTMLKategorie4ButtonElement: {
-    prototype: HTMLKategorie4ButtonElement;
-    new (): HTMLKategorie4ButtonElement;
   };
 
   interface HTMLRadioInputElement extends Components.RadioInput, HTMLStencilElement {}
@@ -611,8 +454,6 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement
-    'app-auswertung': HTMLAppAuswertungElement
-    'app-bewertung': HTMLAppBewertungElement
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
@@ -623,17 +464,12 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement
     'auswertung-daten': HTMLAuswertungDatenElement
     'bewertung-end': HTMLBewertungEndElement
-    'datei-einlesen': HTMLDateiEinlesenElement
     'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
     'formular-larissa': HTMLFormularLarissaElement
     'header-leonie': HTMLHeaderLeonieElement
     'headline-mittig': HTMLHeadlineMittigElement
-    'kategorie1-button': HTMLKategorie1ButtonElement
-    'kategorie2-button': HTMLKategorie2ButtonElement
-    'kategorie3-button': HTMLKategorie3ButtonElement
-    'kategorie4-button': HTMLKategorie4ButtonElement
     'radio-input': HTMLRadioInputElement
     'regler-wertung': HTMLReglerWertungElement
     'start-button': HTMLStartButtonElement
@@ -645,8 +481,6 @@ declare global {
 
   interface ElementTagNameMap {
     'anmerkungs-feld': HTMLAnmerkungsFeldElement;
-    'app-auswertung': HTMLAppAuswertungElement;
-    'app-bewertung': HTMLAppBewertungElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
@@ -657,17 +491,12 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement;
     'auswertung-daten': HTMLAuswertungDatenElement;
     'bewertung-end': HTMLBewertungEndElement;
-    'datei-einlesen': HTMLDateiEinlesenElement;
     'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;
     'formular-larissa': HTMLFormularLarissaElement;
     'header-leonie': HTMLHeaderLeonieElement;
     'headline-mittig': HTMLHeadlineMittigElement;
-    'kategorie1-button': HTMLKategorie1ButtonElement;
-    'kategorie2-button': HTMLKategorie2ButtonElement;
-    'kategorie3-button': HTMLKategorie3ButtonElement;
-    'kategorie4-button': HTMLKategorie4ButtonElement;
     'radio-input': HTMLRadioInputElement;
     'regler-wertung': HTMLReglerWertungElement;
     'start-button': HTMLStartButtonElement;
