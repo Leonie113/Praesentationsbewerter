@@ -16,6 +16,8 @@ export class FooterLeonie {
                 <li>Bewertung</li>
               
                 <li>Auswertung</li>
+                <li><img src="/assets/weiter.png"></img></li>
+                <li>Ergebnis</li>
             </ul>
         </div>
     }

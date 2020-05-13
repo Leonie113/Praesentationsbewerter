@@ -12,7 +12,7 @@ export class AppBewertung {
   render() {
     return (
       <div class='app-bewertung'>
-        
+        <daten-oben></daten-oben>
         <headline-mittig text="Bewertung"></headline-mittig>
         <kategorie1-button class="aufklappbuttons"
           Ueberschrift="Thematische Ausarbeitung   ▼" 

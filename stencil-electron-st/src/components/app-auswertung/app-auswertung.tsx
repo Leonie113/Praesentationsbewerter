@@ -162,6 +162,7 @@ export class AppAuswertung{
   render() {
     return (
       <div class='app-home'>
+        <daten-oben></daten-oben>
                 
         <headline-mittig text="Auswertung &amp; Anmerkungen"></headline-mittig>
         {this.addiereThematischeAusarbeitung()}
@@ -201,7 +202,7 @@ export class AppAuswertung{
               kriteriumeins="Methodik"
               kriteriumzwei="Selbstständigkeit, Eigeninitiative"
               kriteriumdrei="Kommunikation"
-              kriteriumvier="Dokumentation"
+              kriteriumvier="Recherche"
               reglereins={this.reglersieben}
               reglerzwei={this.regleracht}
               reglerdrei={this.reglerneun}
@@ -235,8 +236,11 @@ export class AppAuswertung{
               noteend ={this.note}>
               </test-larissa>
               <div id="auswertungs-buttons">
+              <div id="ex">
                 <export-button button="Exportieren"></export-button>
+                </div>  
                 <bewertung-end></bewertung-end>
+
               </div>
             </div>
           </div>
@@ -245,8 +249,14 @@ export class AppAuswertung{
           <stencil-route-link url="/bewertung">
           <zurueck-zwei></zurueck-zwei>
           </stencil-route-link>
+        <div id="lin">  
+
+          <stencil-route-link url="/tabelle">
+           <weiter-button></weiter-button> 
+          </stencil-route-link>
         </div>
         <table-test></table-test>
+        </div>
       </div>
     );
   }

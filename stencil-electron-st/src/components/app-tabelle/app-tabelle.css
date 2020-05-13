@@ -1,3 +1,47 @@
+#tabelle-end{
+  margin: auto;
+  border: #747474;
+  border-width: 0.2em;
+  border-style: solid;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1%;
+}
+thead{
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+  border-style: inherit;
+}
+
+.fett-end{
+  font-weight: 700;
+}
+
+.button-end{
+  margin-left: 71%;
+  height: 150px;
+  width: 1000px;
+}
+
+#export{
+  padding-bottom: 1%;
+}
+
+#tabelle-end td{
+  border: #747474;
+  border-width: 0.1em;
+  border-style: solid; 
+}
+
+#td-weg {
+  border: inherit !important;
+  color: #cfcfcf;
+}
+
+.mach-zentral{
+  text-align: center !important;
+}
+
 .flex-container {
   width: 100%;
   justify-content: center; /* mittig */
@@ -32,7 +76,7 @@ h2 {
 }
 
 img {
-
+  margin-left: 48%;
   margin-bottom: 10px;
 }
 #gesamt{
@@ -40,13 +84,6 @@ img {
   margin-left: 3%;
 }
 
-#lin{
-  margin-left: 45%;
-}
-
-#ex{
-  margin-bottom: 10px;
-}
 
 body {
   overflow: hidden;
