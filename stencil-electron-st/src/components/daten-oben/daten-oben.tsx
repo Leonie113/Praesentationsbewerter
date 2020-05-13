@@ -40,6 +40,7 @@ export class datenOben{
                   <ul id="daten-liste">
                         <li>{this.dozent}</li>
                         <li>{this.gruppe}</li>
+                        <li>{this.veranstaltung}</li> 
                         <li>{this.matrikelnummereins}</li> 
                         <li>{this.matrikelnummerzwei}</li>
                         <li>{this.matrikelnummervier}</li>
@@ -48,7 +49,6 @@ export class datenOben{
                         <li>{this.matrikelnummersechs}</li>
                         <li>{this.matrikelnummersieben}</li>
                         <li>{this.matrikelnummeracht}</li>
-                        <li>{this.veranstaltung}</li>   
                     </ul>
                 </div>
              ) 
