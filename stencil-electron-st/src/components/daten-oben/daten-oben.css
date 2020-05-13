@@ -1,0 +1,21 @@
+#daten-oben {
+    text-align: center;
+    justify-content: center; 
+    align-items: flex-start; 
+    display: flex;
+}
+
+#daten-liste {
+    text-align: center;
+    list-style: none;
+    /* margin-top: 15px; */
+    width: fit-content;
+}
+
+#daten-liste li {
+    display: inline;
+    margin-right: 20px;
+    color: #7F868D; 
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

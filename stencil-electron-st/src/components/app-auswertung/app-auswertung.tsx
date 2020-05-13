@@ -162,6 +162,7 @@ export class AppAuswertung{
   render() {
     return (
       <div class='app-home'>
+        <daten-oben></daten-oben>
                 
         <headline-mittig text="Auswertung &amp; Anmerkungen"></headline-mittig>
         {this.addiereThematischeAusarbeitung()}

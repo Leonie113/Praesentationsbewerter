@@ -63,25 +63,25 @@ export class AufklappButton {
                 <td><strong>Punktebewertung</strong></td>
               </tr>
               <tr>
-                <td>{this.Kriterium1}<br></br>{this.KriteriumDetail1}</td>
+                <td><strong>{this.Kriterium1}</strong><br></br>{this.KriteriumDetail1}</td>
                 <td>        
                 <regler-wertung regler="reglerelf" wert={this.valueeins}></regler-wertung> 
                 </td>
               </tr>
               <tr>
-                <td>{this.Kriterium2}<br></br>{this.KriteriumDetail2}</td>
+                <td><strong>{this.Kriterium2}</strong><br></br>{this.KriteriumDetail2}</td>
                 <td>
                 <regler-wertung regler="reglerzwoelf" wert={this.valuezwei}></regler-wertung> 
                 </td>
               </tr>     
               <tr>
-                <td>{this.Kriterium3}<br></br>{this.KriteriumDetail3}</td>
+                <td><strong>{this.Kriterium3}</strong><br></br>{this.KriteriumDetail3}</td>
                 <td>
                 <regler-wertung regler="reglerdreizehn" wert={this.valuedrei}></regler-wertung> 
                 </td>
               </tr>
               <tr>
-                <td>{this.Kriterium4}<br></br>{this.KriteriumDetail4}</td>
+                <td><strong>{this.Kriterium4}</strong><br></br>{this.KriteriumDetail4}</td>
                 <td>
                 <regler-wertung regler="reglervierzehn" wert={this.valuevier}></regler-wertung> 
                 </td>
