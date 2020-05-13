@@ -176,6 +176,9 @@ export namespace Components {
     'button'?: string;
   }
 
+  interface DatenOben {}
+  interface DatenObenAttributes extends StencilHTMLAttributes {}
+
   interface EingabeFelder {}
   interface EingabeFelderAttributes extends StencilHTMLAttributes {
     'onLoginShouldOccur'?: (event: CustomEvent) => void;
@@ -361,6 +364,7 @@ declare global {
     'AuswertungButton': Components.AuswertungButton;
     'AuswertungDaten': Components.AuswertungDaten;
     'BewertungEnd': Components.BewertungEnd;
+    'DatenOben': Components.DatenOben;
     'EingabeFelder': Components.EingabeFelder;
     'ExportButton': Components.ExportButton;
     'FooterLeonie': Components.FooterLeonie;
@@ -394,6 +398,7 @@ declare global {
     'auswertung-button': Components.AuswertungButtonAttributes;
     'auswertung-daten': Components.AuswertungDatenAttributes;
     'bewertung-end': Components.BewertungEndAttributes;
+    'daten-oben': Components.DatenObenAttributes;
     'eingabe-felder': Components.EingabeFelderAttributes;
     'export-button': Components.ExportButtonAttributes;
     'footer-leonie': Components.FooterLeonieAttributes;
@@ -490,6 +495,12 @@ declare global {
   var HTMLBewertungEndElement: {
     prototype: HTMLBewertungEndElement;
     new (): HTMLBewertungEndElement;
+  };
+
+  interface HTMLDatenObenElement extends Components.DatenOben, HTMLStencilElement {}
+  var HTMLDatenObenElement: {
+    prototype: HTMLDatenObenElement;
+    new (): HTMLDatenObenElement;
   };
 
   interface HTMLEingabeFelderElement extends Components.EingabeFelder, HTMLStencilElement {}
@@ -608,6 +619,7 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement
     'auswertung-daten': HTMLAuswertungDatenElement
     'bewertung-end': HTMLBewertungEndElement
+    'daten-oben': HTMLDatenObenElement
     'eingabe-felder': HTMLEingabeFelderElement
     'export-button': HTMLExportButtonElement
     'footer-leonie': HTMLFooterLeonieElement
@@ -641,6 +653,7 @@ declare global {
     'auswertung-button': HTMLAuswertungButtonElement;
     'auswertung-daten': HTMLAuswertungDatenElement;
     'bewertung-end': HTMLBewertungEndElement;
+    'daten-oben': HTMLDatenObenElement;
     'eingabe-felder': HTMLEingabeFelderElement;
     'export-button': HTMLExportButtonElement;
     'footer-leonie': HTMLFooterLeonieElement;
