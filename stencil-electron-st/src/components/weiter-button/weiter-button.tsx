@@ -7,6 +7,6 @@ import { Component } from '@stencil/core';
 
 export class WeiterButton {
     render() {
-        return <img id="rechts" src="/assets/rechts.png"></img>
+        return <img id="links" src="/assets/rechts.png"></img>
     }
 }

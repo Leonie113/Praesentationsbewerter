@@ -50,6 +50,13 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
+  interface AppTabelle {
+    'test': string;
+  }
+  interface AppTabelleAttributes extends StencilHTMLAttributes {
+    'test'?: string;
+  }
+
   interface AufklappButton {
     'Kriterium1': string;
     'Kriterium2': string;
@@ -357,6 +364,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'AppTabelle': Components.AppTabelle;
     'AufklappButton': Components.AufklappButton;
     'AufklappInput': Components.AufklappInput;
     'AufklappKurz': Components.AufklappKurz;
@@ -391,6 +399,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'app-tabelle': Components.AppTabelleAttributes;
     'aufklapp-button': Components.AufklappButtonAttributes;
     'aufklapp-input': Components.AufklappInputAttributes;
     'aufklapp-kurz': Components.AufklappKurzAttributes;
@@ -453,6 +462,12 @@ declare global {
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
+  };
+
+  interface HTMLAppTabelleElement extends Components.AppTabelle, HTMLStencilElement {}
+  var HTMLAppTabelleElement: {
+    prototype: HTMLAppTabelleElement;
+    new (): HTMLAppTabelleElement;
   };
 
   interface HTMLAufklappButtonElement extends Components.AufklappButton, HTMLStencilElement {}
@@ -612,6 +627,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'app-tabelle': HTMLAppTabelleElement
     'aufklapp-button': HTMLAufklappButtonElement
     'aufklapp-input': HTMLAufklappInputElement
     'aufklapp-kurz': HTMLAufklappKurzElement
@@ -646,6 +662,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'app-tabelle': HTMLAppTabelleElement;
     'aufklapp-button': HTMLAufklappButtonElement;
     'aufklapp-input': HTMLAufklappInputElement;
     'aufklapp-kurz': HTMLAufklappKurzElement;
