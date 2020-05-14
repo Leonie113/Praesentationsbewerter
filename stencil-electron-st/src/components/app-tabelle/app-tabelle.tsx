@@ -378,12 +378,12 @@ export class AppTabelle{
             </div>
 
 
-        <div>
+        <div id="last-button">
           <stencil-route-link url="/auswertung">
           <zurueck-button></zurueck-button>
           </stencil-route-link>
         </div>
-
+        <table-test></table-test>
       </div>
     );
   }
