@@ -6,4 +6,9 @@ img {
 button{
     border: none;
     background-color: transparent;
+<<<<<<< Updated upstream
+=======
+    outline: none;
+    cursor: pointer;
+>>>>>>> Stashed changes
 }
