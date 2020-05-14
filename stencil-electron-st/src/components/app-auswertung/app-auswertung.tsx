@@ -243,10 +243,10 @@ export class AppAuswertung{
           <stencil-route-link url="/bewertung">
           <zurueck-zwei></zurueck-zwei>
           </stencil-route-link>
+        
         <div id="lin">  
-
           <stencil-route-link url="/tabelle">
-           <weiter-button></weiter-button> 
+           <weiter-zwei></weiter-zwei> 
           </stencil-route-link>
         </div>
         <table-test></table-test>
