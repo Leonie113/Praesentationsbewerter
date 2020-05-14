@@ -235,13 +235,7 @@ export class AppAuswertung{
               prozent ={this.ergebnisProzent}
               noteend ={this.note}>
               </test-larissa>
-              <div id="auswertungs-buttons">
-              <div id="ex">
-                <export-button button="Exportieren"></export-button>
-                </div>  
-                <bewertung-end></bewertung-end>
 
-              </div>
             </div>
           </div>
         </div>
