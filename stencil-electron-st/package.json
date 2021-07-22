@@ -27,7 +27,7 @@
     "export-to-csv": "^0.2.1",
     "jquery": "^3.5.0",
     "ts-export-to-csv": "^0.3.3",
-    "xlsx": "^0.16.0"
+    "xlsx": "^0.17.0"
   },
   "license": "MIT",
   "devDependencies": {
